@@ -12,19 +12,24 @@
 //      2 element array (floats) location
 //      3 elements array (unsigned int) Dims
 
-template <class Type>
+
 class PyFunc 
 {
     private:
-        PyObject* pName, pArgs, pValue;
+        PyObject* pModule, pName, pFunc, pArgs, pValue;
+        bool isValid;
 
     public:
 
-        PyFunc<Type>();
-        ~PyFunc<Type>();
+        // When created automatically loads function
+        // must include call to validFunc to check all is well
+        PyFunc(const char* Module, const char* FuncName);
+        ~PyFunc();
 
-        void defineFunction(const char* Module, const char* FuncName);
-        Type callFunction(PyObject* pArgs);
+        int*  callFunction(int a, int b);
+
+        // Used to check if the function was loaded correctly
+        bool validFunc() {return isValid};
 };
 
 #endif
