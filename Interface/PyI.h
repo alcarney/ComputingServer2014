@@ -1,8 +1,10 @@
 #ifndef PYTHON_INTERPRETER_CPP
 #define PYTHON_INTERPRETER_CPP
 
-#include "../tools/LinkedList.h"
 #include <python2.7/Python.h>
+
+#include "PyFunc.h"
+#include "../tools/LinkedList.h"
 
 class PyI
 {
@@ -15,7 +17,7 @@ class PyI
         PyI();
         ~PyI();
 
-        void addFunction(PyFunc* pFunc);
+        void addFunction(PyFunc<int>* pFunc);
 
 
 };
