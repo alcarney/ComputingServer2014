@@ -22,4 +22,36 @@
 //      Simples!! :P
 
 
+#include <iostream>
+#include <thread>
 
+int main ()
+{
+    using std::cout;
+    using std::endl;
+
+    cout << "Welcome to the Logistic Calculator 9000 brought to you by Axiom Enterprises!\n";
+
+    cout << "[Log][INFO]: Starting UI thread\n";
+
+    // Create an instance of the job queue class
+    // JobQueue *jobs = new JobQueue;
+    //
+    // if (!success)
+    // {
+    //   Complain and exit
+    // }
+
+
+    // Create an instance of the UI communication class
+    // UIComms *ui = new UIComms;
+
+    // if (!success)
+    // {
+    //      Complain
+    // }
+    }
+    //      Start the UI in it's own thread
+    //      std::thread uiThread(ui->run())
+
+}
