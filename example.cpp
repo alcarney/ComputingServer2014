@@ -69,7 +69,7 @@ int main (int argc, char *argv[])
             if (pValue != NULL)
             {
                 // Be sure to convert the value back into something C++ understands
-                cout << "Result of function call: " << PyInt_AsLong(pValue);
+                cout << "Result of function call: " << PyInt_AsLong(pValue) << endl;
                 Py_DECREF(pValue);
             }
             else
