@@ -1,6 +1,6 @@
 PYTHON_FLAGS = -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic
 
-PythonInterpreter.o:
+PyI.o:
 	g++ -c PyI.cpp  $(PYTHON_FLAGS)
 
 clean:
