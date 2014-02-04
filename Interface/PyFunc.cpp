@@ -6,16 +6,19 @@
 // Constructor automatically pulls function from python if needed
 PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
 {
+    Py_Initialize();
+
     // Convert the name of the module into something python understands
     pName = PyString_FromString(ModuleName);
 
     // Import said module and nullify the pName reference
     pModule = PyImport_Import(pName);
-    pName = NULL;
+
 
     // If import was succesful continue else throw a wobbly
-    if (pModule == NULL)
+    if (pModule != NULL)
     {
+        std::cout << "Loading function ...\n";
         // Now get the function from the file
         pFunc = PyObject_GetAttrString(pModule, FuncName);
 
@@ -28,7 +31,7 @@ PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
         }
         else
         {
-           std::cout << "[PyFunc][ERROR]: " << FuncName << " not a valid function or not in " << ModuleName << std::end;
+           std::cout << "[PyFunc][ERROR]: " << FuncName << " not a valid function or not in " << ModuleName << std::endl;
            isValid = false;
         }
     }
@@ -43,15 +46,19 @@ PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
 PyFunc::~PyFunc()
 {
     Py_DECREF(pModule);
-    Py_DECREF(pName);
-    py-DECREF(pFunc);
-    Py_DECREF(pArgs);
-    Py_DECREF(pValue);
+   // Py_DECREF(pName);
+    //Py_DECREF(pFunc);
+    //Py_DECREF(pArgs);
+    //Py_DECREF(pValue);
+    Py_Finalize();
 }
 
 // Calls the function and passes whatever arguments it gets onwards
-int PyFunc::callFunction(int a, int b)i
+int* PyFunc::callFunction(int a, int b)
 {
     // Create a list to pass our arguments to python with
-    pArgs = PyTuplr
+    ///pArgs = PyTuple_New(2);
+
+    //pValue = PyInt_FromLong(a);
+
 }

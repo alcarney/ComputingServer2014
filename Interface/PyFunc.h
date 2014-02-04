@@ -16,7 +16,7 @@
 class PyFunc 
 {
     private:
-        PyObject* pModule, pName, pFunc, pArgs, pValue;
+        PyObject *pModule, *pName, *pFunc, *pArgs, *pValue;
         bool isValid;
 
     public:
@@ -29,7 +29,7 @@ class PyFunc
         int*  callFunction(int a, int b);
 
         // Used to check if the function was loaded correctly
-        bool validFunc() {return isValid};
+        bool validFunc() {return isValid;};
 };
 
 #endif

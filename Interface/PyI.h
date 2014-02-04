@@ -17,7 +17,7 @@ class PyI
         PyI();
         ~PyI();
 
-        void addFunction(PyFunc<int>* pFunc);
+        void addFunction(PyFunc* pFunc);
 
 
 };
