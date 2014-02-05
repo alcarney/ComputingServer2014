@@ -11,7 +11,7 @@ PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
     // Convert the name of the module into something python understands
     pName = PyString_FromString(ModuleName);
 
-    // Import said module and nullify the pName reference
+    // Import said module
     pModule = PyImport_Import(pName);
 
 
@@ -42,10 +42,10 @@ PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
     }
 }
 
-// Destructor, calls multiple Py_DECREF calls to delete references to PyObjects
+// Destructor,
 PyFunc::~PyFunc()
 {
-    Py_DECREF(pModule);
+    //Py_DECREF(pModule);
    // Py_DECREF(pName);
     //Py_DECREF(pFunc);
     //Py_DECREF(pArgs);
@@ -53,12 +53,38 @@ PyFunc::~PyFunc()
     Py_Finalize();
 }
 
-// Calls the function and passes whatever arguments it gets onwards
-int* PyFunc::callFunction(int a, int b)
+// Calls the function it has loaded, note this is only capable of handling 
+// functions that take no arguments and returns a list of ints
+int* PyFunc::callFunction()
 {
-    // Create a list to pass our arguments to python with
-    ///pArgs = PyTuple_New(2);
+    // Call the function and catch the return value
+    pValue = PyObject_CallObject(pFunc, NULL);
 
-    //pValue = PyInt_FromLong(a);
+    // Check that data it received and in proper format
+    if (PyList_Check(pValue))
+    {
+        // Get the length of the list and convert it to C++ data
+        pListLength =  PyList_Size(pValue);
+        int length = PyInt_AsLong(pListLength);
+
+        // Reserve space for the array
+        int* values = new int[length];
+
+        // Convert the values and add them to the array 
+        for (int i = 0; i < length; i++)
+        {
+            // Get a value from the list
+            pListItem = PyList_GetItem(pValue, i);
+
+            *values[i] = PyInt_AsLong(pListItem);
+        }
+        return values;
+
+    }
+    else 
+    {
+        std::cout << "Error no data returned or in wrong format\n";
+        return 0;
+    }
 
 }
