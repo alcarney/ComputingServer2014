@@ -3,7 +3,7 @@
 // and the state of the python interpreter
 
 #include "PyI.h"
-
+#include "PyFunc.h"
 
 // The default constructor for the class
 PyI::PyI()
@@ -11,17 +11,23 @@ PyI::PyI()
     // Fire up the python interpreter
     Py_Initialize();
 
-    // Create a linked list to store functions and modules in
-    modList = new LinkedList<int>();
-    funcList = new LinkedList<int>();
+    // Create a linked list to store functions
+    funcList = new LinkedList<PyFunc>();
 }
+
 
 PyI::~PyI()
 {
     // Clean up our lists
-    delete modList;
     delete funcList;
 
     // CLose down python
     Py_Finalize();
 }
+
+void PyI::addFunction(PyFunc* pFunc )
+{
+    funcList->appendNode(pFunc);
+}
+
+

@@ -9,8 +9,7 @@
 class PyI
 {
     private:
-        LinkedList<int>* modList;
-        LinkedList<int>* funcList;
+        LinkedList<PyFunc>* funcList;
 
     public:
 

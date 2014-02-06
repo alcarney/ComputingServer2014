@@ -45,11 +45,6 @@ PyFunc::PyFunc(const char* ModuleName, const char* FuncName)
 // Destructor,
 PyFunc::~PyFunc()
 {
-    //Py_DECREF(pModule);
-   // Py_DECREF(pName);
-    //Py_DECREF(pFunc);
-    //Py_DECREF(pArgs);
-    //Py_DECREF(pValue);
     Py_Finalize();
 }
 
@@ -57,35 +52,49 @@ PyFunc::~PyFunc()
 // functions that take no arguments and returns a list of ints
 int* PyFunc::callFunction()
 {
-    // Call the function and catch the return value
-    pValue = PyObject_CallObject(pFunc, NULL);
-
-    // Check that data it received and in proper format
-    if (PyList_Check(pValue))
+    if (validFunc())
     {
-        // Get the length of the list and convert it to C++ data
-        int length = PyList_Size(pValue);
+        // Call the function and catch the return value
+        pValue = PyObject_CallObject(pFunc, NULL);
 
-
-        // Reserve space for the array
-        int* values = new int[length];
-
-        // Convert the values and add them to the array 
-        for (int i = 0; i < length; i++)
+        // Check that data it received and in proper format
+        if (PyList_Check(pValue))
         {
-            // Get a value from the list
-            values[i] = PyInt_AsLong(PyList_GetItem(pValue, i));
-        }
-        return values;
+            // Get the length of the list and convert it to C++ data
+            int length = PyList_Size(pValue);
 
+
+            // Reserve space for the array
+            int* values = new int[length];
+
+            // Convert the values and add them to the array 
+            for (int i = 0; i < length; i++)
+            {
+                // Get a value from the list
+                values[i] = PyInt_AsLong(PyList_GetItem(pValue, i));
+            }
+            return values;
+
+        }
+        else 
+        {
+            std::cout << "Error no data returned or in wrong format\n";
+            return NULL;
+        }
     }
-    else 
+    else
     {
-        std::cout << "Error no data returned or in wrong format\n";
-        return 0;
+        std::cout << "[PyFunc][ERROR]: Attempted call to undefined function, doing nothing\n";
+        return NULL;
     }
 
 }
+
+bool PyFunc::validFunc()
+{
+    return isValid;
+}
+
 /* An example program
  *
  *
