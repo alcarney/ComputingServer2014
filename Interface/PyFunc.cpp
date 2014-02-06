@@ -64,8 +64,8 @@ int* PyFunc::callFunction()
     if (PyList_Check(pValue))
     {
         // Get the length of the list and convert it to C++ data
-        pListLength =  PyList_Size(pValue);
-        int length = PyInt_AsLong(pListLength);
+        int length = PyList_Size(pValue);
+
 
         // Reserve space for the array
         int* values = new int[length];
@@ -74,9 +74,7 @@ int* PyFunc::callFunction()
         for (int i = 0; i < length; i++)
         {
             // Get a value from the list
-            pListItem = PyList_GetItem(pValue, i);
-
-            *values[i] = PyInt_AsLong(pListItem);
+            values[i] = PyInt_AsLong(PyList_GetItem(pValue, i));
         }
         return values;
 
@@ -88,3 +86,4 @@ int* PyFunc::callFunction()
     }
 
 }
+

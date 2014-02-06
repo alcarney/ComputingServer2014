@@ -30,7 +30,7 @@ class PyFunc
         int* callFunction();
 
         // Used to check if the function was loaded correctly
-         validFunc() {return isValid;};
+        bool validFunc() {return isValid;};
 };
 
 #endif
