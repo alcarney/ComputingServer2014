@@ -11,5 +11,4 @@ PyFunc.o:
 
 clean:
 	rm *.o
-	rm postage 
 
