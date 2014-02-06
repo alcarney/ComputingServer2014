@@ -86,4 +86,29 @@ int* PyFunc::callFunction()
     }
 
 }
+/* An example program
+ *
+ *
+    #include "PyFunc.h"
 
+    int main ()
+    {
+        PyFunc func("hello", "hello");
+
+        int* ret = func.callFunction();
+
+        for (int i = 0; i < 10; i++)
+        {
+            std::cout << ret[i] << std::endl;
+        }
+        return 0;
+    }
+    
+    And the python file
+
+    hello.py:
+
+    def hello();
+        return [1,2,3,4,5,6,7,8,9,10]
+
+*/
