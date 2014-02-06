@@ -5,11 +5,11 @@ int main ()
     PyFunc func("hello", "hello");
 
     int* ret = func.callFunction();
-    
-    std::cout << ret[0] <<std::endl;
-    std::cout << ret[1] <<std::endl;
-    std::cout << ret[2] <<std::endl;
 
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << ret[i] << std::endl;
+    }
     return 0;
 }
 
