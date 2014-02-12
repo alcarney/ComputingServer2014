@@ -27,7 +27,8 @@ class PyFunc
         PyFunc(const char* Module, const char* FuncName);
         ~PyFunc();
 
-        int* callFunction();
+        // Makes the function pure virtual and must be implemented by classes that inherit this
+        virtual int* callFunction() = 0;
 
         // Used to check if the function was loaded correctly
         bool validFunc();
