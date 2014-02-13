@@ -4,7 +4,7 @@ int main ()
 {
     ReturnList<int*> func("hello", "hello");
 
-    func.callFunction();
+    std::cout << *func.callFunction() << std::endl;
 
     return 0;
 }

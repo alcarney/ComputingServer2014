@@ -7,7 +7,7 @@
 #include "PyFunc.h"
 
 template <class Type>
-class ReturnList<Type> : public PyFunc<Type>
+class ReturnList : public PyFunc<Type>
 {
     public:
 
@@ -22,16 +22,17 @@ class ReturnList<Type> : public PyFunc<Type>
 template <class Type>
 Type ReturnList<Type>::callFunction()
 {
-    if (validFunc())
+
+    if (PyFunc<Type>::validFunc())
     {
         // Call the function and catch the return value
-        pValue = PyObject_CallObject(pFunc, NULL);
+        PyFunc<Type>::pValue = PyObject_CallObject(PyFunc<Type>::pFunc, NULL);
 
         // Check that data it received and in proper format
-        if (PyList_Check(pValue))
+        if (PyList_Check(PyFunc<Type>::pValue))
         {
             // Get the length of the list and convert it to C++ data
-            int length = PyList_Size(pValue);
+            int length = PyList_Size(PyFunc<Type>::pValue);
 
 
             // Reserve space for the array
@@ -41,7 +42,7 @@ Type ReturnList<Type>::callFunction()
             for (int i = 0; i < length; i++)
             {
                 // Get a value from the list
-                values[i] = PyInt_AsLong(PyList_GetItem(pValue, i));
+                values[i] = PyInt_AsLong(PyList_GetItem(PyFunc<Type>::pValue, i));
             }
             return values;
 

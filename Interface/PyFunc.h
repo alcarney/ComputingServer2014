@@ -15,7 +15,7 @@
 template <class Type>
 class PyFunc
 {
-    private:
+    protected:
         PyObject *pModule, *pName, *pFunc, *pList, *pValue;
         PyObject *pListLength, pListItem;
         bool isValid;
@@ -28,10 +28,10 @@ class PyFunc
         ~PyFunc<Type>();
 
         // Makes the function pure virtual and must be implemented by classes that inherit this
-//        virtual Type callFunction() = 0;
+//        virtual Type callFunction();
 
         // Used to check if the function was loaded correctly
-        bool validFunc();
+        bool validFunc() {return isValid;};
 };
 
 
@@ -82,11 +82,12 @@ PyFunc<Type>::~PyFunc()
     Py_Finalize();
 }
 
+/*
 template <class Type>
-bool PyFunc<Type>::validFunc()
+bool PyFunc::validFunc()
 {
     return isValid;
-}
+}*/
 
 /* An example program
  *
