@@ -2,7 +2,7 @@
 
 // Calls the function it has loaded, note this is only capable of handling 
 // functions that take no arguments and returns a list of ints
-int* ReturnIntListNoArgs::callFunction()
+int* ReturnList::callFunction()
 {
     if (validFunc())
     {

@@ -1,8 +1,10 @@
-#include "PyFunc.h"
+#include "Functions.h"
 
 int main ()
 {
-    PyFunc<int*> func("hello", "hello");
+    ReturnList<int*> func("hello", "hello");
+
+    func.callFunction();
 
     return 0;
 }
