@@ -12,7 +12,7 @@ class ReturnList : public PyFunc<Type>
     public:
 
             ReturnList(const char* ModuleName, const char* FuncName) : PyFunc<Type>(ModuleName, FuncName) {};
-            Type callFunction();
+            Type* callFunction();
 
 };
 
@@ -20,7 +20,7 @@ class ReturnList : public PyFunc<Type>
 // Calls the function it has loaded, note this is only capable of handling 
 // functions that take no arguments and returns a list of ints
 template <class Type>
-Type ReturnList<Type>::callFunction()
+Type* ReturnList<Type>::callFunction()
 {
 
     if (PyFunc<Type>::validFunc())
@@ -36,7 +36,7 @@ Type ReturnList<Type>::callFunction()
 
 
             // Reserve space for the array
-            int* values = new int[length];
+            Type* values = new Type[length];
 
             // Convert the values and add them to the array 
             for (int i = 0; i < length; i++)

@@ -2,7 +2,7 @@
 
 int main ()
 {
-    ReturnList<int*> func("hello", "hello");
+    ReturnList<int> func("hello", "hello");
 
     std::cout << *func.callFunction() << std::endl;
 
