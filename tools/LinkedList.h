@@ -9,107 +9,107 @@
 template <class Type>
 class Node
 {
-	public:
-		Type data;
-		Node<Type>* next;
-		Node<Type>* previous;
+    public:
+        Type data;
+        Node<Type>* next;
+        Node<Type>* previous;
 
-		Node(Type data);
+        Node(Type data);
 
 };
 
 template <class Type>
 Node<Type>::Node(Type data)
 {
-	this->data = data;
-	next = NULL;
-	previous = NULL;
+    this->data = data;
+    next = NULL;
+    previous = NULL;
 }
 
 // Here is the actual linked list class
 template <class Type>
 class LinkedList 
 {
-	private:
+    private:
 
-		Node<Type>* front;
-		Node<Type>* back;
+        Node<Type>* front;
+        Node<Type>* back;
         Node<Type>* currentNode;
 
-	public:
+    public:
 
-		LinkedList();
-		~LinkedList();
+        LinkedList();
+        LinkedList();
 
-		void appendNode(Type data);
+        void appendNode(Type data);
 
         Type getNextNode();
 
-		void displayNodes();
-		void displayNodesR();
+        void displayNodes();
+        void displayNodesR();
 
-		void emptyList();
+        void emptyList();
 };
 
 template<class Type>
 LinkedList<Type>::LinkedList()
 {
-	front = NULL;
-	back = NULL;
+    front = NULL;
+    back = NULL;
 }
 
 template<class Type>
 LinkedList<Type>::~LinkedList()
 {
-	emptyList();
+    emptyList();
 }
 
 // Adds a node to the end of the list
 template<class Type>
 void LinkedList<Type>::appendNode(Type data)
 {
-	Node<Type>* n = new Node<Type>(data);	// Create new node to add
-	
-	if(back == NULL)						// If list is empty
-	{
-		back = n;
-		front = n;							// Then n is the only node in the list so it's both
-											// add the front and back. 
-	}
-	else
-	{
-		back->next = n;						// Assign the next pointer of the last node in the list to the new one 
-		n->previous = back;					// Set the previous pointer of the new node to the previous in the list 
-		back = n;							// Set the pointer to the last node in the list to the new one
-	}
+    Node<Type>* n = new Node<Type>(data);   // Create new node to add
+
+    if(back == NULL)                        // If list is empty
+    {
+        back = n;
+        front = n;                          // Then n is the only node in the list so it's both
+                                            // add the front and back.
+    }
+    else
+    {
+        back->next = n;                         // Assign the next pointer of the last node in the list to the new one 
+        n->previous = back;                     // Set the previous pointer of the new node to the previous in the list 
+        back = n;                               // Set the pointer to the last node in the list to the new one
+    }
 }
 
 // Write out all the nodes in the list to screen
 template <class Type>
-void LinkedList<Type>::displayNodes()			
+void LinkedList<Type>::displayNodes()
 {
-	std::cout << "Nodes:\n";
+    std::cout << "Nodes:\n";
 
-	Node<Type>* temp = front;				// Create a pointer to a  node pointing at the first node in the list
-	while(temp != NULL)				// While it's not pointing at nothing
-	{
-		std::cout << "\t" << temp->data << "\n";	// Write out the node's data in a nice list
-		temp = temp->next;			// Set the temporary node to point at the next node
-	}
+    Node<Type>* temp = front;                       // Create a pointer to a  node pointing at the first node in the list
+    while(temp != NULL)                             // While it's not pointing at nothing
+    {
+        std::cout << "\t" << temp->data << "\n";    // Write out the node's data in a nice list
+        temp = temp->next;                          // Set the temporary node to point at the next node
+    }
 }
 
 // Write out all the nodes in the list to screen in reverse order
 template<class Type>
-void LinkedList<Type>::displayNodesR()			
+void LinkedList<Type>::displayNodesR()
 {
-	std::cout << "Nodes in reverse order:\n";
+    std::cout << "Nodes in reverse order:\n";
 
-	Node<Type>* temp = back;				// Create a pointer to a node pointing at the last node in the list
-	while(temp != NULL)				// While it's not pointing at nothing
-	{
-		std::cout << "\t" << temp->data << "\n";	// Write out the node's data in a nice list
-		temp = temp->previous;			// Set the temporary node pointing at the previous node
-	}
+    Node<Type>* temp = back;                            // Create a pointer to a node pointing at the last node in the list
+    while(temp != NULL)                                   // While it's not pointing at nothing
+    {
+        std::cout << "\t" << temp->data << "\n";            // Write out the node's data in a nice list
+        temp = temp->previous;                              // Set the temporary node pointing at the previous node
+    }
 }
 
 // Get the value store in the next node
@@ -135,20 +135,20 @@ Type LinkedList<Type>::getNextNode()
 template <class Type>
 void LinkedList<Type>::emptyList()
 {
-	Node<Type>* temp = back;		// Create a pointer to a node to traverse the list with and point it at the last node 	
+    Node<Type>* temp = back;        // Create a pointer to a node to traverse the list with and point it at the last node 	
 
-	while(temp != NULL)				// While it's not pointing at nothing
-	{
-		Node<Type>* temp2 = temp;	// Create another pointer to a node, set it to the same as temp	
-		temp = temp->previous;		// Point temp at the previous node
-		delete temp2;				// Delete the node temp2 points at 
-	}
+    while(temp != NULL)             // While it's not pointing at nothing
+    {
+        Node<Type>* temp2 = temp;   // Create another pointer to a node, set it to the same as temp	
+        temp = temp->previous;      // Point temp at the previous node
+        delete temp2;                   // Delete the node temp2 points at 
+    }
 
-	back = NULL;					// Finally set the front and back pointers to nothing and delete 
-	front = NULL;					// our original temp node
-	
-	delete temp;
+    back = NULL;                    // Finally set the front and back pointers to nothing and delete 
+    front = NULL;                     // our original temp node
+
+    delete temp;
 }
 
 
-#endif 
+#endif
