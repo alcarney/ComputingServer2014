@@ -4,6 +4,10 @@
 #define LINKEDLIST_CPP
 
 #include <iostream>
+#include <stdexcept>
+
+//                                              Class Definitions
+//========================================================================================================
 
 // This class actually stores data while the next class manages these and organises them into a list. 
 template <class Type>
@@ -18,14 +22,6 @@ class Node
 
 };
 
-template <class Type>
-Node<Type>::Node(Type data)
-{
-    this->data = data;
-    next = NULL;
-    previous = NULL;
-}
-
 // Here is the actual linked list class
 template <class Type>
 class LinkedList 
@@ -36,14 +32,17 @@ class LinkedList
         Node<Type>* back;
         Node<Type>* currentNode;
 
+        int list_length;
+
     public:
 
         LinkedList();
-        LinkedList();
+        ~LinkedList();
 
         void appendNode(Type data);
 
         Type getNextNode();
+        void loopThroughFrom(int NodeIndex);
 
         void displayNodes();
         void displayNodesR();
@@ -51,6 +50,23 @@ class LinkedList
         void emptyList();
 };
 
+//                                              Node Class Method Definitions 
+//==============================================================================================================
+
+template <class Type>
+Node<Type>::Node(Type data)
+{
+    this->data = data;
+    next = NULL;
+    previous = NULL;
+}
+
+//                                              Linked List Method Definitions
+//===============================================================================================================
+
+
+//              Constructors and Destructors
+//===============================================
 template<class Type>
 LinkedList<Type>::LinkedList()
 {
@@ -63,6 +79,9 @@ LinkedList<Type>::~LinkedList()
 {
     emptyList();
 }
+
+//          Adding Nodes
+//========================================
 
 // Adds a node to the end of the list
 template<class Type>
@@ -82,7 +101,12 @@ void LinkedList<Type>::appendNode(Type data)
         n->previous = back;                     // Set the previous pointer of the new node to the previous in the list 
         back = n;                               // Set the pointer to the last node in the list to the new one
     }
+
+    list_length += 1;                           // Increment the length of the list
 }
+
+//              Displaying Nodes
+//=====================================================
 
 // Write out all the nodes in the list to screen
 template <class Type>
@@ -112,6 +136,9 @@ void LinkedList<Type>::displayNodesR()
     }
 }
 
+//              Node Manipulations
+//======================================================
+
 // Get the value store in the next node
 template<class Type>
 Type LinkedList<Type>::getNextNode()
@@ -123,13 +150,44 @@ Type LinkedList<Type>::getNextNode()
         currentNode = front;
     }
 
-    unsigned long data = currentNode->data;     // Assign the value to a variable
+    Type data = currentNode->data;              // Assign the value to a variable
 
     currentNode = currentNode->next;            // Move the pointer to the next one
 
     return data;
 }
 
+// Loop from the Node given unitl the end
+template<class Type>
+void LinkedList<Type>::loopThroughFrom(int NodeIndex)
+{
+    // Check to see that the starting index given is within range
+    //if (NodeIndex > list_length)
+    //{
+    //    throw out_of_range("[LinkedList][ERROR]: Specified index is out of range\n");
+    //}
+
+    // Create a temporay node that we will use to walk through the list and set it to the first
+    // node in the list
+    Node<Type>* temp = front;
+
+    // Walk through to our starting index
+    for (int i = 0; i < NodeIndex; i++)
+    {
+        temp = temp->next;
+    }
+
+    // Now we are at the correct node, loop through 
+    while (temp != NULL)
+    {
+        std::cout << temp->data << std::endl;
+        temp = temp->next;
+    }
+
+}
+
+//              Removing Nodes
+//=========================================================
 
 // Delete all the nodes in the list
 template <class Type>
@@ -148,6 +206,7 @@ void LinkedList<Type>::emptyList()
     front = NULL;                     // our original temp node
 
     delete temp;
+    list_length = 0;                // Reflect the changes in the list counter
 }
 
 
