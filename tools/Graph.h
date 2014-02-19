@@ -12,12 +12,14 @@ class Connection<Type>
 
 }
 
+template<class Type>
 class Node
 {
     public:
             Node();
             ~Node();
 
+            
 }
 
 #endif
