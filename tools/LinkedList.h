@@ -42,7 +42,10 @@ class LinkedList
         void appendNode(Type data);
 
         Type getNextNode();
+        int getListLength() {return list_length};
+
         void loopThroughFrom(int NodeIndex);
+        void fromStart() {currentNode = front};
 
         void displayNodes();
         void displayNodesR();
