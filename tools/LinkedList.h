@@ -17,7 +17,8 @@ class Node : public Type
         Node<Type>* next;
         Node<Type>* previous;
 
-        Node() : Type() {next = NULL; previous = NULL;};
+        Node(double longitude, double latitude) : Type(longitude, latitude) 
+            {next = NULL; previous = NULL;};
 
 };
 
@@ -38,9 +39,9 @@ class LinkedList
         LinkedList();
         ~LinkedList();
 
-        void appendNode(Type data);
+        void appendNode(double longitude, double latitude);
 
-        Type getNextNode();
+        Type* getNextNode();
         int getListLength() {return list_length;};
 
         void loopThroughFrom(int NodeIndex);
@@ -89,9 +90,9 @@ LinkedList<Type>::~LinkedList()
 
 // Adds a node to the end of the list
 template<class Type>
-void LinkedList<Type>::appendNode(Type data)
+void LinkedList<Type>::appendNode(double longitude, double latitude)
 {
-    Node<Type>* n = new Node<Type>(data);   // Create new node to add
+    Node<Type>* n = new Node<Type>(longitude, latitude);   // Create new node to add
 
     if(back == NULL)                        // If list is empty
     {
@@ -145,7 +146,7 @@ void LinkedList<Type>::displayNodesR()
 
 // Get the value store in the next node
 template<class Type>
-Type LinkedList<Type>::getNextNode()
+Type* LinkedList<Type>::getNextNode()
 {
     // If the currentNode variable isn't assigned or its next pointer doesn't point to anything 
     // meaning currentNode is the last one in the list. Then assign it to the first one again
@@ -154,14 +155,16 @@ Type LinkedList<Type>::getNextNode()
         currentNode = front;
     }
 
-    Type data = currentNode->data;              // Assign the value to a variable
+    Type* data = currentNode;              // Assign the value to a variable
 
     currentNode = currentNode->next;            // Move the pointer to the next one
 
     return data;
 }
 
-// Loop from the Node given unitl the end
+// Loop from the Node given unitl the end, in its current state this 
+// function does nothing, look at adding an argument which is the pointer
+// to a function, and the function is some operation to be done on each node.
 template<class Type>
 void LinkedList<Type>::loopThroughFrom(int NodeIndex)
 {
@@ -183,8 +186,8 @@ void LinkedList<Type>::loopThroughFrom(int NodeIndex)
 
     // Now we are at the correct node, loop through 
     while (temp != NULL)
-    {
-        std::cout << temp->data << std::endl;
+    {   
+        // Look at adding a function pointer here
         temp = temp->next;
     }
 
