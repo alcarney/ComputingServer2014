@@ -22,6 +22,8 @@ class Salesman
 
             void addLocation(double longitude, double latitude);
             void showLocations();
+
+            int getNextStop(int NodeIndex);
             void calculateRoute();
 };
 

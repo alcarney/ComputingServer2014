@@ -26,7 +26,7 @@ Salesman::~Salesman()
 void Salesman::addLocation(double longitude, double latitude)
 {
     locations->appendNode(longitude, latitude);
-    std::cout << "[SALESMAN][INFO]: New location added at " << longitude << " ," << latitude << std::endl;
+    std::cout << "\t[SALESMAN][INFO]: New location added at " << longitude << " ," << latitude << std::endl;
 
 }
 
@@ -46,4 +46,43 @@ void Salesman::showLocations()
         loc->printCoords();
     }
 }
+
+// Return the index of the node with the shortest distance to
+// the node at the given index
+int Salesman::getNextStop(int NodeIndex)
+{
+    // Start from the start of the list
+    locations->fromStart();
+
+    // Get the Node we are calculating from
+    Location* loc = locations->getNode(NodeIndex);
+    Location* temp;
+
+    // Variable to store the closest node in, initialised to -1 so we now 
+    // when it's unassigned
+    int closestNode = -1;
+    double closestDistance = -1;    // -1 for the same reason
+    double distance;
+
+    // Then loop through the nodes from the next index
+    for (int i = 1; i < locations->getListLength(); i++)
+    {
+        // Dont calculate distance with yourself
+        if (NodeIndex == i)
+            continue;                   // Skips to next loop iteration
+
+        temp = locations->getNextNode();
+        distance = loc.getDistanceTo(temp);
+
+        if (distance < closestDistance || closestDistance == -1)
+        {
+            closestDistance = distance;
+            closestNode = i;
+        }
+    }
+
+    return closestNode;
+}
+
+
 
