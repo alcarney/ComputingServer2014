@@ -11,14 +11,13 @@
 
 // This class actually stores data while the next class manages these and organises them into a list. 
 template <class Type>
-class Node
+class Node : public Type
 {
     public:
-        Type data;
         Node<Type>* next;
         Node<Type>* previous;
 
-        Node(Type data);
+        Node() : Type() {};
 
 };
 
@@ -42,10 +41,10 @@ class LinkedList
         void appendNode(Type data);
 
         Type getNextNode();
-        int getListLength() {return list_length};
+        int getListLength() {return list_length;};
 
         void loopThroughFrom(int NodeIndex);
-        void fromStart() {currentNode = front};
+        void fromStart() {currentNode = front;};
 
         void displayNodes();
         void displayNodesR();
@@ -56,6 +55,7 @@ class LinkedList
 //                                              Node Class Method Definitions 
 //==============================================================================================================
 
+/*
 template <class Type>
 Node<Type>::Node(Type data)
 {
@@ -63,6 +63,7 @@ Node<Type>::Node(Type data)
     next = NULL;
     previous = NULL;
 }
+*/
 
 //                                              Linked List Method Definitions
 //===============================================================================================================
