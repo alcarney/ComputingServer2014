@@ -22,6 +22,9 @@ class Location
             bool startLocation() {return isStart;};
             void notStart() {isStart = false;};
 
+            // Show the coords
+            void printCoords() {std::cout << "x: "<< x << "\ty: " << y << std::endl;};
+
             // Get distance to provided location
             double getDistanceTo(Location& loc);
 

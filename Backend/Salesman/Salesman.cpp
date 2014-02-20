@@ -22,3 +22,28 @@ Salesman::~Salesman()
     //delete route;
 }
 
+// Add a new location to the problem
+void Salesman::addLocation(double longitude, double latitude)
+{
+    locations->appendNode(longitude, latitude);
+    std::cout << "[SALESMAN][INFO]: New location added at " << longitude << " ," << latitude << std::endl;
+
+}
+
+// Print out a list of all the locations
+void Salesman::showLocations()
+{
+    // Reset the counter on the linked list so we start from the start
+    locations->fromStart();
+
+    // Create a dummy pointer to a location for use in the loop below
+    Location* loc;
+    // Loop through and print locations
+    for (int i = 0; i < locations->getListLength(); i++)
+    {
+        loc = locations->getNextNode();
+        std::cout << i << ":\t";
+        loc->printCoords();
+    }
+}
+

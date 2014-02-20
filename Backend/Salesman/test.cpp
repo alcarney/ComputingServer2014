@@ -1,9 +1,15 @@
 #include "Location.h"
+#include "Salesman.h"
 
 int main()
 {
-    Location loc1(-2,1);
-    Location loc2(1,5);
+    Salesman sales;
 
-    std::cout << loc1.getDistanceTo(loc2) << std::endl;
+    sales.addLocation(644.45, 65454.4);
+    sales.addLocation(343.54, 45456.43);
+    sales.addLocation(4322.44, 5454.32);
+    sales.addLocation (6554.6,  5454.4);
+
+    sales.showLocations();
+
 }
