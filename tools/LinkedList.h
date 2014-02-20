@@ -17,7 +17,7 @@ class Node : public Type
         Node<Type>* next;
         Node<Type>* previous;
 
-        Node() : Type() {};
+        Node() : Type() {next = NULL; previous = NULL;};
 
 };
 
