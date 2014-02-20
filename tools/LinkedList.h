@@ -42,6 +42,7 @@ class LinkedList
         void appendNode(double longitude, double latitude);
 
         Type* getNextNode();
+        Type* getNodeAt(int NodeIndex);
         int getListLength() {return list_length;};
 
         void loopThroughFrom(int NodeIndex);
@@ -160,6 +161,18 @@ Type* LinkedList<Type>::getNextNode()
     currentNode = currentNode->next;            // Move the pointer to the next one
 
     return data;
+}
+
+Type* LinkedList<Type>::getNodeAt(int NodeIndex)
+{
+    Node<Type>* temp = front;
+
+    for (int i = 0; i < NodeIndex; i++)
+    {
+        temp = temp->next;
+    }
+
+    return temp
 }
 
 // Loop from the Node given unitl the end, in its current state this 
