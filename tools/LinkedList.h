@@ -163,6 +163,7 @@ Type* LinkedList<Type>::getNextNode()
     return data;
 }
 
+template<class Type>
 Type* LinkedList<Type>::getNodeAt(int NodeIndex)
 {
     Node<Type>* temp = front;
@@ -172,7 +173,7 @@ Type* LinkedList<Type>::getNodeAt(int NodeIndex)
         temp = temp->next;
     }
 
-    return temp
+    return temp;
 }
 
 // Loop from the Node given unitl the end, in its current state this 
