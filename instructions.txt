@@ -8,7 +8,7 @@ git pull origin master
 
 enter your password and the the updates will be dowloaded
 
----------------------------------------------------------------
+----------------------------------------------------------
 
 to send your changes to the server run 
 
