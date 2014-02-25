@@ -53,3 +53,20 @@ double Matrix::getElement(int row, int column)
     // Get the value stored there
     return values[index];
 }
+
+// Print the contents of the matrix to screen
+void Matrix::showMatrix()
+{
+    int index;
+
+    for (int i = 0; i < number_of_columns; i++)
+    {
+
+        for (int j = 0 ; j < number_of_columns; j++)
+        {
+            index = (i*number_of_columns) + j;
+            std::cout << "\t" << values[index];
+        }
+        std::cout << "\n";
+    }
+}

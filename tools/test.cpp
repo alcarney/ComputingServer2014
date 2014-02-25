@@ -17,15 +17,8 @@ int main()
     }
 
     std::cout << "The following is a 4x4 identity matrix\n";
-
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            std::cout << "\t" << mat.getElement(i,j);
-        }
-        std::cout << "\n";
-    }
+    
+    mat.showMatrix();
 
     return 0;
 }

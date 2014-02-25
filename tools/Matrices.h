@@ -18,6 +18,8 @@ class Matrix
             bool setElement(int row, int column, double value);
             double getElement(int row, int column);
 
+            void showMatrix();
+
 };
 
 #endif
