@@ -19,6 +19,7 @@ class Matrix
             double getElement(int row, int column);
 
             void showMatrix();
+            int numberOfColumns() {return number_of_columns};
 
 };
 
