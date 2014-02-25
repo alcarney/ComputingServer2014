@@ -26,7 +26,7 @@ Salesman::~Salesman()
 void Salesman::addLocation(double longitude, double latitude)
 {
     locations->appendNode(longitude, latitude);
-    std::cout << "\t[SALESMAN][INFO]: New location added at " << longitude << " ," << latitude << std::endl;
+    std::cout << "\t[SALESMAN][INFO]: New location added at " << longitude << ", " << latitude << std::endl;
 
 }
 
@@ -47,9 +47,57 @@ void Salesman::showLocations()
     }
 }
 
+// Go through each entry in the linked list and compile a matrix that describes 
+// the graph of the whole problem
+bool Salesman::populateMatrix()
+{
+    if (hasMatrix)
+    {
+        std::cout << "Error this salesman already has a matrix defining the problem, aborting...\n";
+        return false;
+    }
+
+    // Store the number of locations in a variable since we will need it many times
+    int num_locations = locations->getListLength();
+
+    // Create a new matrix to hold the distances
+    distanceMatrix = new Matrix(num_locations*num_locations);
+
+    std::cout << "Compiling matrix...\n";
+
+    // Start from the first location in the list
+    locations->fromStart();
+    
+    // Create pointers to nodes to hold our elements in while we process them
+    Location* loc;
+    Location* loc2;
+    double distance;
+
+    // For each element in the list for each current element in the list
+    for (int i = 0; i < num_locations; i++)
+    {
+        // Get the next location in the list
+        loc = locations->getNextNode();
+
+        for (int j = 0; j < num_locations; j++)
+        {
+
+            // Get the next node
+            loc2 = locations->getNodeAt(j);
+
+            // Get the distance and add it to the matrix
+            distance = loc->getDistanceTo(*loc2);
+            distanceMatrix->setElement(i,j,distance);
+        }
+
+    }
+
+    distanceMatrix->showMatrix();
+}
+
 // Return the index of the node with the shortest distance to
 // the node at the given index
-int Salesman::getNextStop(int NodeIndex)
+/*int Salesman::getNextStop(int NodeIndex)
 {
     // Start from the start of the list
     locations->fromStart();
@@ -82,7 +130,7 @@ int Salesman::getNextStop(int NodeIndex)
     }
 
     return closestNode;
-}
+}*/
 
 
 
