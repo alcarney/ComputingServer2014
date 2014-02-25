@@ -28,8 +28,10 @@ class Salesman
             void showLocations();
 
             bool populateMatrix();
-            int getNextStop(int NodeIndex);
+            //int getNextStop(int NodeIndex);
+            
             void calculateRoute();
+
 };
 
 #endif

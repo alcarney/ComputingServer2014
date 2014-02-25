@@ -95,6 +95,47 @@ bool Salesman::populateMatrix()
     distanceMatrix->showMatrix();
 }
 
+// Using the matrix created in populateMatrix() calculate the route
+void Salesman::calculateRoute()
+{
+    // Currently this assumes that the first location in the list
+    // is where we are starting from
+
+    // We will use the row to denote our current location
+    // and rows to denote potential destinations
+    int column = 0;
+    int row = 0;
+    int num_columns = distanceMatrix->numberOfColumns();
+
+    // Used to indicate the closest location
+    int closestNode = -1;
+    double shortestDistance = -1;
+    double distance;
+
+    for (int j = 0; j < distanceMatrix->num_columns; j++)
+    {
+        // Don't choose the route to our current location 
+        if (j == row)
+            continue;
+
+        // Get the distance to the next node
+        distance = distanceMatrix->getElement(row,j);
+
+        // Check to see if we have a new closest node
+        if (distance < shortestDistance || shortestDistance == -1)
+        {
+            // If so record the new distance and index
+            shortestDistance = distance;
+            closestNode = j;
+        }
+    }
+
+    // add closestNode to the 'visited' list
+    //route->appendNode(locartions->getNodeAt(closestNode));
+
+
+}
+
 // Return the index of the node with the shortest distance to
 // the node at the given index
 /*int Salesman::getNextStop(int NodeIndex)
