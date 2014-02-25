@@ -41,7 +41,7 @@ void Salesman::showLocations()
     // Loop through and print locations
     for (int i = 0; i < locations->getListLength(); i++)
     {
-        loc = locations->getNextNode();
+        loc = locations->getNodeAt(i);
         std::cout << i << ":\t";
         loc->printCoords();
     }
@@ -77,7 +77,7 @@ bool Salesman::populateMatrix()
     for (int i = 0; i < num_locations; i++)
     {
         // Get the next location in the list
-        loc = locations->getNextNode();
+        loc = locations->getNodeAt(i);
 
         for (int j = 0; j < num_locations; j++)
         {
