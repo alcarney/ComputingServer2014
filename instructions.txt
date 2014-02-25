@@ -1,0 +1,27 @@
+to download changes from bit bucket in git bash run
+
+cd /d/Users/Student/Documents/computing
+
+to get to the project folder then run
+
+git pull origin master
+
+enter your password and the the updates will be dowloaded
+
+----------------------------------------------------------
+
+to send your changes to the server run 
+
+cd /d/Users/Student/Documents/computing
+
+then you need to tell git which files are changing
+
+git add path/to/file
+
+then 'commit' the changes
+
+git commit -m 'an explanatory message describing the changes'
+
+then send the changes to the server 
+
+git push origin master
