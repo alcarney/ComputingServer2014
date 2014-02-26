@@ -1,6 +1,6 @@
 #include "Location.h"
 
-Location::Location(double longitude, double latitude)
+Location::Location(double latitude, double longitude)
 {
     y = longitude;
     x = latitude;

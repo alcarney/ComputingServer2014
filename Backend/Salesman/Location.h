@@ -16,7 +16,7 @@ class Location
             double y;
             double x;
 
-            Location(double longitude=0, double latitude=0);
+            Location(double latitude=0, double longitude=0);
             ~Location();
 
             // Functions to set/unset and determine if the current location insance is the starting location
