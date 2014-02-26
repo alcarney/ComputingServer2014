@@ -7,12 +7,16 @@ int main()
 
     std::cout << "\n";
 
-    sales.addLocation (6, 4);
-    sales.addLocation (3, 4);
-    sales.addLocation (-4, 4);
-    sales.addLocation (65, 4);
-    sales.addLocation (5.3, 7);
-    sales.addLocation (3, 7);
+    sales.addLocation (2, 3);
+    sales.addLocation (6, 1);
+    sales.addLocation (-1, 1);
+    sales.addLocation (-3, 3);
+    sales.addLocation (4, -3);
+    sales.addLocation (5, 6);
+    sales.addLocation (1, -4);
+    sales.addLocation (7, -2);
+    sales.addLocation (-4, -3);
+    sales.addLocation (-3, -8);
 
     std::cout << "\n";
 
