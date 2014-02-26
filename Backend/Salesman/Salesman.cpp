@@ -130,28 +130,38 @@ void Salesman::calculateRoute()
     // Used to signify which locations have already been visited by the alorithm
     std::cout << "[SALESMAN][INFO]: Initialising variables...\n";
     bool* alreadyVisited = new bool[num_columns];
+    alreadyVisited[0] = true;
 
     // Used to indicate the closest location, shortestDistance found so far and a tempoary variable used
     // in calculations
     int closestNode = -1;
     double shortestDistance = -1;
     double distance;
+    Location* closestLoc;
+    double Long;
+    double Lat;
 
     std::cout << "[SALESMAN][INFO]: Starting calculations...\n";
+
+    route->appendNode(0,0);
+
     while (row != num_columns)
     {
-        //std::cout << "[SALESMAN][INFO]: New loop iteration...\n";
+        std::cout << "[SALESMAN][INFO]: New loop iteration...\n";
 
         for (int j = 0; j < num_columns; j++)
         {
-            //std::cout << "\ti = " << row << "\tj = " << j << std::endl;
             // Don't choose the route to our current location
             // or a location we've already visited
-            if (j == row || alreadyVisited[j])
+            if (j == row || alreadyVisited[j] == true)
+            {
+                //std::cout << "These arent the nodes you are looking for\n";
                 continue;
+            }
 
             // Get the distance to the next node
             distance = distanceMatrix->getElement(row,j);
+            std::cout << "\ti = " << row << "\tj = " << j  << "\tdistance = " << distance << std::endl;
 
             // Check to see if we have a new closest node
             if (distance < shortestDistance || shortestDistance == -1)
@@ -159,7 +169,6 @@ void Salesman::calculateRoute()
                 // If so record the new distance and index
                 shortestDistance = distance;
                 closestNode = j;
-                alreadyVisited[j] = true;
             }
         }
 
@@ -167,17 +176,22 @@ void Salesman::calculateRoute()
         // Add the next node to the route list
         //std::cout << "Getting node\n";
 
-        Location* closestLoc = locations->getNodeAt(closestNode);
+        std::cout << "Choosing node " << closestNode << std::endl;
+        if (closestNode > 0)
+        {
+            alreadyVisited[closestNode] = true;
+            closestLoc = locations->getNodeAt(closestNode);
 
-        //std::cout << "Extracting values\n";
+            //std::cout << "Extracting values\n";
 
-        double Long = closestLoc->getLong();
-        double Lat = closestLoc->getLat();
+            Long = closestLoc->getLong();
+            Lat = closestLoc->getLat();
 
-        //std::cout << "Appending...\n";
-        route->appendNode(Lat, Long);
+            //std::cout << "Appending...\n";
+            route->appendNode(Lat, Long);
 
-        //std::cout << "[SALESMAN][INFO]: Resetting for the next loop...\n";
+            //std::cout << "[SALESMAN][INFO]: Resetting for the next loop...\n";
+        }
 
         //Reset variables for next loop iteration
         closestNode = -1;

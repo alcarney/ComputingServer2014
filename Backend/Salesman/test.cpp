@@ -7,6 +7,7 @@ int main()
 
     std::cout << "\n";
 
+    sales.addLocation(0,0);
     sales.addLocation (2, 3);
     sales.addLocation (6, 1);
     sales.addLocation (-1, 1);
