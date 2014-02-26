@@ -1,24 +1,10 @@
-#include "Matrices.h"
+#include "LinkedList.h"
 
 int main()
 {
-    Matrix mat(16);
+    LinkedList<int>* list = new LinkedList<int>;
 
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-
-            if (i == j)
-                mat.setElement(i,j,1);
-            else
-                mat.setElement(i,j,0);
-        }
-    }
-
-    std::cout << "The following is a 4x4 identity matrix\n";
-    
-    mat.showMatrix();
-
+    list->appendNode(4);
+    Node<int>* n = new 
     return 0;
 }
