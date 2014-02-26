@@ -23,10 +23,10 @@ Salesman::~Salesman()
 }
 
 // Add a new location to the problem
-void Salesman::addLocation(double longitude, double latitude)
+void Salesman::addLocation(double latitude, double longitude)
 {
-    locations->appendNode(longitude, latitude);
-    std::cout << "\t[SALESMAN][INFO]: New location added at " << longitude << ", " << latitude << std::endl;
+    locations->appendNode(latitude, longitude);
+    std::cout << "\t[SALESMAN][INFO]: New location added at " << latitude << ", " << longitude << std::endl;
 
 }
 
@@ -85,7 +85,7 @@ bool Salesman::populateMatrix()
 
     // Start from the first location in the list
     locations->fromStart();
-    
+
     // Create pointers to nodes to hold our elements in while we process them
     Location* loc;
     Location* loc2;
@@ -126,7 +126,6 @@ void Salesman::calculateRoute()
     int column = 0;
     int row = 0;
     int num_columns = distanceMatrix->numberOfColumns();
-//    int num_iterations = 0;
 
     // Used to signify which locations have already been visited by the alorithm
     std::cout << "[SALESMAN][INFO]: Initialising variables...\n";
@@ -137,7 +136,7 @@ void Salesman::calculateRoute()
     int closestNode = -1;
     double shortestDistance = -1;
     double distance;
-    
+
     std::cout << "[SALESMAN][INFO]: Starting calculations...\n";
     while (row != num_columns)
     {
@@ -167,19 +166,19 @@ void Salesman::calculateRoute()
         //std::cout << "[SALESMAN][INFO]: Next node found appending...\n";
         // Add the next node to the route list
         //std::cout << "Getting node\n";
-        
+
         Location* closestLoc = locations->getNodeAt(closestNode);
-        
+
         //std::cout << "Extracting values\n";
 
         double Long = closestLoc->getLong();
         double Lat = closestLoc->getLat();
-        
+
         //std::cout << "Appending...\n";
-        route->appendNode(Long, Lat);
+        route->appendNode(Lat, Long);
 
         //std::cout << "[SALESMAN][INFO]: Resetting for the next loop...\n";
-        
+
         //Reset variables for next loop iteration
         closestNode = -1;
         shortestDistance = -1;

@@ -17,7 +17,7 @@ class Node : public Type
         Node<Type>* next;
         Node<Type>* previous;
 
-        Node(double longitude, double latitude) : Type(longitude, latitude) 
+        Node(double latitude, double longitude) : Type(latitude, longitude) 
             {next = NULL; previous = NULL;};
 
 };
@@ -39,7 +39,7 @@ class LinkedList
         LinkedList();
         ~LinkedList();
 
-        void appendNode(double longitude, double latitude);
+        void appendNode(double latitude, double longitude);
         void appendNode(Node<Type>* n);
 
         Type* getNextNode();
@@ -92,9 +92,9 @@ LinkedList<Type>::~LinkedList()
 
 // Adds a node to the end of the list
 template<class Type>
-void LinkedList<Type>::appendNode(double longitude, double latitude)
+void LinkedList<Type>::appendNode(double latitude, double longitude)
 {
-    Node<Type>* n = new Node<Type>(longitude, latitude);   // Create new node to add
+    Node<Type>* n = new Node<Type>(latitude, longitude);   // Create new node to add
 
     if(back == NULL)                        // If list is empty
     {
