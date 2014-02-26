@@ -40,6 +40,7 @@ class LinkedList
         ~LinkedList();
 
         void appendNode(double longitude, double latitude);
+        void appendNode(Node<Type>* n);
 
         Type* getNextNode();
         Type* getNodeAt(int NodeIndex);
@@ -95,6 +96,26 @@ void LinkedList<Type>::appendNode(double longitude, double latitude)
 {
     Node<Type>* n = new Node<Type>(longitude, latitude);   // Create new node to add
 
+    if(back == NULL)                        // If list is empty
+    {
+        back = n;
+        front = n;                          // Then n is the only node in the list so it's both
+                                            // add the front and back.
+    }
+    else
+    {
+        back->next = n;                         // Assign the next pointer of the last node in the list to the new one 
+        n->previous = back;                     // Set the previous pointer of the new node to the previous in the list 
+        back = n;                               // Set the pointer to the last node in the list to the new one
+    }
+
+    list_length += 1;                           // Increment the length of the list
+}
+
+// Adds a node to the end of a list, by giving the function a node itself
+template <class Type>
+void LinkedList<Type>::appendNode(Node<Type>* n)
+{
     if(back == NULL)                        // If list is empty
     {
         back = n;
