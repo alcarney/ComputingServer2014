@@ -5,6 +5,8 @@
 #include <iostream>
 #include <cmath>
 
+#include "../../tools/LinkedList.h"
+
 class Location
 {
 
@@ -28,6 +30,8 @@ class Location
             // Get distance to provided location
             double getDistanceTo(Location& loc);
 
+            // Let's C++ convert this to a Node<Location> for use in a linked list
+            operator Node<Location> () const {return Node<Location>(y,x);};
 
 };
 
