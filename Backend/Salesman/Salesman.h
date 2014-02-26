@@ -26,6 +26,7 @@ class Salesman
 
             void addLocation(double longitude, double latitude);
             void showLocations();
+            void showRoute();
 
             bool populateMatrix();
             //int getNextStop(int NodeIndex);

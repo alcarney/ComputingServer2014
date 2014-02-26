@@ -24,6 +24,10 @@ class Location
             bool startLocation() {return isStart;};
             void notStart() {isStart = false;};
 
+            // Get our data out
+            double getLong() {return y;};
+            double getLat() {return x;};
+
             // Show the coords
             void printCoords() {std::cout << "x: "<< x << "\ty: " << y << std::endl;};
 
@@ -31,7 +35,7 @@ class Location
             double getDistanceTo(Location& loc);
 
             // Let's C++ convert this to a Node<Location> for use in a linked list
-            operator Node<Location> () const {return Node<Location>(y,x);};
+            //operator Node<Location> () const {return Node<Location>(y,x);};
 
 };
 
