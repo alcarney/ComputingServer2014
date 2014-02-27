@@ -54,7 +54,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         # These are used to create the overall look of the screen
         mainLayout   = QtGui.QVBoxLayout()
-        titleLayout = QtGui.QHBoxLayout()
         dataLayout = QtGui.QHBoxLayout()
         buttonLayout = QtGui.QHBoxLayout()
 
@@ -78,35 +77,33 @@ class Ui_MainWindow(QtGui.QMainWindow):
         """
         formElementName.addWidget(QtGui.QLabel("Customer Name"))
         formElementName.addWidget(QtGui.QLineEdit())
-        
+
         formElementAddress.addWidget(QtGui.QLabel("First line of address"))
         formElementAddress.addWidget(QtGui.QLineEdit())
-        
+
         formElementPostcode.addWidget(QtGui.QLabel("Postcode"))
         formElementPostcode.addWidget(QtGui.QLineEdit())
-        
+
         formElementCoords.addWidget(QtGui.QLabel("Coordinates"))
         formElementCoords.addWidget(QtGui.QLineEdit())
-        
+
         formElementProd1.addWidget(QtGui.QLabel("Product 1"))
         formElementProd1.addWidget(QtGui.QComboBox())
-        
+
         formElementProd1.addWidget(QtGui.QLabel("Quantity"))
         formElementProd1.addWidget(QtGui.QComboBox())
-        
+
         formElementProd2.addWidget(QtGui.QLabel("Product 2"))
         formElementProd2.addWidget(QtGui.QComboBox())
-        
+
         formElementProd2.addWidget(QtGui.QLabel("Quantity"))
         formElementProd2.addWidget(QtGui.QComboBox())
-        
+
         formElementProd3.addWidget(QtGui.QLabel("Product 3"))
         formElementProd3.addWidget(QtGui.QComboBox())
-        
+
         formElementProd3.addWidget(QtGui.QLabel("Quantity"))
         formElementProd3.addWidget(QtGui.QComboBox())
-
-        
 
         dataLayout.addLayout(formElementName)
         dataLayout.addLayout(formElementAddress)
@@ -121,7 +118,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         buttonLayout.addWidget(QtGui.QPushButton("Ok"))
         buttonLayout.addWidget(QtGui.QPushButton("cancel"))
 
-        mainLayout.addLayout(titleLayout)
         mainLayout.addLayout(dataLayout)
         mainLayout.addStretch(0.5)
         mainLayout.addLayout(buttonLayout)
