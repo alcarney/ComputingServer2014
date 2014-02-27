@@ -1,0 +1,3 @@
+http://qt-project.org/doc/qt-4.8/functions.html
+http://qt-project.org/doc/qt-4.8/qcombobox.html#details
+http://qt-project.org/doc/qt-4.8/model-view-programming.html

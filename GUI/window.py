@@ -32,8 +32,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
                 
         '''
-Arranges how big and where the interface on the screen will be
-'''
+        Arranges how big and where the interface on the screen will be
+        '''
 
         
         self.setWindowTitle('Axiom Enterprises - Route Logistics')
@@ -52,18 +52,70 @@ Arranges how big and where the interface on the screen will be
         fileMenu.addAction(exitAction)  # toolbar subsections
        
         
+        # These are used to create the overall look of the screen
+        mainLayout   = QtGui.QVBoxLayout()
+        titleLayout = QtGui.QHBoxLayout()
+        dataLayout = QtGui.QHBoxLayout()
+        buttonLayout = QtGui.QHBoxLayout()
+
+        # Each of These Contain the elements of the form, eg name,address etc
+        formElementName = QtGui.QVBoxLayout()
+        formElementAddress = QtGui.QVBoxLayout()
+        formElementPostcode = QtGui.QVBoxLayout()
+        formElementCoords = QtGui.QVBoxLayout()
+        formElementProd1 = QtGui.QVBoxLayout()
+        formElementProd2 = QtGui.QVBoxLayout()
+        formElementProd3 = QtGui.QVBoxLayout()
         
-        gridLayout   = QtGui.QGridLayout()
         centralWidget =     QtGui.QWidget()
-    
-        gridLayout.addWidget(QtGui.QPushButton("cancel"),6,6)
-        gridLayout.addWidget(QtGui.QPushButton("Ok"),6,5)
-        gridLayout.addWidget(QtGui.QComboBox(),0,2)
-        gridLayout.addWidget(QtGui.QLineEdit(),1,0)
-        gridLayout.addWidget(QtGui.QPushButton("Button 5"),1,1)
-       
+        """
+        gridLayout.addWidget(QtGui.QLabel("Product"),2,0)
+        gridLayout.addWidget(QtGui.QLabel("Quantity"),2,1)
+        
+        gridLayout.addWidget(QtGui.QLabel("Inspiron 15R"),3,0) # can't seem to get this above the middle of the page
+        gridLayout.addWidget(QtGui.QComboBox(),3,1)
+        gridLayout.addWidget(QtGui.QPushButton("Add new stock"),3,2)
+        """
+        formElementName.addWidget(QtGui.QLabel("Customer Name"))
+        dataLayout.addWidget(QtGui.QLineEdit())
+        
+        titleLayout.addWidget(QtGui.QLabel("First line of address"))
+        
+        titleLayout.addWidget(QtGui.QLabel("Postcode"))
+        
+        titleLayout.addWidget(QtGui.QLabel("Coordinates"))
+        
+        titleLayout.addWidget(QtGui.QLabel("Product 1"))
+        titleLayout.addWidget(QtGui.QLabel("Quantity"))
+        titleLayout.addWidget(QtGui.QLabel("Product 2"))
+        titleLayout.addWidget(QtGui.QLabel("Quantity"))
+        titleLayout.addWidget(QtGui.QLabel("Product 3"))
+        titleLayout.addWidget(QtGui.QLabel("Quantity"))
+
+        
+        dataLayout.addWidget(QtGui.QLineEdit())
+        dataLayout.addWidget(QtGui.QLineEdit())
+        dataLayout.addWidget(QtGui.QLineEdit())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QComboBox())
+        dataLayout.addWidget(QtGui.QPushButton("Add Order"))
+
+        buttonLayout.addStretch(1)
+        buttonLayout.addWidget(QtGui.QPushButton("Ok"))
+        buttonLayout.addWidget(QtGui.QPushButton("cancel"))
+
+        mainLayout.addLayout(titleLayout)
+        mainLayout.addLayout(dataLayout)
+        mainLayout.addStretch(0.5)
+        mainLayout.addLayout(buttonLayout)
+ 
+
         self.setCentralWidget(centralWidget)
-        centralWidget.setLayout(gridLayout)
+        centralWidget.setLayout(mainLayout)
 
         self.resize(750,750)       
       
@@ -75,7 +127,7 @@ Arranges how big and where the interface on the screen will be
         
     def closeEvent(self, event):
                
-        reply = QtGui.QMessageBox.question(self, 'Message',
+        reply = QtGui.QMessageBox.question(self, '!!!WARNING!!!',
             "Are you sure to quit, all data will be lost?", QtGui.QMessageBox.Yes | 
             QtGui.QMessageBox.No, QtGui.QMessageBox.No)
 
