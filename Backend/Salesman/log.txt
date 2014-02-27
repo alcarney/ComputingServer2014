@@ -1,0 +1,382 @@
+[SALESMAN][INFO]: New salesman object created
+
+	[SALESMAN][INFO]: New location added at 0, 0
+	[SALESMAN][INFO]: New location added at 2, 3
+	[SALESMAN][INFO]: New location added at 6, 1
+	[SALESMAN][INFO]: New location added at -1, 1
+	[SALESMAN][INFO]: New location added at -3, 3
+	[SALESMAN][INFO]: New location added at 4, -3
+	[SALESMAN][INFO]: New location added at 5, 6
+	[SALESMAN][INFO]: New location added at 1, -4
+	[SALESMAN][INFO]: New location added at 7, -2
+	[SALESMAN][INFO]: New location added at -4, -3
+	[SALESMAN][INFO]: New location added at -3, -8
+
+0:	x: 0	y: 0
+1:	x: 2	y: 3
+2:	x: 6	y: 1
+3:	x: -1	y: 1
+4:	x: -3	y: 3
+5:	x: 4	y: -3
+6:	x: 5	y: 6
+7:	x: 1	y: -4
+8:	x: 7	y: -2
+9:	x: -4	y: -3
+10:	x: -3	y: -8
+New matrix object created
+[SALESMAN][INFO]: Compiling distance matrix...
+Choosing node 0
+	Comparing nodes 0 and 0
+	Got a distance of 0
+	Comparing nodes 0 and 1
+	Got a distance of 3.60555
+	Comparing nodes 0 and 2
+	Got a distance of 6.08276
+	Comparing nodes 0 and 3
+	Got a distance of 1.41421
+	Comparing nodes 0 and 4
+	Got a distance of 4.24264
+	Comparing nodes 0 and 5
+	Got a distance of 5
+	Comparing nodes 0 and 6
+	Got a distance of 7.81025
+	Comparing nodes 0 and 7
+	Got a distance of 4.12311
+	Comparing nodes 0 and 8
+	Got a distance of 7.28011
+	Comparing nodes 0 and 9
+	Got a distance of 5
+	Comparing nodes 0 and 10
+	Got a distance of 8.544
+Choosing node 1
+	Comparing nodes 1 and 0
+	Got a distance of 3.60555
+	Comparing nodes 1 and 1
+	Got a distance of 0
+	Comparing nodes 1 and 2
+	Got a distance of 4.47214
+	Comparing nodes 1 and 3
+	Got a distance of 3.60555
+	Comparing nodes 1 and 4
+	Got a distance of 5
+	Comparing nodes 1 and 5
+	Got a distance of 6.32456
+	Comparing nodes 1 and 6
+	Got a distance of 4.24264
+	Comparing nodes 1 and 7
+	Got a distance of 7.07107
+	Comparing nodes 1 and 8
+	Got a distance of 7.07107
+	Comparing nodes 1 and 9
+	Got a distance of 8.48528
+	Comparing nodes 1 and 10
+	Got a distance of 12.083
+Choosing node 2
+	Comparing nodes 2 and 0
+	Got a distance of 6.08276
+	Comparing nodes 2 and 1
+	Got a distance of 4.47214
+	Comparing nodes 2 and 2
+	Got a distance of 0
+	Comparing nodes 2 and 3
+	Got a distance of 7
+	Comparing nodes 2 and 4
+	Got a distance of 9.21954
+	Comparing nodes 2 and 5
+	Got a distance of 4.47214
+	Comparing nodes 2 and 6
+	Got a distance of 5.09902
+	Comparing nodes 2 and 7
+	Got a distance of 7.07107
+	Comparing nodes 2 and 8
+	Got a distance of 3.16228
+	Comparing nodes 2 and 9
+	Got a distance of 10.7703
+	Comparing nodes 2 and 10
+	Got a distance of 12.7279
+Choosing node 3
+	Comparing nodes 3 and 0
+	Got a distance of 1.41421
+	Comparing nodes 3 and 1
+	Got a distance of 3.60555
+	Comparing nodes 3 and 2
+	Got a distance of 7
+	Comparing nodes 3 and 3
+	Got a distance of 0
+	Comparing nodes 3 and 4
+	Got a distance of 2.82843
+	Comparing nodes 3 and 5
+	Got a distance of 6.40312
+	Comparing nodes 3 and 6
+	Got a distance of 7.81025
+	Comparing nodes 3 and 7
+	Got a distance of 5.38516
+	Comparing nodes 3 and 8
+	Got a distance of 8.544
+	Comparing nodes 3 and 9
+	Got a distance of 5
+	Comparing nodes 3 and 10
+	Got a distance of 9.21954
+Choosing node 4
+	Comparing nodes 4 and 0
+	Got a distance of 4.24264
+	Comparing nodes 4 and 1
+	Got a distance of 5
+	Comparing nodes 4 and 2
+	Got a distance of 9.21954
+	Comparing nodes 4 and 3
+	Got a distance of 2.82843
+	Comparing nodes 4 and 4
+	Got a distance of 0
+	Comparing nodes 4 and 5
+	Got a distance of 9.21954
+	Comparing nodes 4 and 6
+	Got a distance of 8.544
+	Comparing nodes 4 and 7
+	Got a distance of 8.06226
+	Comparing nodes 4 and 8
+	Got a distance of 11.1803
+	Comparing nodes 4 and 9
+	Got a distance of 6.08276
+	Comparing nodes 4 and 10
+	Got a distance of 11
+Choosing node 5
+	Comparing nodes 5 and 0
+	Got a distance of 5
+	Comparing nodes 5 and 1
+	Got a distance of 6.32456
+	Comparing nodes 5 and 2
+	Got a distance of 4.47214
+	Comparing nodes 5 and 3
+	Got a distance of 6.40312
+	Comparing nodes 5 and 4
+	Got a distance of 9.21954
+	Comparing nodes 5 and 5
+	Got a distance of 0
+	Comparing nodes 5 and 6
+	Got a distance of 9.05539
+	Comparing nodes 5 and 7
+	Got a distance of 3.16228
+	Comparing nodes 5 and 8
+	Got a distance of 3.16228
+	Comparing nodes 5 and 9
+	Got a distance of 8
+	Comparing nodes 5 and 10
+	Got a distance of 8.60233
+Choosing node 6
+	Comparing nodes 6 and 0
+	Got a distance of 7.81025
+	Comparing nodes 6 and 1
+	Got a distance of 4.24264
+	Comparing nodes 6 and 2
+	Got a distance of 5.09902
+	Comparing nodes 6 and 3
+	Got a distance of 7.81025
+	Comparing nodes 6 and 4
+	Got a distance of 8.544
+	Comparing nodes 6 and 5
+	Got a distance of 9.05539
+	Comparing nodes 6 and 6
+	Got a distance of 0
+	Comparing nodes 6 and 7
+	Got a distance of 10.7703
+	Comparing nodes 6 and 8
+	Got a distance of 8.24621
+	Comparing nodes 6 and 9
+	Got a distance of 12.7279
+	Comparing nodes 6 and 10
+	Got a distance of 16.1245
+Choosing node 7
+	Comparing nodes 7 and 0
+	Got a distance of 4.12311
+	Comparing nodes 7 and 1
+	Got a distance of 7.07107
+	Comparing nodes 7 and 2
+	Got a distance of 7.07107
+	Comparing nodes 7 and 3
+	Got a distance of 5.38516
+	Comparing nodes 7 and 4
+	Got a distance of 8.06226
+	Comparing nodes 7 and 5
+	Got a distance of 3.16228
+	Comparing nodes 7 and 6
+	Got a distance of 10.7703
+	Comparing nodes 7 and 7
+	Got a distance of 0
+	Comparing nodes 7 and 8
+	Got a distance of 6.32456
+	Comparing nodes 7 and 9
+	Got a distance of 5.09902
+	Comparing nodes 7 and 10
+	Got a distance of 5.65685
+Choosing node 8
+	Comparing nodes 8 and 0
+	Got a distance of 7.28011
+	Comparing nodes 8 and 1
+	Got a distance of 7.07107
+	Comparing nodes 8 and 2
+	Got a distance of 3.16228
+	Comparing nodes 8 and 3
+	Got a distance of 8.544
+	Comparing nodes 8 and 4
+	Got a distance of 11.1803
+	Comparing nodes 8 and 5
+	Got a distance of 3.16228
+	Comparing nodes 8 and 6
+	Got a distance of 8.24621
+	Comparing nodes 8 and 7
+	Got a distance of 6.32456
+	Comparing nodes 8 and 8
+	Got a distance of 0
+	Comparing nodes 8 and 9
+	Got a distance of 11.0454
+	Comparing nodes 8 and 10
+	Got a distance of 11.6619
+Choosing node 9
+	Comparing nodes 9 and 0
+	Got a distance of 5
+	Comparing nodes 9 and 1
+	Got a distance of 8.48528
+	Comparing nodes 9 and 2
+	Got a distance of 10.7703
+	Comparing nodes 9 and 3
+	Got a distance of 5
+	Comparing nodes 9 and 4
+	Got a distance of 6.08276
+	Comparing nodes 9 and 5
+	Got a distance of 8
+	Comparing nodes 9 and 6
+	Got a distance of 12.7279
+	Comparing nodes 9 and 7
+	Got a distance of 5.09902
+	Comparing nodes 9 and 8
+	Got a distance of 11.0454
+	Comparing nodes 9 and 9
+	Got a distance of 0
+	Comparing nodes 9 and 10
+	Got a distance of 5.09902
+Choosing node 10
+	Comparing nodes 10 and 0
+	Got a distance of 8.544
+	Comparing nodes 10 and 1
+	Got a distance of 12.083
+	Comparing nodes 10 and 2
+	Got a distance of 12.7279
+	Comparing nodes 10 and 3
+	Got a distance of 9.21954
+	Comparing nodes 10 and 4
+	Got a distance of 11
+	Comparing nodes 10 and 5
+	Got a distance of 8.60233
+	Comparing nodes 10 and 6
+	Got a distance of 16.1245
+	Comparing nodes 10 and 7
+	Got a distance of 5.65685
+	Comparing nodes 10 and 8
+	Got a distance of 11.6619
+	Comparing nodes 10 and 9
+	Got a distance of 5.09902
+	Comparing nodes 10 and 10
+	Got a distance of 0
+	0	3.60555	6.08276	1.41421	4.24264	5	7.81025	4.12311	7.28011	5	8.544
+	3.60555	0	4.47214	3.60555	5	6.32456	4.24264	7.07107	7.07107	8.48528	12.083
+	6.08276	4.47214	0	7	9.21954	4.47214	5.09902	7.07107	3.16228	10.7703	12.7279
+	1.41421	3.60555	7	0	2.82843	6.40312	7.81025	5.38516	8.544	5	9.21954
+	4.24264	5	9.21954	2.82843	0	9.21954	8.544	8.06226	11.1803	6.08276	11
+	5	6.32456	4.47214	6.40312	9.21954	0	9.05539	3.16228	3.16228	8	8.60233
+	7.81025	4.24264	5.09902	7.81025	8.544	9.05539	0	10.7703	8.24621	12.7279	16.1245
+	4.12311	7.07107	7.07107	5.38516	8.06226	3.16228	10.7703	0	6.32456	5.09902	5.65685
+	7.28011	7.07107	3.16228	8.544	11.1803	3.16228	8.24621	6.32456	0	11.0454	11.6619
+	5	8.48528	10.7703	5	6.08276	8	12.7279	5.09902	11.0454	0	5.09902
+	8.544	12.083	12.7279	9.21954	11	8.60233	16.1245	5.65685	11.6619	5.09902	0
+
+[SALESMAN][INFO]: Proceding with route calculation...
+[SALESMAN][INFO]: Initialising variables...
+[SALESMAN][INFO]: Starting calculations...
+[SALESMAN][INFO]: New loop iteration...
+	i = 0	j = 1	distance = 3.60555
+	i = 0	j = 2	distance = 6.08276
+	i = 0	j = 3	distance = 1.41421
+	i = 0	j = 4	distance = 4.24264
+	i = 0	j = 5	distance = 5
+	i = 0	j = 6	distance = 7.81025
+	i = 0	j = 7	distance = 4.12311
+	i = 0	j = 8	distance = 7.28011
+	i = 0	j = 9	distance = 5
+	i = 0	j = 10	distance = 8.544
+Choosing node 3
+[SALESMAN][INFO]: New loop iteration...
+	i = 1	j = 2	distance = 4.47214
+	i = 1	j = 4	distance = 5
+	i = 1	j = 5	distance = 6.32456
+	i = 1	j = 6	distance = 4.24264
+	i = 1	j = 7	distance = 7.07107
+	i = 1	j = 8	distance = 7.07107
+	i = 1	j = 9	distance = 8.48528
+	i = 1	j = 10	distance = 12.083
+Choosing node 6
+[SALESMAN][INFO]: New loop iteration...
+	i = 2	j = 1	distance = 4.47214
+	i = 2	j = 4	distance = 9.21954
+	i = 2	j = 5	distance = 4.47214
+	i = 2	j = 7	distance = 7.07107
+	i = 2	j = 8	distance = 3.16228
+	i = 2	j = 9	distance = 10.7703
+	i = 2	j = 10	distance = 12.7279
+Choosing node 8
+[SALESMAN][INFO]: New loop iteration...
+	i = 3	j = 1	distance = 3.60555
+	i = 3	j = 2	distance = 7
+	i = 3	j = 4	distance = 2.82843
+	i = 3	j = 5	distance = 6.40312
+	i = 3	j = 7	distance = 5.38516
+	i = 3	j = 9	distance = 5
+	i = 3	j = 10	distance = 9.21954
+Choosing node 4
+[SALESMAN][INFO]: New loop iteration...
+	i = 4	j = 1	distance = 5
+	i = 4	j = 2	distance = 9.21954
+	i = 4	j = 5	distance = 9.21954
+	i = 4	j = 7	distance = 8.06226
+	i = 4	j = 9	distance = 6.08276
+	i = 4	j = 10	distance = 11
+Choosing node 1
+[SALESMAN][INFO]: New loop iteration...
+	i = 5	j = 2	distance = 4.47214
+	i = 5	j = 7	distance = 3.16228
+	i = 5	j = 9	distance = 8
+	i = 5	j = 10	distance = 8.60233
+Choosing node 7
+[SALESMAN][INFO]: New loop iteration...
+	i = 6	j = 2	distance = 5.09902
+	i = 6	j = 5	distance = 9.05539
+	i = 6	j = 9	distance = 12.7279
+	i = 6	j = 10	distance = 16.1245
+Choosing node 2
+[SALESMAN][INFO]: New loop iteration...
+	i = 7	j = 5	distance = 3.16228
+	i = 7	j = 9	distance = 5.09902
+	i = 7	j = 10	distance = 5.65685
+Choosing node 5
+[SALESMAN][INFO]: New loop iteration...
+	i = 8	j = 9	distance = 11.0454
+	i = 8	j = 10	distance = 11.6619
+Choosing node 9
+[SALESMAN][INFO]: New loop iteration...
+	i = 9	j = 10	distance = 5.09902
+Choosing node 10
+[SALESMAN][INFO]: New loop iteration...
+Choosing node -1
+[SALESMAN][INFO]: Finished calculating, returning route...
+
+0:	x: 0	y: 0
+1:	x: -1	y: 1
+2:	x: 5	y: 6
+3:	x: 7	y: -2
+4:	x: -3	y: 3
+5:	x: 2	y: 3
+6:	x: 1	y: -4
+7:	x: 6	y: 1
+8:	x: 4	y: -3
+9:	x: -4	y: -3
+10:	x: -3	y: -8
