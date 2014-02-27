@@ -94,17 +94,20 @@ bool Salesman::populateMatrix()
     // For each element in the list for each current element in the list
     for (int i = 0; i < num_locations; i++)
     {
+        std::cout <<  "Choosing node " << i << std::endl;
         // Get the next location in the list
         loc = locations->getNodeAt(i);
+        
 
         for (int j = 0; j < num_locations; j++)
         {
-
+            std::cout << "\tComparing nodes " << i << " and " << j << std::endl;
             // Get the next node
             loc2 = locations->getNodeAt(j);
 
             // Get the distance and add it to the matrix
-            distance = loc->getDistanceTo(*loc2);
+            distance = loc2->getDistanceTo(*loc);
+            std::cout << "\tGot a distance of " << distance << std::endl;
             distanceMatrix->setElement(i,j,distance);
         }
 
