@@ -54,7 +54,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         # These are used to create the overall look of the screen
         mainLayout   = QtGui.QVBoxLayout()
-        titleLayout = QtGui.QHBoxLayout()
         dataLayout = QtGui.QHBoxLayout()
         buttonLayout = QtGui.QHBoxLayout()
 
@@ -77,38 +76,48 @@ class Ui_MainWindow(QtGui.QMainWindow):
         gridLayout.addWidget(QtGui.QPushButton("Add new stock"),3,2)
         """
         formElementName.addWidget(QtGui.QLabel("Customer Name"))
-        dataLayout.addWidget(QtGui.QLineEdit())
-        
-        titleLayout.addWidget(QtGui.QLabel("First line of address"))
-        
-        titleLayout.addWidget(QtGui.QLabel("Postcode"))
-        
-        titleLayout.addWidget(QtGui.QLabel("Coordinates"))
-        
-        titleLayout.addWidget(QtGui.QLabel("Product 1"))
-        titleLayout.addWidget(QtGui.QLabel("Quantity"))
-        titleLayout.addWidget(QtGui.QLabel("Product 2"))
-        titleLayout.addWidget(QtGui.QLabel("Quantity"))
-        titleLayout.addWidget(QtGui.QLabel("Product 3"))
-        titleLayout.addWidget(QtGui.QLabel("Quantity"))
+        formElementName.addWidget(QtGui.QLineEdit())
 
-        
-        dataLayout.addWidget(QtGui.QLineEdit())
-        dataLayout.addWidget(QtGui.QLineEdit())
-        dataLayout.addWidget(QtGui.QLineEdit())
-        dataLayout.addWidget(QtGui.QComboBox())
-        dataLayout.addWidget(QtGui.QComboBox())
-        dataLayout.addWidget(QtGui.QComboBox())
-        dataLayout.addWidget(QtGui.QComboBox())
-        dataLayout.addWidget(QtGui.QComboBox())
-        dataLayout.addWidget(QtGui.QComboBox())
+        formElementAddress.addWidget(QtGui.QLabel("First line of address"))
+        formElementAddress.addWidget(QtGui.QLineEdit())
+
+        formElementPostcode.addWidget(QtGui.QLabel("Postcode"))
+        formElementPostcode.addWidget(QtGui.QLineEdit())
+
+        formElementCoords.addWidget(QtGui.QLabel("Coordinates"))
+        formElementCoords.addWidget(QtGui.QLineEdit())
+
+        formElementProd1.addWidget(QtGui.QLabel("Product 1"))
+        formElementProd1.addWidget(QtGui.QComboBox())
+
+        formElementProd1.addWidget(QtGui.QLabel("Quantity"))
+        formElementProd1.addWidget(QtGui.QComboBox())
+
+        formElementProd2.addWidget(QtGui.QLabel("Product 2"))
+        formElementProd2.addWidget(QtGui.QComboBox())
+
+        formElementProd2.addWidget(QtGui.QLabel("Quantity"))
+        formElementProd2.addWidget(QtGui.QComboBox())
+
+        formElementProd3.addWidget(QtGui.QLabel("Product 3"))
+        formElementProd3.addWidget(QtGui.QComboBox())
+
+        formElementProd3.addWidget(QtGui.QLabel("Quantity"))
+        formElementProd3.addWidget(QtGui.QComboBox())
+
+        dataLayout.addLayout(formElementName)
+        dataLayout.addLayout(formElementAddress)
+        dataLayout.addLayout(formElementPostcode)
+        dataLayout.addLayout(formElementCoords)
+        dataLayout.addLayout(formElementProd1)
+        dataLayout.addLayout(formElementProd2)
+        dataLayout.addLayout(formElementProd3)
         dataLayout.addWidget(QtGui.QPushButton("Add Order"))
 
         buttonLayout.addStretch(1)
         buttonLayout.addWidget(QtGui.QPushButton("Ok"))
         buttonLayout.addWidget(QtGui.QPushButton("cancel"))
 
-        mainLayout.addLayout(titleLayout)
         mainLayout.addLayout(dataLayout)
         mainLayout.addStretch(0.5)
         mainLayout.addLayout(buttonLayout)
