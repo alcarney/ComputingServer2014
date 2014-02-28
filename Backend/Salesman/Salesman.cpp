@@ -128,6 +128,7 @@ void Salesman::calculateRoute()
     // and rows to denote potential destinations
     int column = 0;
     int row = 0;
+    int count = 0;
     int num_columns = distanceMatrix->numberOfColumns();
 
     // Used to signify which locations have already been visited by the alorithm
@@ -148,9 +149,21 @@ void Salesman::calculateRoute()
 
     route->appendNode(0,0);
 
-    while (row != num_columns)
+    while (count != num_columns)
     {
         std::cout << "[SALESMAN][INFO]: New loop iteration...\n";
+
+        // Get the right row to check with 
+        if (closestNode == -1)
+        {
+            row = 0;
+        }
+        else
+        {
+            row = closestNode;
+            closestNode = -1;
+        }
+
 
         for (int j = 0; j < num_columns; j++)
         {
@@ -197,11 +210,10 @@ void Salesman::calculateRoute()
         }
 
         //Reset variables for next loop iteration
-        closestNode = -1;
         shortestDistance = -1;
 
         // Increment the iteration tracker 
-        row++;
+        count++;
     }
 
     // De-allocate the memory assigned to the array of bools
