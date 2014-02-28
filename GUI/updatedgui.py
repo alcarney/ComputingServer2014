@@ -97,8 +97,6 @@ class Ui_FormEntry():
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
-    # Attributes
-    
 
     def __init__(self):
         super(Ui_MainWindow,self).__init__()
@@ -106,70 +104,84 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def setupUI(self):
 
-        centralWidget = QtGui.QWidget()
-        bottomDock = QtGui.QDockWidget()
-        bottomDockWidget = QtGui.QWidget()
-
-
-        #Arranges how big and where the interface on the screen will be
-        
-
-
+        # Window appearance 
         self.setWindowTitle('Axiom Enterprises - Route Logistics')
-        self.setGeometry(200,200,750,750)  # window size and location
+        self.setGeometry(200,200,750,750)  
 
-        exitAction = QtGui.QAction(QtGui.QIcon('exit.png'), '&Exit', self) # exit process     
-        exitAction.setShortcut('Ctrl+Q')
-        exitAction.setStatusTip('Exit application')
-        exitAction.triggered.connect(QtGui.qApp.quit) # possible ways to exit with a shortcut
+        # The main content goes here
+        self.centreWidget = QtGui.QWidget()
+        mainLayout = QtGui.QVBoxLayout()
 
-      
-        menubar = self.menuBar()
-        fileMenu = menubar.addMenu('&File')  # toolbar options
-        fileMenu.addAction(exitAction)  # toolbar subsections
-       
-        
-        # These are used to create the overall look of the screen
-        self.mainLayout = QtGui.QVBoxLayout()
-        titleLayout = QtGui.QHBoxLayout()
-        contentLayout = QtGui.QHBoxLayout()
+        # Bottom Buttons
+        bottomDock = QtGui.QDockWidget()        #Used to place the buttons
+        bottomDockWidget = QtGui.QWidget()      # Contains the buttons
         buttonLayout = QtGui.QHBoxLayout()
 
 
-        self.mainLayout.addLayout(titleLayout)
-        l = Ui_FormEntry()
-        contentLayout.addLayout(l.setup())
-        self.mainLayout.addLayout(contentLayout)
-        self.mainLayout.addStretch(0.5)
-        #self.mainLayout.addLayout(buttonLayout)
+        menubar = self.menuBar()
+        fileMenu = menubar.addMenu('&File')  # toolbar options
+       
+        
+        # These are used to create the overall look of the screen
 
-        # The buttons
-        buttonLayout.addWidget(QtGui.QPushButton('Add Order'))
+
+        l = Ui_FormEntry()
+        mainLayout.addLayout(l.setup())
+        mainLayout.addStretch(0.5)
+
+        # ------------------- Bottom Dock ----------------------------
+
+        # Building the layout
+
+        self.addOrderButton = QtGui.QPushButton("Add Order")
+        self.addOrderButton.clicked.connect(self.addEntry)
+
+        buttonLayout.addWidget(self.addOrderButton)
         buttonLayout.addStretch(1)
         buttonLayout.addWidget(QtGui.QPushButton("Ok"))
         buttonLayout.addWidget(QtGui.QPushButton("cancel"))
 
+        # Adding the bottom dock to screen
         bottomDockWidget.setLayout(buttonLayout)
         bottomDock.setWidget(bottomDockWidget)
         bottomDock.setFeatures(QDockWidget.NoDockWidgetFeatures)
         self.addDockWidget(Qt.BottomDockWidgetArea, bottomDock)
 
 
-        self.setCentralWidget(centralWidget)
-        centralWidget.setLayout(self.mainLayout)
+        # Adding the main content to the screen
+        self.centreWidget.setLayout(mainLayout)
+        self.setCentralWidget(self.centreWidget)
 
-        self.resize(750,750)
+        # Adding functionality to the screen
+        exitAction = QtGui.QAction(QtGui.QIcon('exit.png'), '&Exit', self) # exit process     
+        exitAction.setShortcut('Ctrl+Q')
+        exitAction.setStatusTip('Exit application')
+        exitAction.triggered.connect(QtGui.qApp.quit) # possible ways to exit with a shortcut
+        fileMenu.addAction(exitAction)  # Exit Option in file menu
+
 
         #self.create_connections()
 
+    # Add a new row to the form
     def addEntry(self):
-        contentLayout = self.mainLayout.takeAt(1)
-        
+
+        # Gain control over the central widget again
+        self.centreWidget = self.centralWidget()
+
+        # Gain control over the central widget's layout again
+        Layout = self.centreWidget.layout()
+
+        # Create a new form entry
         l = Ui_FormEntry()
-        
-        contentLayout.insertLayout(-1, l.setup())
-        self.mainLayout.insertLayout(1, contentLayout)
-        self.mainLayout.update()
+
+        # Append the entry to the layout
+        Layout.insertLayout(Layout.count()+1,l.setup())
+
+        # Add the new layout to the central widget
+        self.centreWidget.setLayout(Layout)
+
+        # Pass the new widget back to the window
+        self.setCentralWidget(self.centreWidget)
 
     def create_connections(self):
         self.addbutton.clicked.connect(self.addEntry) 
