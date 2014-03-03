@@ -47,6 +47,7 @@ def main():
     window = Ui_LoginScreen()
     window.show()
     sys.exit(app.exec_())
+    return [1,2,3]
 
 if __name__=="__main__":
     main()

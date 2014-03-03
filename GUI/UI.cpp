@@ -8,5 +8,5 @@
 // as a guide on how to use the functions defined here
 int main()
 {
-
+    ReturnList<int>* login = new ReturnList<int>("login", "main");
 }
