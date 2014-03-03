@@ -37,6 +37,9 @@ class Ui_Orders(QtGui.QTableWidget):
         self.setColumnCount(5)
         self.setRowCount(1)
 
+        # Set the style of the grid
+        self.setGridStyle(Qt.DashLine)
+
         # Name the columns
         self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
 
@@ -52,28 +55,33 @@ class Ui_OrderForm(QtGui.QWidget):
         # Use a VBox layout
         self.formLayout = QtGui.QVBoxLayout()
 
+        # Title 
+        title = QtGui.QLabel("New Order")
+        title.setAlignment(Qt.AlignHCenter)
+        self.formLayout.addWidget(title)
+
         # Name
         self.nameField = QtGui.QLineEdit()
-        self.formLayout.addWidget(QtGui.QLabel("Name: "))
+        self.formLayout.addWidget(QtGui.QLabel("Name: "),1)
         self.formLayout.addWidget(self.nameField)
 
         # Address
         self.addressField = QtGui.QLineEdit()
-        self.formLayout.addWidget(QtGui.QLabel("Address: "))
+        self.formLayout.addWidget(QtGui.QLabel("Address: "),1)
         self.formLayout.addWidget(self.addressField)
 
         # Postcode
         self.postcodeField = QtGui.QLineEdit()
-        self.formLayout.addWidget(QtGui.QLabel("Postcode: "))
+        self.formLayout.addWidget(QtGui.QLabel("Postcode: "),1)
         self.formLayout.addWidget(self.postcodeField)
 
         # Coordinates
         self.coordField = QtGui.QLineEdit()
-        self.formLayout.addWidget(QtGui.QLabel("Coordinates: "))
+        self.formLayout.addWidget(QtGui.QLabel("Coordinates: "),1)
         self.formLayout.addWidget(self.coordField)
 
         # Compress everything together
-        self.formLayout.addStretch(1)
+        self.formLayout.addStretch(6)
 
         # Set the layout
         self.setLayout(self.formLayout)
