@@ -1,5 +1,6 @@
 // This file manages the UI
 
+#include <iostream>
 #include "../tools/Python/Functions.h"
 
 
@@ -9,4 +10,10 @@
 int main()
 {
     ReturnList<int>* login = new ReturnList<int>("login", "main");
+
+    int* ret = login->callFunction();
+
+    std::cout << ret[0] << ret[1] << ret[2] << std::endl;
+
+    return 0;
 }
