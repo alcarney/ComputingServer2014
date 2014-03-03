@@ -35,8 +35,6 @@ class Ui_Orders(QtGui.QTableWidget):
 
         # Adding some columns and initial row
         self.setColumnCount(5)
-        self.setRowCount(1)
-        self.num_rows = 1
 
         # Set the style of the grid
         self.setGridStyle(Qt.DashLine)
@@ -47,9 +45,15 @@ class Ui_Orders(QtGui.QTableWidget):
         self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
 
     def addRow(self, data):
-        self.insertRow(1)
-        self.num_rows += 1
-        self.setCurrentCell(self.num_rows,0)
+        rows = self.rowCount()
+
+        if (rows == 0):
+            self.setRowCount(1)
+        else:
+            self.insertRow(1)
+
+        for i in range(0,4):
+            self.setItem(rows-1,i, QTableWidgetItem(data[i]))
 
 # Order form class used to get input from user and is eventually used to display that data
 class Ui_OrderForm(QtGui.QWidget):
@@ -168,7 +172,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def addOrder(self):
         data = self.formWidget.getData()
         self.formWidget.clearFields()
-        
         self.orderWidget.addRow(data)
 
     def closeEvent(self, event):
