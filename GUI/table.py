@@ -36,15 +36,20 @@ class Ui_Orders(QtGui.QTableWidget):
         # Adding some columns and initial row
         self.setColumnCount(5)
         self.setRowCount(1)
+        self.num_rows = 1
 
         # Set the style of the grid
         self.setGridStyle(Qt.DashLine)
 
         self.horizontalHeader().setStretchLastSection(True)
 
-
         # Name the columns
         self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
+
+    def addRow(self, data):
+        self.insertRow(1)
+        self.num_rows += 1
+        self.setCurrentCell(self.num_rows,0)
 
 # Order form class used to get input from user and is eventually used to display that data
 class Ui_OrderForm(QtGui.QWidget):
@@ -86,9 +91,35 @@ class Ui_OrderForm(QtGui.QWidget):
         # Compress everything together
         self.formLayout.addStretch(6)
 
-
         # Set the layout
         self.setLayout(self.formLayout)
+
+    def getData(self):
+
+        # Create an empty list to store the data in
+        data = []
+
+        # Name
+        name = self.formLayout.itemAt(2).widget()
+        data.append(name.text())
+
+         # Address
+        address = self.formLayout.itemAt(4).widget()
+        data.append(address.text())
+
+        # Post code
+        postcode = self.formLayout.itemAt(6).widget()
+        data.append(postcode.text())
+
+        # Coordinates
+        coords = self.formLayout.itemAt(8).widget()
+        data.append(coords.text())
+
+        return data
+
+    def clearFields(self):
+        for i in 2,4,6,8:
+            self.formLayout.itemAt(i).widget().clear()
 
 # The main UI class everything is controlled here
 class Ui_MainWindow(QtGui.QMainWindow):
@@ -104,14 +135,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.setGeometry(200,200,1500,750)
 
         # Widgets
-        orderWidget = Ui_Orders()
-        formWidget = Ui_OrderForm()
+        self.orderWidget = Ui_Orders()
+        self.formWidget = Ui_OrderForm()
         self.centreWidget = QtGui.QWidget()
         self.centreLayout = QtGui.QHBoxLayout()
 
         # Centre Widget layout
-        self.centreLayout.addWidget(orderWidget, 2)
-        self.centreLayout.addWidget(formWidget, 1)
+        self.centreLayout.addWidget(self.orderWidget, 2)
+        self.centreLayout.addWidget(self.formWidget, 1)
 
         # Passing everything to the main window
         self.centreWidget.setLayout(self.centreLayout)
@@ -128,10 +159,17 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.addOrderButton = QtGui.QPushButton("Add Order")
         self.addOrderButton.clicked.connect(self.addOrder)
         buttonLayout.addWidget(self.addOrderButton)
-        
+
+        bottomDockWidget.setLayout(buttonLayout)
+        bottomDock.setWidget(bottomDockWidget)
+        bottomDock.setFeatures(QDockWidget.NoDockWidgetFeatures)
+        self.addDockWidget(Qt.BottomDockWidgetArea, bottomDock)
 
     def addOrder(self):
-        pass
+        data = self.formWidget.getData()
+        self.formWidget.clearFields()
+        
+        self.orderWidget.addRow(data)
 
     def closeEvent(self, event):
 
@@ -144,10 +182,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         else:
             event.ignore()        
         
-  
-      
-          
-        
+ 
 def main():
     app = QtGui.QApplication(sys.argv)
     window = Ui_MainWindow()
