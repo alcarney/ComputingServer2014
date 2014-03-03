@@ -21,81 +21,8 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-"""
-class Ui_FormEntry():
 
-        def __init__(self):
-            pass
-
-        def setup(self):
-
-            dataLayout = QtGui.QHBoxLayout()
-            # Each of These Contain the elements of the form, eg name,address etc
-            formElementName = QtGui.QVBoxLayout()
-            formElementAddress = QtGui.QVBoxLayout()
-            formElementPostcode = QtGui.QVBoxLayout()
-            formElementCoords = QtGui.QVBoxLayout()
-            formElementProd1 = QtGui.QVBoxLayout()
-            formElementProd2 = QtGui.QVBoxLayout()
-            formElementProd3 = QtGui.QVBoxLayout()
-            
-            gridLayout.addWidget(QtGui.QLabel("Product"),2,0)
-            gridLayout.addWidget(QtGui.QLabel("Quantity"),2,1)
-            
-            gridLayout.addWidget(QtGui.QLabel("Inspiron 15R"),3,0) # can't seem to get this above the middle of the page
-            gridLayout.addWidget(QtGui.QComboBox(),3,1)
-            gridLayout.addWidget(QtGui.QPushButton("Add new stock"),3,2)
-            formElementName.addWidget(QtGui.QLabel("Customer Name"))
-            formElementName.addWidget(QtGui.QLineEdit())
-            
-            formElementAddress.addWidget(QtGui.QLabel("First line of address"))
-            formElementAddress.addWidget(QtGui.QLineEdit())
-            
-            formElementPostcode.addWidget(QtGui.QLabel("Postcode"))
-            formElementPostcode.addWidget(QtGui.QLineEdit())
-            
-            formElementCoords.addWidget(QtGui.QLabel("Coordinates"))
-            formElementCoords.addWidget(QtGui.QLineEdit())
-            
-            formElementProd1.addWidget(QtGui.QLabel("Product 1"))
-            Product1 = QtGui.QComboBox()
-            formElementProd1.addWidget(Product1)
-            
-            formElementProd1.addWidget(QtGui.QLabel("Quantity"))
-            Prod1Quantity = QtGui.QComboBox()
-            formElementProd1.addWidget(Prod1Quantity)
-            
-            formElementProd2.addWidget(QtGui.QLabel("Product 2"))
-            Product2 = QtGui.QComboBox()
-            formElementProd2.addWidget(QtGui.QComboBox())
-            
-            formElementProd2.addWidget(QtGui.QLabel("Quantity"))
-            Prod2Quantity = QtGui.QComboBox()
-            formElementProd2.addWidget(Prod2Quantity)
-            
-            formElementProd3.addWidget(QtGui.QLabel("Product 3"))
-            Product3 = QtGui.QComboBox()
-            formElementProd3.addWidget(Product3)
-            
-            formElementProd3.addWidget(QtGui.QLabel("Quantity"))
-            Prod3Quantity = QtGui.QComboBox()
-            formElementProd3.addWidget(Prod3Quantity)
-
-            
-
-            dataLayout.addLayout(formElementName)
-            dataLayout.addLayout(formElementAddress)
-            dataLayout.addLayout(formElementPostcode)
-            dataLayout.addLayout(formElementCoords)
-            dataLayout.addLayout(formElementProd1)
-            dataLayout.addLayout(formElementProd2)
-            dataLayout.addLayout(formElementProd3)
-         
-
-            return dataLayout
-"""
-
-# The table class, this will display all the orders that currently need to be processed
+# The orders class, this will display all the orders that currently need to be processed
 class Ui_Orders(QtGui.QTableWidget):
 
     # Init function calls superclass and sets it self up
@@ -105,7 +32,51 @@ class Ui_Orders(QtGui.QTableWidget):
 
     # Sets the table up, adding columns header etc
     def setupTable(self):
-        pass
+
+        # Adding some columns and initial row
+        self.setColumnCount(5)
+        self.setRowCount(1)
+
+        # Name the columns
+        self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
+
+# Order form class used to get input from user and is eventually used to display that data
+class Ui_OrderForm(QtGui.QWidget):
+
+    def __init__(self):
+        super(Ui_OrderForm,self).__init__()
+        self.setupForm()
+
+    def setupForm(self):
+
+        # Use a VBox layout
+        self.formLayout = QtGui.QVBoxLayout()
+
+        # Name
+        self.nameField = QtGui.QLineEdit()
+        self.formLayout.addWidget(QtGui.QLabel("Name: "))
+        self.formLayout.addWidget(self.nameField)
+
+        # Address
+        self.addressField = QtGui.QLineEdit()
+        self.formLayout.addWidget(QtGui.QLabel("Address: "))
+        self.formLayout.addWidget(self.addressField)
+
+        # Postcode
+        self.postcodeField = QtGui.QLineEdit()
+        self.formLayout.addWidget(QtGui.QLabel("Postcode: "))
+        self.formLayout.addWidget(self.postcodeField)
+
+        # Coordinates
+        self.coordField = QtGui.QLineEdit()
+        self.formLayout.addWidget(QtGui.QLabel("Coordinates: "))
+        self.formLayout.addWidget(self.coordField)
+
+        # Compress everything together
+        self.formLayout.addStretch(1)
+
+        # Set the layout
+        self.setLayout(self.formLayout)
 
 # The main UI class everything is controlled here
 class Ui_MainWindow(QtGui.QMainWindow):
@@ -118,14 +89,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
         # Window title and dimensions
         self.setWindowTitle('Axiom Enterprises - Route Logistics')
-        self.setGeometry(200,200,750,750)
+        self.setGeometry(200,200,1500,750)
 
         # Widgets
         orderWidget = Ui_Orders()
-        centreWidget = orderWidget
+        formWidget = Ui_OrderForm()
+        self.centreWidget = QtGui.QWidget()
+        self.centreLayout = QtGui.QHBoxLayout()
+
+        # Centre Widget layout
+        self.centreLayout.addWidget(orderWidget, 2)
+        self.centreLayout.addWidget(formWidget, 1)
 
         # Passing everything to the main window
-        self.setCentralWidget(centreWidget)
+        self.centreWidget.setLayout(self.centreLayout)
+        self.setCentralWidget(self.centreWidget)
 
         
 
