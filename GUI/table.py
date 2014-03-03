@@ -46,11 +46,8 @@ class Ui_Orders(QtGui.QTableWidget):
 
     def addRow(self, data):
         rows = self.rowCount()
-
-        if (rows == 0):
-            self.setRowCount(1)
-        else:
-            self.insertRow(1)
+        self.insertRow(rows)
+        rows = self.rowCount()
 
         for i in range(0,4):
             self.setItem(rows-1,i, QTableWidgetItem(data[i]))
