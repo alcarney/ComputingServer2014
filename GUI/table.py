@@ -40,6 +40,9 @@ class Ui_Orders(QtGui.QTableWidget):
         # Set the style of the grid
         self.setGridStyle(Qt.DashLine)
 
+        self.horizontalHeader().setStretchLastSection(True)
+
+
         # Name the columns
         self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
 
@@ -83,6 +86,7 @@ class Ui_OrderForm(QtGui.QWidget):
         # Compress everything together
         self.formLayout.addStretch(6)
 
+
         # Set the layout
         self.setLayout(self.formLayout)
 
@@ -113,7 +117,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.centreWidget.setLayout(self.centreLayout)
         self.setCentralWidget(self.centreWidget)
 
+        # Bottom dock
+        bottomDock = QtGui.QDockWidget()
+        bottomDockWidget = QtGui.QWidget()
+        buttonLayout = QtGui.QHBoxLayout()
+
+        buttonLayout.addStretch(1)
+
+        # Add new order button
+        self.addOrderButton = QtGui.QPushButton("Add Order")
+        self.addOrderButton.clicked.connect(self.addOrder)
+        buttonLayout.addWidget(self.addOrderButton)
         
+
+    def addOrder(self):
+        pass
 
     def closeEvent(self, event):
 
