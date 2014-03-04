@@ -13,7 +13,14 @@ int main()
 
     int* ret = login->callFunction();
 
-    std::cout << ret[0] << ret[1] << ret[2] << std::endl;
+    if (ret == NULL)
+    {
+        std::cout << "Something went wrong function returned null\n";
+    }
+    else
+    {
+        std::cout << ret[0] << ret[1] << ret[2] << std::endl;
+    }
 
     return 0;
 }
