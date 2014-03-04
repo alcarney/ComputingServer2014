@@ -25,14 +25,19 @@
 #include <iostream>
 #include <thread>
 
+#include "GUI/UI.h"
+
 int main ()
 {
     using std::cout;
     using std::endl;
 
-    cout << "Welcome to the Logistic Calculator 9000 brought to you by Axiom Enterprises!\n";
+    cout << "Welcome to Route Logistics brought to you by Axiom Enterprises!\n";
+    cout << "Please would you log in sir...\n\n";
 
-    cout << "[Log][INFO]: Starting UI thread\n";
+    bool proceed = userLogin();
+
+    cout << "[ROUTE_LOGISTICS][INFO]: Starting UI thread\n";
 
     // Create an instance of the job queue class
     // JobQueue *jobs = new JobQueue;
@@ -50,7 +55,7 @@ int main ()
     // {
     //      Complain
     // }
-    }
+    //}
     //      Start the UI in it's own thread
     //      std::thread uiThread(ui->run())
 

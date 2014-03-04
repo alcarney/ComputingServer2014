@@ -52,7 +52,7 @@ class Ui_LoginScreen(QtGui.QWidget):
         # TODO: Make that the file is written in plain binary 
         # so that its not human readable
 
-        source = open('accounts.txt', 'r')
+        source = open('data/accounts.txt', 'r')
 
         # Get the data from the file
         raw_data = source.read().split('\n')
