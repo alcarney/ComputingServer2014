@@ -3,7 +3,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
 
-#success = False
+success = False
 
 class Ui_LoginScreen(QtGui.QWidget):
 
@@ -26,6 +26,7 @@ class Ui_LoginScreen(QtGui.QWidget):
         name =  QtGui.QLineEdit()
         name.setPlaceholderText("Username: ")
         name.setMaximumWidth(200)
+        name.returnPressed.connect(self.attemptLogin)
         self.layout.addWidget(name)
         self.layout.addStretch(1)
 
@@ -34,6 +35,7 @@ class Ui_LoginScreen(QtGui.QWidget):
         password.setEchoMode(QtGui.QLineEdit.Password)
         password.setMaximumWidth(200)
         password.setPlaceholderText("Password: ")
+        password.returnPressed.connect(self.attemptLogin)
         self.layout.addWidget(password)
         self.layout.addStretch(1)
 
@@ -118,9 +120,9 @@ class Ui_LoginScreen(QtGui.QWidget):
         """
         if (loginCode == 0):
             print "Login was a success, opening UI"
- #           global success 
+            global success 
             success = True
-            self.closeEvent
+            self.closeEvent()
         elif(loginCode == 1):
             print "Incorrect password"
         elif(loginCode == 2):
