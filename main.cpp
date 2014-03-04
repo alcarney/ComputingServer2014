@@ -35,10 +35,14 @@ int main ()
     cout << "Welcome to Route Logistics brought to you by Axiom Enterprises!\n";
     cout << "Please would you log in sir...\n\n";
 
+    // Get the user to log in
     bool proceed = userLogin();
 
-    cout << "[ROUTE_LOGISTICS][INFO]: Starting UI thread\n";
-
+    // If successful carry on
+    if (proceed)
+    {
+        cout << "[Log][INFO]: Starting UI thread\n";
+    }
     // Create an instance of the job queue class
     // JobQueue *jobs = new JobQueue;
     //

@@ -187,8 +187,8 @@ def main():
     app = QtGui.QApplication(sys.argv)
     window = Ui_MainWindow()
     window.show()
-    sys.exit(app.exec_())
-
+    app.exec_()
+    return True;
 
 if __name__ == '__main__':
     main()

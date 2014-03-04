@@ -11,7 +11,7 @@ class ReturnList : public PyFunc<Type>
 {
     public:
 
-            ReturnList(const char* ModuleName, const char* FuncName) : PyFunc<Type>(ModuleName, FuncName) {};
+            ReturnList(const char* ModuleName, const char* FuncName, char* FileName) : PyFunc<Type>(ModuleName, FuncName, FileName) {};
             // This function can be overidden to account for cases where different arguments can be passed
             Type* callFunction();
 

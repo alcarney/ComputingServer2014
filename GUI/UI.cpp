@@ -4,13 +4,33 @@
 #include "../tools/Python/Functions.h"
 
 
+// This function launches the main UI
+bool launchGUI()
+{
+    // Load the python Gui file
+    ReturnList<bool>* gui = new ReturnList<bool>("table", "main", "./GUI/table.py");
+
+    bool* ret = gui->callFunction();
+
+    if (ret == NULL)
+    {
+        std::cout << "Something went wrong function returned null\n";
+        return false;
+    }
+    else
+    {
+        // Yay or nay?
+        return *ret;
+    }
+}
+
 // This function runs the login screen written in python, gets
 // a yay or nay signal and passes it back to C++ who then either 
 // closes or carries on executing the app
 bool userLogin()
 {
     // Load the python login file 
-    ReturnList<bool>* login = new ReturnList<bool>("login", "main");
+    ReturnList<bool>* login = new ReturnList<bool>("login", "main", "./GUI/login.py");
 
     // Execute it
     bool* ret = login->callFunction();
