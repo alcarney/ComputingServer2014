@@ -13,7 +13,7 @@ class Ui_LoginScreen(QtGui.QWidget):
     def initUI(self):
 
         # Window title and dimensions
-        self.setWindowTitle('Axiom Enterprises - Route Logistics - Login Screen')
+        self.setWindowTitle('Axiom Enterprises - Route Logistics - Login')
         self.setGeometry(200,200,500,250)
 
         # Layout
@@ -21,13 +21,18 @@ class Ui_LoginScreen(QtGui.QWidget):
         buttonLayout = QtGui.QHBoxLayout()
 
         # Items
-        self.layout.addWidget(QtGui.QLabel('Name: '))
-        self.layout.addWidget(QtGui.QLineEdit())
+        self.layout.addStretch(1)
+        name =  QtGui.QLineEdit()
+        name.setPlaceholderText("Username: ")
+        name.setMaximumWidth(200)
+        self.layout.addWidget(name)
+        self.layout.addStretch(1)
 
         # Password Field
-        self.layout.addWidget(QtGui.QLabel('Password: '))
         password = QtGui.QLineEdit()
         password.setEchoMode(QtGui.QLineEdit.Password)
+        password.setMaximumWidth(200)
+        password.setPlaceholderText("Password: ")
         self.layout.addWidget(password)
         self.layout.addStretch(1)
 
@@ -91,11 +96,39 @@ class Ui_LoginScreen(QtGui.QWidget):
         if accountExists == True:
             if password == accounts[accountIndex][1]:
                 print "Login Succeeded"
+                self.loginResponse(0)
             else:
                 print "Login Failed: Invalid Password"
+                self.loginResponse(1)
         else:
             print "Login Failed: Invalid Username"
+            self.loginResponse(1)
 
+    # Function that executes the appropriate response to the login attempt
+    def loginResponse(self, loginCode):
+        """
+        loginCode denotes the result from attemptLogin, the following numbers
+        represent the following outcomes:
+                0 - Succesful Login
+                1 - Falied login - Incorrect username or password
+                2 - Falied login - No username given
+                3 - Failed login - No password given
+                4 - Failed login - No Username or password given
+        """
+        if (loginCode == 0):
+            print "Login was a success, opening UI"
+        elif(loginCode == 1):
+            print "Incorrect password"
+        elif(loginCode == 2):
+            print "No username"
+            self.layout.itemAt(0).widget().setPlaceholderText('Please enter a username')
+        elif(loginCode == 3):
+            print "No password"
+            self.layout.itemAt(0).widget().setPlaceholderText('Please enter a password')
+        elif(loginCode == 4):
+            print "No username or password given"
+            self.layout.itemAt(0).widget().setPlaceholderText('Please enter a password')
+            self.layout.itemAt(0).widget().setPlaceholderText('Please enter a username')
 
     def closeEvent(self):
         QtCore.QCoreApplication.instance().quit()
