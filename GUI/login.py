@@ -23,8 +23,12 @@ class Ui_LoginScreen(QtGui.QWidget):
         # Items
         self.layout.addWidget(QtGui.QLabel('Name: '))
         self.layout.addWidget(QtGui.QLineEdit())
+
+        # Password Field
         self.layout.addWidget(QtGui.QLabel('Password: '))
-        self.layout.addWidget(QtGui.QLineEdit())
+        password = QtGui.QLineEdit()
+        password.setEchoMode(QtGui.QLineEdit.Password)
+        self.layout.addWidget(password)
         self.layout.addStretch(1)
 
         okButton = QtGui.QPushButton('OK')
