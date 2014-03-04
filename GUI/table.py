@@ -3,7 +3,8 @@ import sys
 
 
 from PyQt4 import QtCore, QtGui
-
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
