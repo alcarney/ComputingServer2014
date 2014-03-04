@@ -27,13 +27,13 @@ bool launchGUI()
 // This function runs the login screen written in python, gets
 // a yay or nay signal and passes it back to C++ who then either 
 // closes or carries on executing the app
-bool userLogin()
+int userLogin()
 {
     // Load the python login file 
-    ReturnList<bool>* login = new ReturnList<bool>("login", "main", "./GUI/login.py");
+    ReturnList<int>* login = new ReturnList<int>("login", "main", "./GUI/login.py");
 
     // Execute it
-    bool* ret = login->callFunction();
+    int* ret = login->callFunction();
 
     if (ret == NULL)
     {

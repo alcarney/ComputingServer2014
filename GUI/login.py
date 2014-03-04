@@ -3,7 +3,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
 
-success = False
+success = 0
 
 class Ui_LoginScreen(QtGui.QWidget):
 
@@ -121,7 +121,7 @@ class Ui_LoginScreen(QtGui.QWidget):
         if (loginCode == 0):
             print "Login was a success, opening UI"
             global success 
-            success = True
+            success = 1
             self.closeEvent()
         elif(loginCode == 1):
             print "Incorrect password"
@@ -141,14 +141,14 @@ class Ui_LoginScreen(QtGui.QWidget):
 
 
 def main():
-    print sys.argv
+#    print sys.argv
 
     app = QtGui.QApplication(sys.argv)
 
     window = Ui_LoginScreen()
     window.show()
     app.exec_()
-    return success
+    return [success]
 
 if __name__=="__main__":
     main()

@@ -36,12 +36,13 @@ int main ()
     cout << "Please would you log in sir...\n\n";
 
     // Get the user to log in
-    bool proceed = userLogin();
+    int proceed = userLogin();
 
     // If successful carry on
-    if (proceed)
+    if (proceed == 1)
     {
         cout << "[Log][INFO]: Starting UI thread\n";
+        launchGUI();
     }
     // Create an instance of the job queue class
     // JobQueue *jobs = new JobQueue;
