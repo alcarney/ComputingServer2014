@@ -24,7 +24,7 @@ class PyFunc
 
         // When created automatically loads function
         // must include call to validFunc to check all is well
-        PyFunc<Type>(const char* Module, const char* FuncName);
+        PyFunc<Type>(const char* Module, const char* FuncName, char* FileName);
         ~PyFunc<Type>();
 
         // Makes the function pure virtual and must be implemented by classes that inherit this
@@ -37,9 +37,19 @@ class PyFunc
 
 // Constructor automatically pulls function from python if needed
 template <class Type>
-PyFunc<Type>::PyFunc(const char* ModuleName, const char* FuncName)
+PyFunc<Type>::PyFunc(const char* ModuleName, const char* FuncName, char* FileName)
 {
     Py_Initialize();
+
+    // The following is awful inflexible hard coded cruft, needed to shoehorn something in 
+    // for now
+    int argc = 1;
+    char * argv[3];
+
+    argv[0] = FileName;
+
+    // Set the argv variable
+    PySys_SetArgv(argc, argv);
 
     // Convert the name of the module into something python understands
     pName = PyString_FromString(ModuleName);
