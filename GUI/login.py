@@ -42,18 +42,59 @@ class Ui_LoginScreen(QtGui.QWidget):
         self.layout.addLayout(buttonLayout)
         self.setLayout(self.layout)
 
-    def attmeptLogin(self):
+    def attemptLogin(self):
         # Open the file containing the accounts
+        # TODO: Make that the file is written in plain binary 
+        # so that its not human readable
+
         source = open('accounts.txt', 'r')
 
         # Get the data from the file
         raw_data = source.read().split('\n')
-        accounts = []
-        # Load the accounts
-        for i in raw_data:
-            accounts.append([i.split(',')])
+        source.close()
 
-        print accounts
+        # Load the accounts
+        accounts = []
+
+        for i in raw_data:
+            accounts.append(i.split(','))
+
+        #print accounts
+
+        # Get the login attempt
+        name = (self.layout.itemAt(1).widget().text())
+        password = (self.layout.itemAt(3).widget().text())
+
+        # Clear the input fields
+        self.layout.itemAt(1).widget().clear()
+        self.layout.itemAt(3).widget().clear()
+
+        #print name 
+        #print password
+        # TODO: If one of the fields are left blank show msg to user 
+        # saying which one is needed and highlight it with a red border
+        
+        # Check to see if account exists
+        accountExists = False
+        accountIndex = 0
+        j = 0
+
+        for i in accounts:
+            if i[0] == name:
+                accountExists = True
+                accountIndex = j
+            j += 1
+        #print accountExists
+        #print accountIndex
+
+        # If account exists check if password is correct
+        if accountExists == True:
+            if password == accounts[accountIndex][1]:
+                print "Login Succeeded"
+            else:
+                print "Login Failed: Invalid Password"
+        else:
+            print "Login Failed: Invalid Username"
 
 
     def closeEvent(self):
