@@ -41,6 +41,16 @@ PyFunc<Type>::PyFunc(const char* ModuleName, const char* FuncName)
 {
     Py_Initialize();
 
+    // The following is awful inflexible hard coded cruft, needed to shoehorn something in 
+    // for now
+    int argc = 1;
+    char * argv[3];
+
+    argv[0] = "./login.py";
+
+    // Set the argv variable
+    PySys_SetArgv(argc, argv);
+
     // Convert the name of the module into something python understands
     pName = PyString_FromString(ModuleName);
 

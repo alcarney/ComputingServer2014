@@ -43,7 +43,10 @@ class Ui_LoginScreen(QtGui.QWidget):
 
 
 def main():
+    print sys.argv
+
     app = QtGui.QApplication(sys.argv)
+
     window = Ui_LoginScreen()
     window.show()
     sys.exit(app.exec_())
