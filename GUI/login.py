@@ -32,6 +32,7 @@ class Ui_LoginScreen(QtGui.QWidget):
         self.layout.addStretch(1)
 
         okButton = QtGui.QPushButton('OK')
+        okButton.clicked.connect(self.attemptLogin)
         quitButton = QtGui.QPushButton('Quit')
         quitButton.clicked.connect(self.closeEvent)
 
@@ -40,6 +41,19 @@ class Ui_LoginScreen(QtGui.QWidget):
 
         self.layout.addLayout(buttonLayout)
         self.setLayout(self.layout)
+
+    def attmeptLogin(self):
+        # Open the file containing the accounts
+        source = open('accounts.txt', 'r')
+
+        # Get the data from the file
+        raw_data = source.read().split('\n')
+        accounts = []
+        # Load the accounts
+        for i in raw_data:
+            accounts.append([i.split(',')])
+
+        print accounts
 
 
     def closeEvent(self):
