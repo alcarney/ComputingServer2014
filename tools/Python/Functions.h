@@ -34,6 +34,10 @@ Type* ReturnList<Type>::callFunction()
         if (PyFunc<Type>::pValue == NULL)
         {
             std::cout << "[PYFUNC][ERROR]: Called Python function returned nothing\n;";
+
+            // Assume an error occured and print it
+            PyErr_Print();
+
             return NULL;
         }
         // Check that data it received and in proper format
