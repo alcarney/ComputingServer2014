@@ -144,14 +144,19 @@ class Ui_OrderForm(QtGui.QWidget):
         data.append(postcode.text())
 
         # Coordinates
-        coords = self.formLayout.itemAt(8).widget()
-        data.append(coords.text())
+        Xcoord = self.formLayout.itemAt(8).layout().itemAt(0).widget()
+        Ycoord = self.formLayout.itemAt(8).layout().itemAt(1).widget()
+        coords = "%s,%s" % (Xcoord.text(), Ycoord.text())
+        data.append(coords)
 
         return data
 
     def clearFields(self):
-        for i in 2,4,6,8:
+        for i in 2,4,6:
             self.formLayout.itemAt(i).widget().clear()
+
+        self.formLayout.itemAt(8).layout().itemAt(0).widget().clear()
+        self.formLayout.itemAt(8).layout().itemAt(1).widget().clear()
 
 # The main UI class everything is controlled here
 class Ui_MainWindow(QtGui.QMainWindow):
