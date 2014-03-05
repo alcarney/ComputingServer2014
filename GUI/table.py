@@ -21,6 +21,9 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
+# A few global variables which will be used in the handshaking with C++
+salesmanData = []
+dataComplete = False
 
 # The orders class, this will display all the orders that currently need to be processed
 class Ui_Orders(QtGui.QTableWidget):
@@ -43,6 +46,22 @@ class Ui_Orders(QtGui.QTableWidget):
 
         # Name the columns
         self.setHorizontalHeaderLabels(['Name', 'Address', 'Postcode', 'Coordinates', 'Products'])
+
+    def sendDataForCalculation(self):
+        
+        # Declare our intensions to modify the global salesmanData variable
+        global salesmanData
+        global dataComplete
+
+        # For each of the rows
+        for i in xrange(0,self.rowCount()):
+            currentRow = [i, self.itemAt(i,3).text().split(',')]
+            salesmanData.append(currentRow)
+
+        dataComplete = True
+
+
+
 
     def addRow(self, data):
         rows = self.rowCount()
@@ -85,9 +104,21 @@ class Ui_OrderForm(QtGui.QWidget):
         self.formLayout.addWidget(self.postcodeField)
 
         # Coordinates
-        self.coordField = QtGui.QLineEdit()
+        self.coordLayout = QtGui.QHBoxLayout()
+        self.coordX = QtGui.QLineEdit()
+        self.coordY = QtGui.QLineEdit()
+
+        self.coordX.setMaximumWidth(75)
+        self.coordX.setPlaceholderText("X: ")
+
+        self.coordY.setMaximumWidth(75)
+        self.coordY.setPlaceholderText("Y: ")
+
         self.formLayout.addWidget(QtGui.QLabel("Coordinates: "),1)
-        self.formLayout.addWidget(self.coordField)
+        self.coordLayout.addWidget(self.coordX)
+        self.coordLayout.addWidget(self.coordY)
+        self.coordLayout.addStretch(1)
+        self.formLayout.addLayout(self.coordLayout)
 
         # Compress everything together
         self.formLayout.addStretch(6)
