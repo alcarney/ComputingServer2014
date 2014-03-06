@@ -54,14 +54,16 @@ class Ui_Orders(QtGui.QTableWidget):
         global dataComplete
 
         # For each of the rows
+
+        # For some reason coords returns empty????? :S
         for i in xrange(0,self.rowCount()):
-            currentRow = [i, self.itemAt(i,3).text().split(',')]
+            coords = self.itemAt(3,i).whatsThis()
+            print coords
+            currentRow = [i,coords.split(',')]
             salesmanData.append(currentRow)
 
         dataComplete = True
-
-
-
+        print salesmanData
 
     def addRow(self, data):
         rows = self.rowCount()
@@ -195,12 +197,20 @@ class Ui_MainWindow(QtGui.QMainWindow):
         # Add new order button
         self.addOrderButton = QtGui.QPushButton("Add Order")
         self.addOrderButton.clicked.connect(self.addOrder)
+
+        self.calculateRouteButton = QtGui.QPushButton("Calculate Route")
+        self.calculateRouteButton.clicked.connect(self.calcRoute)
+
+        buttonLayout.addWidget(self.calculateRouteButton)
         buttonLayout.addWidget(self.addOrderButton)
 
         bottomDockWidget.setLayout(buttonLayout)
         bottomDock.setWidget(bottomDockWidget)
         bottomDock.setFeatures(QDockWidget.NoDockWidgetFeatures)
         self.addDockWidget(Qt.BottomDockWidgetArea, bottomDock)
+
+    def calcRoute(self):
+        self.orderWidget.sendDataForCalculation()
 
     def addOrder(self):
         data = self.formWidget.getData()
