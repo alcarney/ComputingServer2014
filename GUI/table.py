@@ -54,13 +54,11 @@ class Ui_Orders(QtGui.QTableWidget):
         global dataComplete
 
         # For each of the rows
+        for i in range(0,self.rowCount()):
+            xy = self.item(i,3).text()
+            xy = xy.split(',')
 
-        # For some reason coords returns empty????? :S
-        for i in xrange(0,self.rowCount()):
-            coords = self.itemAt(3,i).whatsThis()
-            print coords
-            currentRow = [i,coords.split(',')]
-            salesmanData.append(currentRow)
+            salesmanData.append([i, float(xy[0]), float(xy[1])])
 
         dataComplete = True
         print salesmanData
