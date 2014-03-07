@@ -61,7 +61,6 @@ class Ui_Orders(QtGui.QTableWidget):
             salesmanData.append([i, float(xy[0]), float(xy[1])])
 
         dataComplete = True
-        print salesmanData
 
     def addRow(self, data):
         rows = self.rowCount()
@@ -209,6 +208,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def calcRoute(self):
         self.orderWidget.sendDataForCalculation()
+        print salesmanData
 
     def addOrder(self):
         data = self.formWidget.getData()
