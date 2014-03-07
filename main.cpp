@@ -31,6 +31,7 @@ int main ()
 {
     using std::cout;
     using std::endl;
+    using std::thread;
 
     cout << "Welcome to Route Logistics brought to you by Axiom Enterprises!\n";
     cout << "Please would you log in sir...\n\n";
@@ -42,26 +43,33 @@ int main ()
     if (proceed == 1)
     {
         cout << "[Log][INFO]: Starting UI thread\n";
-        launchGUI();
+        thread gui(launchGUI);
+    
+
+        cout << "We are waiting for data to process...\n";
+
+        // Create an instance of the job queue class
+        // JobQueue *jobs = new JobQueue;
+        //
+        // if (!success)
+        // {
+        //   Complain and exit
+        // }
+
+
+        // Create an instance of the UI communication class
+        // UIComms *ui = new UIComms;
+
+        // if (!success)
+        // {
+        //      Complain
+        // }
+        //}
+        //      Start the UI in it's own thread
+        //      std::thread uiThread(ui->run())
+
+        // Make sure all remaining threads close before terminating
+        gui.join();
     }
-    // Create an instance of the job queue class
-    // JobQueue *jobs = new JobQueue;
-    //
-    // if (!success)
-    // {
-    //   Complain and exit
-    // }
-
-
-    // Create an instance of the UI communication class
-    // UIComms *ui = new UIComms;
-
-    // if (!success)
-    // {
-    //      Complain
-    // }
-    //}
-    //      Start the UI in it's own thread
-    //      std::thread uiThread(ui->run())
-
+    return 0;
 }
