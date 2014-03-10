@@ -1,5 +1,6 @@
 // A test file to see if we can get cpp to use sockets
 #include <stdio.h>
+#include <strings.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -16,7 +17,7 @@ int main (int argc, char *argv[])
     if (sockfd < 0)
     {
        perror("Error!: Unable to open socket!\n");
-        exit(1);
+        return 1;
     }
 
     // Initialise socket structure
@@ -27,10 +28,10 @@ int main (int argc, char *argv[])
     serv_addr.sin_port = htons(portno);
 
     // Now bind the host address using bind()
-    if (bin(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
+    if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
     {
         perror("Error!: Unable to bind socket\n");
-        exit(1);
+        return 1;
     }
 
     // Now start listening for clients, here process will go to sleep
@@ -43,7 +44,7 @@ int main (int argc, char *argv[])
     if (newsockfd < 0)
     {
         perror("Error!: Unable to accept connection\n");
-        exit(1);
+        return 1;
     }
 
     // If connection is established then start communicating
@@ -53,7 +54,7 @@ int main (int argc, char *argv[])
     if (n < 0)
     {
         perror("Error!: Unable to read from socket\n");
-        exit(1);
+        return 1;
     }
     printf("Here is the message: %s\n", buffer);
 
@@ -62,7 +63,7 @@ int main (int argc, char *argv[])
     if (n < 0)
     {
         perror("Unable to write to socket");
-        exit(1);
+        return 1;
     }
     return 0;
 }

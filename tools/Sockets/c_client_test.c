@@ -1,6 +1,8 @@
 // C client test
 
 #include <stdio.h>
+#include <strings.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -16,7 +18,7 @@ int main(int argc, char *argv[])
     if (argc < 3)
     {
         fprintf(stderr, "Usage: %s hostname port\n", argv[0]);
-        exit(0);
+        return 0;
     }
     portno = atoi(argv[2]);
 
@@ -26,14 +28,14 @@ int main(int argc, char *argv[])
     if (sockfd < 0)
     {
         perror("Error: Unable to open socket\n");
-        exit(1);
+        return 1;
     }
 
     server = gethostbyname(argv[1]);
     if (server == NULL)
     {
         fprintf(stderr, "Error: No such host\n");
-        exit(0);
+        return 0;
     }
 
     bzero((char *) &serv_addr, sizeof(serv_addr));
@@ -46,7 +48,7 @@ int main(int argc, char *argv[])
     if (connect(sockfd, &serv_addr, sizeof(serv_addr)) < 0)
     {
         perror("Error!: Unable to connect\n");
-        exit(1);
+        return 1;
     }
 
     // Now ask for a msg from the user which will be sent to the server
@@ -59,7 +61,7 @@ int main(int argc, char *argv[])
     if (n < 0)
     {
         perror("Error!: Unable to write to socket\n");
-        exit(1);
+        return 1;
     }
 
     // Now read the server response
@@ -69,7 +71,7 @@ int main(int argc, char *argv[])
     if (n < 0)
     {
         perror("Error: Unable to read from socket");
-        exit(1);
+        return 1;
     }
     printf("%s\n", buffer);
     return 0;
