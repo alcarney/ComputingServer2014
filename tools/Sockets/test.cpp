@@ -2,11 +2,11 @@
 
 extern "C" 
 {
-    #include <server.h>
+    #include "server.h"
 }
 
 int main ()
 {
-    run_server()
+    run_server();
     return 0;
 }
