@@ -1,21 +1,6 @@
 // A demo server that broadcasts "hello world!" for all to see
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <errno.h>
-#include <string.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <arpa/inet.h>
-#include <sys/wait.h>
-#include <signal.h>
-
-#define PORT "3490"     // The port we will be using
-#define BACKLOG 10      // How many pending connections the queue will allow
+#include "server.h"
 
 void sigchld_handler(int s)
 {
@@ -35,7 +20,7 @@ void *get_in_addr(struct sockaddr *sa)
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-int main(void)
+int run_server(void)
 {
 
     int sockfd, new_fd;                         // Listen on sockfd, new connection on new_fd
