@@ -18,6 +18,13 @@
 #define PORT "3490"     // The port we will be using
 #define BACKLOG 10      // How many pending connections the queue will allow
 
+struct location
+{
+    double id;
+    double latitude;
+    double longitude;
+};
+
 void *get_in_addr(struct sockaddr *sa);
 void sigchld_handler(int s);
 int run_server(void);

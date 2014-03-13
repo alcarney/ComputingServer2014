@@ -20,7 +20,7 @@ void *get_in_addr(struct sockaddr *sa)
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 
-int run_server(void)
+int main(void)
 {
 
     int sockfd, new_fd;                         // Listen on sockfd, new connection on new_fd
@@ -115,11 +115,20 @@ int run_server(void)
         // This is the child process
         if (!fork())
         {
+            struct location loc;        // Create a new location structure
+            char* buf = (char*)&loc;    // Cast the pointer into a char 
+
             close(sockfd); // The child doesn't need the listener
-            if (send(new_fd, "Hello World!",11, 0) == -1)
+
+            // Read the data into the buffer 
+            if (recv(new_fd, buf,24, 0) == -1)
             {
-                perror("send");
+                perror("recv");
             }
+
+            // Print the data
+            printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
+            // Close the connection
             close(new_fd);
             exit(0);
         }
