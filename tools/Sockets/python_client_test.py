@@ -11,11 +11,11 @@ s.connect((HOST,PORT))
 #for i in range(0,4):
 #    s.sendall(struct.pack('ddd',i,23.4,45.6))
 
-data = struct.unpack('d', s.recv(8))
-print 'Recieved', repr (data)
+for i in range (0,10):
 
-s.sendall(struct.pack('ddd', 0, 0, 0))
+    s.sendall(struct.pack('ddd', 0, 0, 0))
 
-data = struct.unpack('d', s.recv(8))
+    data = s.recv(8)
+    print 'Recieved', repr (data)
+
 s.close()
-print 'Recieved', repr (data)
