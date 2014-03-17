@@ -133,7 +133,7 @@ int main(void)
                 printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
 
                 // If we receive the agreed upon end of stream 'packet',(0,0,0) quit
-                if (loc.id == 0 && loc.latitude == 0 && loc.longitutde)
+                if (loc.id == 0 && loc.latitude == 0 && loc.longitude)
                     break;
             }
 
