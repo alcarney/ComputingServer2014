@@ -143,7 +143,10 @@ int main(void)
 
                 // If we receive end of stream break the loop
                 if (loc.id == 0)
+                {
+                    printf("EOS received, closing current connection\n");
                     break;
+                }
 
             }
 
