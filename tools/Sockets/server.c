@@ -111,7 +111,7 @@ int main(void)
         inet_ntop(their_addr.ss_family, get_in_addr((struct sockaddr *)&their_addr),
                 s, sizeof(s));
         printf("server: new connection from %s\n", s);
-        
+
         // This is the child process
         if (!fork())
         {
@@ -122,20 +122,29 @@ int main(void)
 
             close(sockfd); // The child doesn't need the listener
 
-            // Read the data into the buffer 
-            if (recv(new_fd, buf,24, 0) == -1)
+            while (1)
             {
-                perror("recv");
-            }
 
-            // Print the data
-            printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
+                // Read the data into the buffer 
+                if (recv(new_fd, buf,24, 0) == -1)
+                {
+                    perror("recv");
+                }
+
+                // Print the data
+                printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
 
 
-            // Acknowledge python that we heard it
-            if (send(new_fd, outbuf, 8, 0) == -1)
-            {
-                perror("send");
+                // Acknowledge python that we heard it
+                if (send(new_fd, outbuf, 8, 0) == -1)
+                {
+                    perror("send");
+                }
+
+                // If we receive end of stream break the loop
+                if (loc.id == 0)
+                    break;
+
             }
 
             // Close the connection
@@ -143,7 +152,7 @@ int main(void)
             exit(0);
         }
 
-        close(new_fd);      // Parent doesn't need this
+        close(new_fd);      // Parent doesn't need this now
     }
 
     return 0;
