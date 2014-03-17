@@ -24,11 +24,7 @@ struct location
     double longitude;
 };
 
-struct server_info
-{
-    int sockfd;          // The address of our socket
-};
 
-struct server_info* setup_server();
+int setup_server(int portNum);      // Get a new socket on port number x
 
 #endif
