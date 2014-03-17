@@ -18,6 +18,6 @@ for i in range (0,10):
     data = s.recv(8)
     print 'Recieved', repr (data)
 
-s.sendall('ddd', 0, 0, 0)
+s.sendall(struct.pack('ddd', 0, 0, 0))
 
 s.close()
