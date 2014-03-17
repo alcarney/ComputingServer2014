@@ -120,14 +120,25 @@ int main(void)
 
             close(sockfd); // The child doesn't need the listener
 
-            // Read the data into the buffer 
-            if (recv(new_fd, buf,24, 0) == -1)
+            // Loop until we have received everything
+            while (1)
             {
-                perror("recv");
+                // Read the data into the buffer 
+                if (recv(new_fd, buf,24, 0) == -1)
+                {
+                    perror("recv");
+                }
+
+                // Print the data
+                printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
+
+                // If we receive the agreed upon end of stream 'packet',(0,0,0) quit
+                if (loc.id == 0 && loc.latitude == 0 && loc.longitutde)
+                    break;
             }
 
-            // Print the data
-            printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
+            //if (send(new_fd, outbuf, 8, 0) == -1)
+
             // Close the connection
             close(new_fd);
             exit(0);
