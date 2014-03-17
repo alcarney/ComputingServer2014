@@ -13,9 +13,11 @@ s.connect((HOST,PORT))
 
 for i in range (0,10):
 
-    s.sendall(struct.pack('ddd', 0, 0, 0))
+    s.sendall(struct.pack('ddd', i+1, 2*i, 3*i))
 
     data = s.recv(8)
     print 'Recieved', repr (data)
+
+s.sendall('ddd', 0, 0, 0)
 
 s.close()
