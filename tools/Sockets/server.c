@@ -16,7 +16,7 @@ void *get_in_addr(struct sockaddr *sa)
         return &(((struct sockaddr_in*)sa)->sin_addr);
     }
 
-    // Else IPv6
+    // Else IPv6d
     return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }
 

@@ -31,7 +31,7 @@ int main ()
         thread gui(launchGUI);
 
 
-        cout << "We are waiting for data to process...\n";
+        cout << "[Log][INFO]: Initialising server...\n";
 
 
         // Make sure all remaining threads close before terminating
