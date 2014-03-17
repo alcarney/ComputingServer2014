@@ -116,28 +116,27 @@ int main(void)
         if (!fork())
         {
             struct location loc;        // Create a new location structure
+            double ack_signal;          // Used to tell python to send the next one
             char* buf = (char*)&loc;    // Cast the pointer into a char 
+            char* outbuf = (char*)&ack_signal;
 
             close(sockfd); // The child doesn't need the listener
 
-            // Loop until we have received everything
-            while (1)
+            // Read the data into the buffer 
+            if (recv(new_fd, buf,24, 0) == -1)
             {
-                // Read the data into the buffer 
-                if (recv(new_fd, buf,24, 0) == -1)
-                {
-                    perror("recv");
-                }
-
-                // Print the data
-                printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
-
-                // If we receive the agreed upon end of stream 'packet',(0,0,0) quit
-                if (loc.id == 0 && loc.latitude == 0 && loc.longitude)
-                    break;
+                perror("recv");
             }
 
-            //if (send(new_fd, outbuf, 8, 0) == -1)
+            // Print the data
+            printf("Location received\n\tid: %f\n\tx: %f\n\ty: %f\n",loc.id, loc.latitude, loc.longitude);
+
+
+            // Acknowledge python that we heard it
+            if (send(new_fd, outbuf, 8, 0) == -1)
+            {
+                perror("send");
+            }
 
             // Close the connection
             close(new_fd);
