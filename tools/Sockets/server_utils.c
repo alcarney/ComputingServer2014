@@ -45,6 +45,7 @@ int new_socket(int portNum)
     int rv;
 
     // Allocate the memory for the hints struct and load in our parameters
+    printf("Allocating memory...\n");
     memset(&hints, 0, sizeof(hints));
 
     hints.ai_family = AF_UNSPEC;        // Dont mind if we use IPv4 or IPv6
@@ -52,6 +53,7 @@ int new_socket(int portNum)
     hints.ai_flags = AI_PASSIVE;        // Fill in my IP address for me - I'm lazy :p
 
     // Get a linked list of addrinfo structs based on our hints and store it in servinfo
+    printf("Getting addr info...\n");
     if (( rv = getaddrinfo(NULL, (char *)portNum, &hints, &servinfo)) != 0)
     {
         // If there was an error exit after printing the error msg
@@ -59,6 +61,7 @@ int new_socket(int portNum)
         return 1;
     }
 
+    printf("Looping through list...\n");
     // Loop through the linked list and bind to the first appropriate result
     for(p = servinfo; p != NULL; p = p->ai_next)
     {
