@@ -52,7 +52,7 @@ int new_socket(int portNum)
     hints.ai_flags = AI_PASSIVE;        // Fill in my IP address for me - I'm lazy :p
 
     // Get a linked list of addrinfo structs based on our hints and store it in servinfo
-    if (( rv = getaddrinfo(NULL, portNum, &hints, &servinfo)) != 0)
+    if (( rv = getaddrinfo(NULL, (char *)portNum, &hints, &servinfo)) != 0)
     {
         // If there was an error exit after printing the error msg
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
@@ -71,7 +71,7 @@ int new_socket(int portNum)
         }
 
         // ? 
-        if (setsocketopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
+        if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)
         {
             // If not report the error and quit
             perror("setsockopt");
@@ -189,7 +189,7 @@ int run_server(int sock)
         if (!fork())
         {
             struct location loc;                // Used to store the incoming data
-            bool ack_signal = true;             // Used to tell python to send the next bit of data
+            int ack_signal = 1;             // Used to tell python to send the next bit of data
             char* buf = (char*)&loc;            // Data comes in through this variable, it points
                                                 // to the location of loc in memory
             char* outbuf = (char *)&ack_signal; // Point the outward buffer at what is stored in 
@@ -212,7 +212,7 @@ int run_server(int sock)
                             loc.id, loc.latitude, loc.longitude);
 
                 // Acknowledge
-                if (send(their_socket, outbuf, sizeof(ack_signal,0)) == -1)
+                if (send(their_socket, outbuf, sizeof(ack_signal), 0) == -1)
                 {
                     // If it goes wrong
                     perror("send");
