@@ -25,7 +25,10 @@ struct location
 };
 
 
-int new_socket(int portNum);      // Get a new socket on port number x
-int run_server(int socket);      // Run the server through the given socket
+int new_socket(int portNum);                // Get a new socket on port number x
+int run_server(int socket);                 // Run the server through the given socket
+void *get_in_addr(struct sockaddr *sa);     // Get the ip address from a struct (is this what an 
+                                            //  inline function looks like in C?)
+void sigchld_handler(int s);                // Something to do with killing off child processes...
 
 #endif

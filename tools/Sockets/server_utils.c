@@ -1,6 +1,26 @@
 #include "server_utils.h"
 
 
+// Something to do with the child processes in run_server
+void sigchld_handler(int s)
+{
+    while(waitpid(-1, NULL, WNOHANG) > 0);
+}
+
+// Get the IP address from the given struct - helps make the code
+// below IP version agnostic
+void *get_in_addr(struct sockaddr *sa)
+{
+    // If IPv4
+    if (sa->sa_family == AF_INET)
+    {
+        return &(((struct sockaddr_in*)sa)->sin_addr);
+    }
+
+    // Else IPv6 
+    return &(((struct sockaddr_in6*)sa)->sin6_addr);
+}
+
 // This sets up a new socket on the specified port num so that we're 
 // ready to send/receive data returns the socket file descriptor that is used 
 // to communicate with the loopback interface - Hopefully that's all we need 
