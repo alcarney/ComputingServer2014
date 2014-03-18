@@ -210,7 +210,7 @@ int basicHandleClient(int their_socket)
             char* outbuf = (char *)&ack_signal; // Point the outward buffer at what is stored in 
                                                 // ack_signal
 
-            close(sock);                      // For some reason we can do this??
+            //close(sock);                      // For some reason we can do this??
 
             // Loop through the incoming data
             while (1)
