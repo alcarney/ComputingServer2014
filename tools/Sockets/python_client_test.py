@@ -1,23 +1,32 @@
 #!/usr/bin/python
-# Echo client program
+
 import socket
 import struct
 
 HOST = '127.0.0.1'
 PORT = 3490
 
+# Create a new socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((HOST,PORT))
-#for i in range(0,4):
-#    s.sendall(struct.pack('ddd',i,23.4,45.6))
 
+# Connect to server
+s.connect((HOST,PORT))
+
+# Identify ourselves as the user interface
+s.sendall(struct.pack('i', 1))
+
+# Transmit data
 for i in range (0,10):
 
     s.sendall(struct.pack('ddd', i+1, 2*i, 3*i))
 
+    # Wait for acknowledgement before sending next piece of data - I still don't like this though
     data = s.recv(8)
-    print 'Recieved', repr (data)
+    #print 'Recieved', repr (data)
 
+
+# Send EOS packet
 s.sendall(struct.pack('ddd', 0, 0, 0))
 
+# Close the socket
 s.close()
