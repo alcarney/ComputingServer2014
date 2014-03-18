@@ -1,5 +1,5 @@
-test: server.o
-	g++ -o test server.o test.cpp
+test: utils.o
+	g++ -o test server.c utils.o
 
-server.o:
-	gcc -c server.c -o server.o
+utils.o:
+	gcc -c server_utils.c -o utils.o
