@@ -188,8 +188,34 @@ int run_server(int sock)
         // Say that we have a new connection from ip X
         printf("server: New connection from %s", s);
 
-        // Call the client handler
-        int returnV = basicHandleClient(their_socket);
+        // Get the client to identify itself so we know which handler to call - Eventually
+        int clientType;
+        char* buf = (char *)&clientType;            // Create a buffer to read the data
+
+        if (recv(their_socket, buf, sizeof(loc), 0) == -1)
+        {
+            // If something went wrong, report and skip to the next client
+            perror("recv");
+            printf("Unable to identify client ignoring\n");
+            continue;
+        }
+
+        // Choose appropriate action based on client type
+        switch (clientType)
+        {
+            case UI:
+                    printf("User Interface client, preparing handler\n");
+                    basicHandleClient(their_socket);
+                    break;
+
+            case APP:
+                    printf("Sorry this client isn't supported yet...\n");
+                    break;
+
+            default:
+                    fprintf(stderr, "Unable to identify client, ignoring...\n");
+                    break;
+        }
 
         // Close the main parent's connection
         close(their_socket);

@@ -16,6 +16,8 @@
 
 #define PORT "3490"     // The port we will be using
 #define BACKLOG 10      // How many pending connections the queue will allow
+#define UI 1            // UI Client identifier
+#define APP 2           // App client identifier
 
 struct location
 {
