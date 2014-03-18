@@ -192,7 +192,7 @@ int run_server(int sock)
         int clientType;
         char* buf = (char *)&clientType;            // Create a buffer to read the data
 
-        if (recv(their_socket, buf, sizeof(loc), 0) == -1)
+        if (recv(their_socket, buf, sizeof(clientType), 0) == -1)
         {
             // If something went wrong, report and skip to the next client
             perror("recv");
