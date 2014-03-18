@@ -17,20 +17,8 @@ int new_socket(int portNum)
     //                    correct details
     struct addrinfo hints, *servinfo, *p;
 
-    // Used to keep info about clients
-    //struct sockaddr_storage their_addr;
-
-    // ?
-    //socklen_t sin_size;
-
-    // ? 
-    //struct sigaction sa;
-
-    // ?
+    // Something to do with setsocketopt
     int yes = 1;
-
-    // I think this is where the IP address is stored?
-    //char s[INET6_ADDRSTRLEN];
 
     // Used to catch the retrun value of getaddrinfo and retrieve the appropriate
     // error message if somethin should go wrong
@@ -96,4 +84,139 @@ int new_socket(int portNum)
 
     // Return the socket file descriptor
     return sock_fd;
+}
+
+// Run the server through the specified socket
+int run_server(int socket)
+{
+
+    // --- Initialse variables ---
+
+    // Socket file descriptor for client
+    int their_socket;
+
+    // Used to keep info about clients
+    struct sockaddr_storage their_addr;
+
+    // ?
+    socklen_t sin_size;
+
+    // ? 
+    struct sigaction sa;
+
+    // I think this is where the IP address is stored?
+    char s[INET6_ADDRSTRLEN];
+
+    // --- Server Start ---
+
+    // Listen for a connection request
+    if (listen(socket, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
+    {
+        // If something goes wrong report the error and exit
+        perror("listen");
+        return 1;
+    }
+
+    // This next section has something to do with killing of the child procesess this 
+    // function will create later.
+    sa.sa_handler = sigchld_handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = SA_RESTART;
+    if (sigaction(SIGCHLD, &sa, NULL) == -1)
+    {
+        perror("sigaction");
+        return 1;
+    }
+
+    printf("server: Successfully started, waiting for clients...\n");
+
+    // Main client handling loop - consider implementing function pointers to allow
+    // custom server behavoirs and easier maintainability
+    // E.g handlerClients() function pointer passed as argument
+    while(1)
+    {
+        sin_size = sizeof(their_addr);
+
+        // Accept the connection, i think the arguments are as follows:
+        //      socket - the file descrptor for the socket our server will use
+        //      (struct sockaddr*)&their_addr - I think the client's info gets put here
+        //      &sin_size - I think this lets c know how many bytes to write into the previous
+        //      argument
+        their_socket = accept(socket, (struct sockaddr *)&their_addr, &sin_size);
+
+        // Check to make sure the previous step was successful
+        if (their_socket == -1)
+        {
+            // If not throw the error and skip to next connection request
+            perror("accept");
+            continue;
+        }
+
+        // Convert their ip address from network byte order to host byte order
+        //      their_addr.ss_family                       - IPv4 or IPv6
+        //      get_in_addr((struct sockaddr*)&their_addr) - use the function thats defined elsewhere
+        //                                                   to get the ip address, can handle both
+        //                                                   IPv4 and IPv6
+        //      s                                          - Variable to store the resulting string in
+        //      sizeof(s)                                  - How many bytes to write
+        inet_ntop(their_addr.ss_family, get_in_addr((struct sockaddr *)&their_addr),
+                        s, sizeof(s));
+
+        // Say that we have a new connection from ip X
+        printf("server: New connection from %s", s);
+
+        // Create a new child process
+        if (!fork())
+        {
+            struct location loc;                // Used to store the incoming data
+            bool ack_signal = true;             // Used to tell python to send the next bit of data
+            char* buf = (char*)&loc;            // Data comes in through this variable, it points
+                                                // to the location of loc in memory
+            char* outbuf = (char *)&ack_signal; // Point the outward buffer at what is stored in 
+                                                // ack_signal
+
+            close(socket);                      // For some reason we can do this??
+
+            // Loop through the incoming data
+            while (1)
+            {
+                // Read the data (client->buf->loc)
+                if (recv(their_socket, buf, sizeof(loc), 0) == -1)
+                {
+                    // If it goes wrong
+                    perror("recv");
+                }
+
+                // Print the data we receive
+                printf("New location recevied\n\t\tid: %f\n\t\tx: %f\n\t\ty: %f\n",
+                            loc.id, loc.latitude, loc.longitude);
+
+                // Acknowledge
+                if (send(their_socket, outbuf, sizeof(ack_signal,0)) == -1)
+                {
+                    // If it goes wrong
+                    perror("send");
+
+                    // If we receive end of stream [(0,0,0)] break the loop
+                    if (loc.id == 0 && loc.longitude == 0 && loc.latitude == 0)
+                    {
+                        printf("EOS Reached: Closing current connection\n");
+                        break;
+                    }
+                }
+            }
+
+            // Close the child's connection to the client
+            close(their_socket);
+
+            // Quit the child process
+            exit(0);
+
+        }
+
+        // Close the main parent's connection
+        close(their_socket);
+    }
+
+    return 0;
 }
