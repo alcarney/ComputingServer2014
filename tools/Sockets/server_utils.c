@@ -186,7 +186,7 @@ int run_server(int sock)
                         s, sizeof(s));
 
         // Say that we have a new connection from ip X
-        printf("server: New connection from %s", s);
+        printf("server: New connection from %s\n", s);
 
         // Get the client to identify itself so we know which handler to call - Eventually
         int clientType;
@@ -216,6 +216,7 @@ int run_server(int sock)
                     fprintf(stderr, "Unable to identify client, ignoring...\n");
                     break;
         }
+        printf("Carrying on\n");
 
         // Close the main parent's connection
         close(their_socket);
@@ -229,6 +230,7 @@ int basicHandleClient(int their_socket)
         // Create a new child process
         if (!fork())
         {
+            printf("Entered handle client function\n");
             struct location loc;                // Used to store the incoming data
             int ack_signal = 1;             // Used to tell python to send the next bit of data
             char* buf = (char*)&loc;            // Data comes in through this variable, it points
@@ -250,7 +252,7 @@ int basicHandleClient(int their_socket)
 
                 // Print the data we receive
                 //printf("New location recevied\n\t\tid: %f\n\t\tx: %f\n\t\ty: %f\n",
-                  //          loc.id, loc.latitude, loc.longitude);
+                //          loc.id, loc.latitude, loc.longitude);
 
                 // Acknowledge
                 if (send(their_socket, outbuf, sizeof(ack_signal), 0) == -1)
@@ -265,6 +267,7 @@ int basicHandleClient(int their_socket)
                         break;
                     }
                 }
+
             }
 
             // Close the child's connection to the client
@@ -283,7 +286,7 @@ int basicHandleClient(int their_socket)
 int handleUI(int their_socket)
 {
     // Set up what we need
-    int ack_singal = 1;
+    int ack_signal = 1;
     int numLocations;
     char* outbuf = (char *)&ack_signal;
     char* buf = (char *)&numLocations;
@@ -301,6 +304,12 @@ int handleUI(int their_socket)
     {
         // Something is wrong
         perror("recv");
-        fprintf(stderr, "Unable to determine how many locations will be sent aborting")
+        fprintf(stderr, "Unable to determine how many locations will be sent aborting\n");
+        return 1;
     }
+
+    // print the number of locs we will receive
+    printf("The UI is sending %d locations over, put some more pies in the oven\n", numLocations);
+
+    return 0;
 }

@@ -14,6 +14,10 @@ s.connect((HOST,PORT))
 
 # Identify ourselves as the user interface
 s.sendall(struct.pack('i', 1))
+data = s.recv(4)
+
+# Tell the server how many locations we will send
+s.sendall(struct.pack('i', 9))
 
 # Transmit data
 for i in range (0,10):
