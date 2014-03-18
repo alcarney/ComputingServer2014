@@ -54,7 +54,7 @@ int new_socket(int portNum)
 
     // Get a linked list of addrinfo structs based on our hints and store it in servinfo
     printf("Getting addr info...\n");
-    if (( rv = getaddrinfo(NULL, (const char*)&portNum, &hints, &servinfo)) != 0)
+    if (( rv = getaddrinfo(NULL, PORT, &hints, &servinfo)) != 0)
     {
         // If there was an error exit after printing the error msg
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
