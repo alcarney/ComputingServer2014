@@ -249,8 +249,8 @@ int basicHandleClient(int their_socket)
                 }
 
                 // Print the data we receive
-                printf("New location recevied\n\t\tid: %f\n\t\tx: %f\n\t\ty: %f\n",
-                            loc.id, loc.latitude, loc.longitude);
+                //printf("New location recevied\n\t\tid: %f\n\t\tx: %f\n\t\ty: %f\n",
+                  //          loc.id, loc.latitude, loc.longitude);
 
                 // Acknowledge
                 if (send(their_socket, outbuf, sizeof(ack_signal), 0) == -1)
