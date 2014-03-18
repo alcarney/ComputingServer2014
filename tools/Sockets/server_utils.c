@@ -52,7 +52,7 @@ int new_socket(int portNum)
     hints.ai_socktype = SOCK_STREAM;    // TCP sockets
     hints.ai_flags = AI_PASSIVE;        // Fill in my IP address for me - I'm lazy :p
 
-    // Get a linked list of addrinfo structs based on our hints and store it in servinfo
+    // Get a linked list of addrinfo structs based on our hints and store it in servinfo 
     printf("Getting addr info...\n");
     if (( rv = getaddrinfo(NULL, PORT, &hints, &servinfo)) != 0)
     {
