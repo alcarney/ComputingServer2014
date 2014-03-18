@@ -188,6 +188,18 @@ int run_server(int sock)
         // Say that we have a new connection from ip X
         printf("server: New connection from %s", s);
 
+        // Call the client handler
+        int returnV = basicHandleClient(their_socket);
+
+        // Close the main parent's connection
+        close(their_socket);
+    }
+
+    return 0;
+}
+
+int basicHandleClient(int their_socket)
+{
         // Create a new child process
         if (!fork())
         {
@@ -236,10 +248,4 @@ int run_server(int sock)
             exit(0);
 
         }
-
-        // Close the main parent's connection
-        close(their_socket);
-    }
-
-    return 0;
 }
