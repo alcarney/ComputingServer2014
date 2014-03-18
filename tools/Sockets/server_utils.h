@@ -34,4 +34,9 @@ void *get_in_addr(struct sockaddr *sa);     // Get the ip address from a struct 
 void sigchld_handler(int s);                // Something to do with killing off child processes...
 
 int basicHandleClient(int their_socket);    // The current (poor) implementation of client handling
+
+// Hopefully the new and improved UI handler that returns the data in an appropriate format
+int handleUI(int their_socket);
+
 #endif
+
