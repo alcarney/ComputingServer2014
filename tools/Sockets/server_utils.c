@@ -107,7 +107,7 @@ int new_socket(int portNum)
 }
 
 // Run the server through the specified socket
-int run_server(int socket)
+int run_server(int sock)
 {
 
     // --- Initialse variables ---
@@ -130,7 +130,7 @@ int run_server(int socket)
     // --- Server Start ---
 
     // Listen for a connection request
-    if (listen(socket, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
+    if (listen(sock, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
     {
         // If something goes wrong report the error and exit
         perror("listen");
@@ -162,7 +162,7 @@ int run_server(int socket)
         //      (struct sockaddr*)&their_addr - I think the client's info gets put here
         //      &sin_size - I think this lets c know how many bytes to write into the previous
         //      argument
-        their_socket = accept(socket, (struct sockaddr *)&their_addr, &sin_size);
+        their_socket = accept(sock, (struct sockaddr *)&their_addr, &sin_size);
 
         // Check to make sure the previous step was successful
         if (their_socket == -1)
@@ -195,7 +195,7 @@ int run_server(int socket)
             char* outbuf = (char *)&ack_signal; // Point the outward buffer at what is stored in 
                                                 // ack_signal
 
-            close(socket);                      // For some reason we can do this??
+            close(sock);                      // For some reason we can do this??
 
             // Loop through the incoming data
             while (1)
