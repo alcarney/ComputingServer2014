@@ -1,4 +1,5 @@
 *.pyc
+server
 *.swp
 *.o
 *.out
