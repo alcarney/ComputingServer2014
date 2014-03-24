@@ -205,7 +205,8 @@ int run_server(int sock)
         {
             case UI:
                     printf("User Interface client, preparing handler\n");
-                    basicHandleClient(their_socket);
+                    //basicHandleClient(their_socket);
+                    handleUI(their_socket);
                     break;
 
             case APP:
