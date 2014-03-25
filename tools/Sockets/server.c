@@ -113,7 +113,7 @@ int run_server(int sock)
     return 0;
 }
 
-
+/*
 int main()
 {
     int sock = new_socket(3490);
@@ -121,3 +121,4 @@ int main()
 
     return 0;
 }
+*/
