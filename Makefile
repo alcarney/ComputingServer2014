@@ -8,6 +8,5 @@ tools/Sockets/server.o:
 	cd tools/Sockets ; make
 
 clean:
-	rm *.o
 	cd tools/Sockets ; make clean
 	
