@@ -118,7 +118,7 @@ int receiveData(int their_socket, char* data, int data_size)
     // Set up the required variables
     int ack = 1;                            // Used to tell python we received the data
     char* ackBuf = (char *)&ack;            // Used by send to get the data from ack
-    
+
     // Receive the data
     if (recv(their_socket, data, data_size, 0) == -1)
     {

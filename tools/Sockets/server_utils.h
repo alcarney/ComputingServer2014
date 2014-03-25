@@ -26,7 +26,7 @@ struct location
     double longitude;
 };
 
-char* receiveData(int their_sock);          // Receive data from client
+int receiveData(int their_socket, char* data, int data_size);          // Receive data from client
 void sigchld_handler(int s);                // Something to do with killing off child processes...
 int new_socket(int portNum);                // Get a new socket on port number x
 void *get_in_addr(struct sockaddr *sa);     // Get the ip address from a struct (is this what an 
