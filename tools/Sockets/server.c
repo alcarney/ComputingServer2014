@@ -16,6 +16,7 @@ int run_server(int sock)
 
     // Used to state the size of the ip addr?
     socklen_t sin_size;
+    sin_size = sizeof(their_addr);
 
     // Some form of event handler? 
     struct sigaction sa;
@@ -51,7 +52,6 @@ int run_server(int sock)
     // custom server behavoirs and easier maintainability
     while(1)
     {
-        sin_size = sizeof(their_addr);
 
         // Accept the connection, i think the arguments are as follows:
         //      socket - the file descrptor for the socket our server will use
