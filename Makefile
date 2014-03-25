@@ -7,6 +7,7 @@ Route_Logistics: tools/Sockets/server.o
 tools/Sockets/server.o:
 	cd tools/Sockets ; make
 
-GUI/UI.o:
-	cd GUI; make
-
+clean:
+	rm *.o
+	cd tools/Sockets ; make clean
+	
