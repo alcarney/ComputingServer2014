@@ -85,13 +85,7 @@ int run_server(int sock)
         int clientType;
         char* buf = (char *)&clientType;            // Create a buffer to read the data
 
-        if (recv(their_socket, buf, sizeof(clientType), 0) == -1)
-        {
-            // If something went wrong, report and skip to the next client
-            perror("recv");
-            printf("Unable to identify client ignoring\n");
-            continue;
-        }
+        receiveData(their_socket, buf, sizeof(clientType));
 
         // Choose appropriate action based on client type
         switch (clientType)
@@ -99,7 +93,7 @@ int run_server(int sock)
             case UI:
                     printf("User Interface client, preparing handler\n");
                     //basicHandleClient(their_socket);
-                    handleUI(their_socket);
+              //      handleUI(their_socket);
                     break;
 
             case APP:
