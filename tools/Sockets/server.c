@@ -14,24 +14,14 @@ int run_server(int sock)
     // Used to keep info about clients
     struct sockaddr_storage their_addr;
 
-    // ?
+    // Used to state the size of the ip addr?
     socklen_t sin_size;
 
-    // ? 
+    // Some form of event handler? 
     struct sigaction sa;
 
-    // I think this is where the IP address is stored?
+    // I think this is where the IP address is stored
     char s[INET6_ADDRSTRLEN];
-
-    // --- Server Start ---
-
-    // Listen for a connection request
-    if (listen(sock, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
-    {
-        // If something goes wrong report the error and exit
-        perror("listen");
-        return 1;
-    }
 
     // This next section has something to do with killing of the child procesess this 
     // function will create later.
@@ -44,11 +34,21 @@ int run_server(int sock)
         return 1;
     }
 
+
+    // --- Server Start ---
     printf("server: Successfully started, waiting for clients...\n");
+
+    // Listen for a connection request
+    if (listen(sock, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
+    {
+        // If something goes wrong report the error and exit
+        perror("listen");
+        return 1;
+    }
+
 
     // Main client handling loop - consider implementing function pointers to allow
     // custom server behavoirs and easier maintainability
-    // E.g handlerClients() function pointer passed as argument
     while(1)
     {
         sin_size = sizeof(their_addr);
