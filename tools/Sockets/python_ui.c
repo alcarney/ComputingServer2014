@@ -3,7 +3,7 @@
 // The new and improved UI handler
 int handleUI(int their_socket)
 {
-    if(!loginSuccessful())
+    if(loginSuccessful() == 0)
     {
         printf("User quit without logging in or maximum trials reached closing connection\n");
         return 1;
@@ -29,15 +29,22 @@ int loginSuccessful()
     }
 
     // Load the accounts
-    int x;                       // variable to store a single char in
+    int x;                       // variable to store a single character in
+    int i = 0;                   // Used to count position in file
+    struct account user;
 
-    if ( ( x = fgetc(users) ) == 'a')
+    // Loop through each character in the file
+    while (1)
     {
-        printf("It could work\n");
-    }
+        x = fgetc(users);
+        if (x == '\n')
+            break;
 
-    // While we aren't at the end of the file
-    //while ( (x = fgetc()) != EOF);
+        user.username[i] = x;
+        i++;
+    }
+    printf("s\n", user.username);
+
     return 1;
 }
 

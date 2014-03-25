@@ -5,8 +5,8 @@
 
 struct account
 {
-    char* username;
-    char* password;
+    char [32] username;
+    char [32] password;
 };
 int handleUI(int their_socket);
 int loginSuccesful();                          // User login function
