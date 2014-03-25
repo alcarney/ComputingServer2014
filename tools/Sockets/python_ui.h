@@ -3,6 +3,12 @@
 
 #include "server_utils.h"
 
+struct account
+{
+    char* username;
+    char* password;
+};
 int handleUI(int their_socket);
+int loginSuccesful();                          // User login function
 
 #endif
