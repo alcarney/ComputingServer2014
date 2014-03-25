@@ -109,6 +109,37 @@ int new_socket(int portNum)
     return sock_fd;
 }
 
+
+// Function that reads data from a client into a given location
+//      their_sock - The socket file descriptor of the client
+//      data       - A pointer to where the data will be stored
+int receiveData(int their_socket, char* data, int data_size)
+{
+    // Set up the required variables
+    int ack = 1;                            // Used to tell python we received the data
+    char* ackBuf = (char *)&ack;            // Used by send to get the data from ack
+    
+    // Receive the data
+    if (recv(their_socket, data, data_size, 0) == -1)
+    {
+        // Something went wrong
+        perror("recv");
+        return -1;
+    }
+
+    // Else it went fine - let the sender know we got the data
+    if (send(their_socket, ackBuf, sizeof(ack), 0) == -1)
+    {
+        // Something went wrong
+        perror("send");
+        fprintf(stderr, "Unable to notify client of successful data aquisition\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+
 /*
 int basicHandleClient(int their_socket)
 {
