@@ -5,7 +5,6 @@
 #include <iostream>
 #include <thread>
 
-#include "GUI/UI.h"
 
 extern "C"
 {
@@ -21,9 +20,11 @@ int main ()
     cout << "Welcome to Route Logistics brought to you by Axiom Enterprises!\n";
     cout << "Please would you log in sir...\n\n";
 
-    // Get the user to log in
-    int proceed = userLogin();
+    int sock = new_socket(12);
+    run_server(sock);
 
+    // Get the user to log in
+/*
     // If successful carry on
     if (proceed == 1)
     {
@@ -36,6 +37,6 @@ int main ()
 
         // Make sure all remaining threads close before terminating
         gui.join();
-    }
+    }*/
     return 0;
 }
