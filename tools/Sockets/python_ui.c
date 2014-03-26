@@ -39,20 +39,35 @@ int getNumLines(FILE * file)
 // Load the accounts from file into the struct provided
 int loadAccounts(FILE* file, struct account* accounts, int num)
 {
-    char buffer[256]; 
+    char buffer[256];
+    char test[256];
     int i;
 
     // Loop through each account in the file and pass it into an appropriate struct
-    while(buffer, 256, file)
+    while(fgets(buffer, 256, file))
     {
 
+        //printf("Buffer is %s", buffer);
         // Assumning the file is in csv format, split the string into name password using the comma
         // as a delimeter
-        printf("Running strchr on %s\n", buffer);
-        printf("%s\n", strchr(buffer, ','));
+        //printf("\t\tCalculating split\n");
+        char* split = strchr(buffer, ',');
+        //printf("\t\tSplit is %s", strncpy(test ,buffer,strlen(buffer) - strlen(split)));
+
+        //printf("\t\tSetting username\n");
+
+        // Allocate memory for the username
+        accounts->username = malloc(sizeof(char)*128);
+        strncpy(accounts->username, buffer, strlen(buffer) - strlen(split));
+        //strncat(accounts->username, 1);        // Dont forget the null character
+
+
+        // Allocate memory for the password
+        //printf("\t\tSetting password\n");
+        accounts->password = malloc(sizeof(char)*127);
+        strcpy(accounts->password, split+1);
 
         // Increment the pointer through the array
-        printf("Incrementing the accounts pointer\n");
         accounts++;
     }
 
@@ -86,16 +101,7 @@ int loginSuccessful()
 
     // Loop through the file and add each entry to an element of the array
     printf("\tlogin: Retreiving accounts from file\n");
-    loadAccounts(users, (struct account*)&accounts, numAccounts);
-
-    // Print the accounts to see if the above worked
-    //int c;
-    //for (c = 0; c < numAccounts; c++)
-    //{
-    //    printf("Username: %s\nPassword: %s\n", accounts[0].username, accounts[1].password);
-    //}
-    // Loop through each character in the file
-    //printf("s\n", user.username);
+    loadAccounts(users, accounts, numAccounts);
 
     return 1;
 }
