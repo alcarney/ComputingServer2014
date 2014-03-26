@@ -1,3 +1,13 @@
+If git starts producing "phantom" files again
+
+    1   Delete the folder (from Windows Explorer)
+    2   Open Git Bash
+    3   cd /d/Users/Student/Documents/ 
+    4   git clone https://Adam_Pohl@bitbucket.org/ScrumFour/computingproject (for server code) OR git clone https://Adam_Pohl@bitbucket.org/ScrumFour/computinggui (for the python gui code)
+    5   Enter your password and git will download the project
+
+-----------------------------------------------------------
+
 to download changes from bit bucket in git bash run
 
 cd /d/Users/Student/Documents/computing

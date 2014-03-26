@@ -1,4 +1,5 @@
 *.pyc
+server
 *.swp
 *.o
 *.out
@@ -6,4 +7,5 @@ postage
 example
 test
 Route_Logistics
+log.txt
 ENV
