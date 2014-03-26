@@ -3,6 +3,7 @@
 // The new and improved UI handler
 int handleUI(int their_socket)
 {
+    printf("pythonUI: New client detected, requesting login\n");
     if(loginSuccessful() == 0)
     {
         printf("User quit without logging in or maximum trials reached closing connection\n");
@@ -19,7 +20,7 @@ int getNumLines(FILE * file)
 {
 
     int i;                  // Store the count in i
-    char* x;             // Buffer to store the lines in
+    char* x[64];             // Buffer to store the lines in
 
     // Loop through to end of file
     while( ( x = fgets(x, 64, file) ) != EOF)
@@ -35,6 +36,7 @@ int getNumLines(FILE * file)
 int loginSuccessful()
 {
     // Open the user accounts file in read only mode
+    printf("\tlogin: Opening accounts file")
     FILE *users;
     users = fopen("data/accounts.txt", "r");
 
@@ -51,6 +53,7 @@ int loginSuccessful()
     struct account user;
 
     // We assume that each line in the accounts file is a separate account
+    printf("\tlogin: Getting number of registered accounts\n");
     printf("There are %i accounts to check\n", getNumLines(users));
 
     // Loop through each character in the file

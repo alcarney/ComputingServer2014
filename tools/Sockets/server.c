@@ -37,7 +37,7 @@ int run_server(int sock)
 
 
     // --- Server Start ---
-    printf("server: Successfully started, waiting for clients...\n");
+    printf("server-setup: Successfully started, waiting for clients\n");
 
     // Listen for a connection request
     if (listen(sock, 10) == -1)       // 10 denotes how many pending connections to leave in a queue
@@ -91,8 +91,6 @@ int run_server(int sock)
         switch (clientType)
         {
             case UI:
-                    printf("User Interface client, preparing handler\n");
-                    //basicHandleClient(their_socket);
                     handleUI(their_socket);
                     break;
 
