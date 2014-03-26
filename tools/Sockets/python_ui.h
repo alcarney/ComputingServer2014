@@ -1,6 +1,7 @@
 #ifndef PYTHON_UI_C
 #define PYTHON_UI_C
 
+#include <string.h>
 #include "server_utils.h"
 
 struct account
