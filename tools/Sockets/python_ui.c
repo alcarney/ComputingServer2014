@@ -14,6 +14,23 @@ int handleUI(int their_socket)
     return 0;
 }
 
+// Get the of lines in a text file
+int getNumLines(FILE * file)
+{
+
+    int i;                  // Store the count in i
+    char* x;             // Buffer to store the lines in
+
+    // Loop through to end of file
+    while( ( x = fgets(x, 64, file) ) != EOF)
+    {
+        i++;    // Increment counter
+    }
+
+    // Return the result
+    return i;
+}
+
 // Login function
 int loginSuccessful()
 {
@@ -33,17 +50,11 @@ int loginSuccessful()
     int i = 0;                   // Used to count position in file
     struct account user;
 
-    // Loop through each character in the file
-    while (1)
-    {
-        x = fgetc(users);
-        if (x == '\n')
-            break;
+    // We assume that each line in the accounts file is a separate account
+    printf("There are %i accounts to check\n", getNumLines(users));
 
-        user.username[i] = x;
-        i++;
-    }
-    printf("s\n", user.username);
+    // Loop through each character in the file
+    //printf("s\n", user.username);
 
     return 1;
 }

@@ -5,10 +5,15 @@
 
 struct account
 {
-    char [32] username;
-    char [32] password;
+    char*  username;
+    char*  password;
 };
 int handleUI(int their_socket);
-int loginSuccesful();                          // User login function
+
+// Login Functions
+int loginSuccesful();                          // Main login function
+
+// Text file parsing functions
+int getNumLines(FILE* file);
 
 #endif
