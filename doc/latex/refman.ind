@@ -59,7 +59,7 @@
   \item {calculate\discretionary {-}{}{}Route}
     \subitem {Salesman}, \hyperpage{19}
   \item {call\discretionary {-}{}{}Function}
-    \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
+    \subitem {Return\discretionary {-}{}{}List}, \hyperpage{19}
   \item {client.\discretionary {-}{}{}c}
     \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}, 
 		\hyperpage{27}
@@ -151,7 +151,7 @@
     \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
 		\hyperpage{28}
   \item {has\discretionary {-}{}{}Matrix}
-    \subitem {Salesman}, \hyperpage{19}
+    \subitem {Salesman}, \hyperpage{20}
   \item {hello}, \hyperpage{9}
     \subitem {hello}, \hyperpage{9}
     \subitem {multiply}, \hyperpage{9}
@@ -226,7 +226,7 @@
   \item {location\discretionary {-}{}{}I\discretionary {-}{}{}D}
     \subitem {Location}, \hyperpage{14}
   \item {locations}
-    \subitem {Salesman}, \hyperpage{19}
+    \subitem {Salesman}, \hyperpage{20}
   \item {login\discretionary {-}{}{}Succesful}
     \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
 		\hyperpage{28}
@@ -289,7 +289,7 @@
     \subitem {next}, \hyperpage{16}
     \subitem {Node}, \hyperpage{16}
     \subitem {previous}, \hyperpage{16}
-  \item {Node$<$ Type $>$}, \hyperpage{15}
+  \item {Node$<$ Type $>$}, \hyperpage{16}
   \item {not\discretionary {-}{}{}Start}
     \subitem {Location}, \hyperpage{14}
   \item {number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}
@@ -394,12 +394,12 @@
     \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
 		\hyperpage{30}
   \item {Return\discretionary {-}{}{}List}
-    \subitem {call\discretionary {-}{}{}Function}, \hyperpage{18}
+    \subitem {call\discretionary {-}{}{}Function}, \hyperpage{19}
     \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
     \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
   \item {Return\discretionary {-}{}{}List$<$ Type $>$}, \hyperpage{18}
   \item {route}
-    \subitem {Salesman}, \hyperpage{19}
+    \subitem {Salesman}, \hyperpage{20}
   \item {run\discretionary {-}{}{}\_\discretionary {-}{}{}server}
     \subitem {server.\discretionary {-}{}{}c}, \hyperpage{29}
     \subitem {server.\discretionary {-}{}{}h}, \hyperpage{29}
@@ -416,10 +416,10 @@
     \subitem {add\discretionary {-}{}{}Location}, \hyperpage{19}
     \subitem {calculate\discretionary {-}{}{}Route}, \hyperpage{19}
     \subitem {distance\discretionary {-}{}{}Matrix}, \hyperpage{19}
-    \subitem {has\discretionary {-}{}{}Matrix}, \hyperpage{19}
-    \subitem {locations}, \hyperpage{19}
+    \subitem {has\discretionary {-}{}{}Matrix}, \hyperpage{20}
+    \subitem {locations}, \hyperpage{20}
     \subitem {populate\discretionary {-}{}{}Matrix}, \hyperpage{19}
-    \subitem {route}, \hyperpage{19}
+    \subitem {route}, \hyperpage{20}
     \subitem {Salesman}, \hyperpage{19}
     \subitem {show\discretionary {-}{}{}Locations}, \hyperpage{19}
     \subitem {show\discretionary {-}{}{}Route}, \hyperpage{19}

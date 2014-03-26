@@ -77,19 +77,20 @@
 \contentsline {subsubsection}{\numberline {6.5.3.3}x}{14}{subsubsection.6.5.3.3}
 \contentsline {subsubsection}{\numberline {6.5.3.4}y}{14}{subsubsection.6.5.3.4}
 \contentsline {section}{\numberline {6.6}Matrix Class Reference}{15}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Constructor \& Destructor Documentation}{15}{subsection.6.6.1}
-\contentsline {subsubsection}{\numberline {6.6.1.1}Matrix}{15}{subsubsection.6.6.1.1}
-\contentsline {subsubsection}{\numberline {6.6.1.2}$\sim $\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.1.2}
-\contentsline {subsection}{\numberline {6.6.2}Member Function Documentation}{15}{subsection.6.6.2}
-\contentsline {subsubsection}{\numberline {6.6.2.1}get\discretionary {-}{}{}Element}{15}{subsubsection.6.6.2.1}
-\contentsline {subsubsection}{\numberline {6.6.2.2}number\discretionary {-}{}{}Of\discretionary {-}{}{}Columns}{15}{subsubsection.6.6.2.2}
-\contentsline {subsubsection}{\numberline {6.6.2.3}set\discretionary {-}{}{}Element}{15}{subsubsection.6.6.2.3}
-\contentsline {subsubsection}{\numberline {6.6.2.4}show\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.2.4}
-\contentsline {subsection}{\numberline {6.6.3}Member Data Documentation}{15}{subsection.6.6.3}
-\contentsline {subsubsection}{\numberline {6.6.3.1}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}{15}{subsubsection.6.6.3.1}
-\contentsline {subsubsection}{\numberline {6.6.3.2}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}{15}{subsubsection.6.6.3.2}
-\contentsline {subsubsection}{\numberline {6.6.3.3}values}{15}{subsubsection.6.6.3.3}
-\contentsline {section}{\numberline {6.7}Node$<$ Type $>$ Class Template Reference}{15}{section.6.7}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{15}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{15}{subsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.2.1}Matrix}{15}{subsubsection.6.6.2.1}
+\contentsline {subsubsection}{\numberline {6.6.2.2}$\sim $\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.2.2}
+\contentsline {subsection}{\numberline {6.6.3}Member Function Documentation}{15}{subsection.6.6.3}
+\contentsline {subsubsection}{\numberline {6.6.3.1}get\discretionary {-}{}{}Element}{15}{subsubsection.6.6.3.1}
+\contentsline {subsubsection}{\numberline {6.6.3.2}number\discretionary {-}{}{}Of\discretionary {-}{}{}Columns}{15}{subsubsection.6.6.3.2}
+\contentsline {subsubsection}{\numberline {6.6.3.3}set\discretionary {-}{}{}Element}{15}{subsubsection.6.6.3.3}
+\contentsline {subsubsection}{\numberline {6.6.3.4}show\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.3.4}
+\contentsline {subsection}{\numberline {6.6.4}Member Data Documentation}{15}{subsection.6.6.4}
+\contentsline {subsubsection}{\numberline {6.6.4.1}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}{15}{subsubsection.6.6.4.1}
+\contentsline {subsubsection}{\numberline {6.6.4.2}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}{15}{subsubsection.6.6.4.2}
+\contentsline {subsubsection}{\numberline {6.6.4.3}values}{15}{subsubsection.6.6.4.3}
+\contentsline {section}{\numberline {6.7}Node$<$ Type $>$ Class Template Reference}{16}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}Constructor \& Destructor Documentation}{16}{subsection.6.7.1}
 \contentsline {subsubsection}{\numberline {6.7.1.1}Node}{16}{subsubsection.6.7.1.1}
 \contentsline {subsection}{\numberline {6.7.2}Member Data Documentation}{16}{subsection.6.7.2}
@@ -120,9 +121,9 @@
 \contentsline {subsubsection}{\numberline {6.9.3.1}func\discretionary {-}{}{}List}{18}{subsubsection.6.9.3.1}
 \contentsline {section}{\numberline {6.10}Return\discretionary {-}{}{}List$<$ Type $>$ Class Template Reference}{18}{section.6.10}
 \contentsline {subsection}{\numberline {6.10.1}Constructor \& Destructor Documentation}{18}{subsection.6.10.1}
-\contentsline {subsubsection}{\numberline {6.10.1.1}Return\discretionary {-}{}{}List}{18}{subsubsection.6.10.1.1}
-\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{18}{subsection.6.10.2}
-\contentsline {subsubsection}{\numberline {6.10.2.1}call\discretionary {-}{}{}Function}{18}{subsubsection.6.10.2.1}
+\contentsline {subsubsection}{\numberline {6.10.1.1}Return\discretionary {-}{}{}List}{19}{subsubsection.6.10.1.1}
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{19}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}call\discretionary {-}{}{}Function}{19}{subsubsection.6.10.2.1}
 \contentsline {section}{\numberline {6.11}Salesman Class Reference}{19}{section.6.11}
 \contentsline {subsection}{\numberline {6.11.1}Constructor \& Destructor Documentation}{19}{subsection.6.11.1}
 \contentsline {subsubsection}{\numberline {6.11.1.1}Salesman}{19}{subsubsection.6.11.1.1}
@@ -134,10 +135,10 @@
 \contentsline {subsubsection}{\numberline {6.11.2.4}show\discretionary {-}{}{}Locations}{19}{subsubsection.6.11.2.4}
 \contentsline {subsubsection}{\numberline {6.11.2.5}show\discretionary {-}{}{}Route}{19}{subsubsection.6.11.2.5}
 \contentsline {subsection}{\numberline {6.11.3}Member Data Documentation}{19}{subsection.6.11.3}
-\contentsline {subsubsection}{\numberline {6.11.3.1}distance\discretionary {-}{}{}Matrix}{19}{subsubsection.6.11.3.1}
-\contentsline {subsubsection}{\numberline {6.11.3.2}has\discretionary {-}{}{}Matrix}{19}{subsubsection.6.11.3.2}
-\contentsline {subsubsection}{\numberline {6.11.3.3}locations}{19}{subsubsection.6.11.3.3}
-\contentsline {subsubsection}{\numberline {6.11.3.4}route}{19}{subsubsection.6.11.3.4}
+\contentsline {subsubsection}{\numberline {6.11.3.1}distance\discretionary {-}{}{}Matrix}{20}{subsubsection.6.11.3.1}
+\contentsline {subsubsection}{\numberline {6.11.3.2}has\discretionary {-}{}{}Matrix}{20}{subsubsection.6.11.3.2}
+\contentsline {subsubsection}{\numberline {6.11.3.3}locations}{20}{subsubsection.6.11.3.3}
+\contentsline {subsubsection}{\numberline {6.11.3.4}route}{20}{subsubsection.6.11.3.4}
 \contentsline {chapter}{\numberline {7}File Documentation}{21}{chapter.7}
 \contentsline {section}{\numberline {7.1}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.cpp File Reference}{21}{section.7.1}
 \contentsline {section}{\numberline {7.2}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.h File Reference}{21}{section.7.2}

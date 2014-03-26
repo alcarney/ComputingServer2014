@@ -118,7 +118,7 @@
 \indexentry{number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements@{number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}!Matrix@{Matrix}|hyperpage}{15}
 \indexentry{Matrix@{Matrix}!values@{values}|hyperpage}{15}
 \indexentry{values@{values}!Matrix@{Matrix}|hyperpage}{15}
-\indexentry{Node$<$ Type $>$@{Node$<$ Type $>$}|hyperpage}{15}
+\indexentry{Node$<$ Type $>$@{Node$<$ Type $>$}|hyperpage}{16}
 \indexentry{Node@{Node}!Node@{Node}|hyperpage}{16}
 \indexentry{Node@{Node}!Node@{Node}|hyperpage}{16}
 \indexentry{Node@{Node}!next@{next}|hyperpage}{16}
@@ -160,8 +160,8 @@
 \indexentry{Return\discretionary {-}{}{}List$<$ Type $>$@{Return\discretionary {-}{}{}List$<$ Type $>$}|hyperpage}{18}
 \indexentry{Return\discretionary {-}{}{}List@{Return\discretionary {-}{}{}List}!Return\discretionary {-}{}{}List@{Return\discretionary {-}{}{}List}|hyperpage}{18}
 \indexentry{Return\discretionary {-}{}{}List@{Return\discretionary {-}{}{}List}!ReturnList@{Return\discretionary {-}{}{}List}|hyperpage}{18}
-\indexentry{Return\discretionary {-}{}{}List@{Return\discretionary {-}{}{}List}!call\discretionary {-}{}{}Function@{call\discretionary {-}{}{}Function}|hyperpage}{18}
-\indexentry{call\discretionary {-}{}{}Function@{call\discretionary {-}{}{}Function}!ReturnList@{Return\discretionary {-}{}{}List}|hyperpage}{18}
+\indexentry{Return\discretionary {-}{}{}List@{Return\discretionary {-}{}{}List}!call\discretionary {-}{}{}Function@{call\discretionary {-}{}{}Function}|hyperpage}{19}
+\indexentry{call\discretionary {-}{}{}Function@{call\discretionary {-}{}{}Function}!ReturnList@{Return\discretionary {-}{}{}List}|hyperpage}{19}
 \indexentry{Salesman@{Salesman}|hyperpage}{19}
 \indexentry{Salesman@{Salesman}!Salesman@{Salesman}|hyperpage}{19}
 \indexentry{Salesman@{Salesman}!Salesman@{Salesman}|hyperpage}{19}
@@ -179,12 +179,12 @@
 \indexentry{show\discretionary {-}{}{}Route@{show\discretionary {-}{}{}Route}!Salesman@{Salesman}|hyperpage}{19}
 \indexentry{Salesman@{Salesman}!distance\discretionary {-}{}{}Matrix@{distance\discretionary {-}{}{}Matrix}|hyperpage}{19}
 \indexentry{distance\discretionary {-}{}{}Matrix@{distance\discretionary {-}{}{}Matrix}!Salesman@{Salesman}|hyperpage}{19}
-\indexentry{Salesman@{Salesman}!has\discretionary {-}{}{}Matrix@{has\discretionary {-}{}{}Matrix}|hyperpage}{19}
-\indexentry{has\discretionary {-}{}{}Matrix@{has\discretionary {-}{}{}Matrix}!Salesman@{Salesman}|hyperpage}{19}
-\indexentry{Salesman@{Salesman}!locations@{locations}|hyperpage}{19}
-\indexentry{locations@{locations}!Salesman@{Salesman}|hyperpage}{19}
-\indexentry{Salesman@{Salesman}!route@{route}|hyperpage}{19}
-\indexentry{route@{route}!Salesman@{Salesman}|hyperpage}{19}
+\indexentry{Salesman@{Salesman}!has\discretionary {-}{}{}Matrix@{has\discretionary {-}{}{}Matrix}|hyperpage}{20}
+\indexentry{has\discretionary {-}{}{}Matrix@{has\discretionary {-}{}{}Matrix}!Salesman@{Salesman}|hyperpage}{20}
+\indexentry{Salesman@{Salesman}!locations@{locations}|hyperpage}{20}
+\indexentry{locations@{locations}!Salesman@{Salesman}|hyperpage}{20}
+\indexentry{Salesman@{Salesman}!route@{route}|hyperpage}{20}
+\indexentry{route@{route}!Salesman@{Salesman}|hyperpage}{20}
 \indexentry{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}cpp@{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}cpp}|hyperpage}{21}
 \indexentry{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}h@{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}h}|hyperpage}{21}
 \indexentry{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.\discretionary {-}{}{}cpp@{Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.\discretionary {-}{}{}cpp}|hyperpage}{21}

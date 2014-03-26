@@ -96,40 +96,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classMatrix.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix.html">Matrix</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">   10</a></span>&#160;            <span class="keywordtype">double</span>* <a class="code" href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">values</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">   11</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">number_of_columns</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classMatrix.html#ad88772bca79eec502f3737b027431c60">   12</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#ad88772bca79eec502f3737b027431c60">number_of_elements</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="classMatrix.html#a6c846d0a46676ff6addbcd04e2d516cc">Matrix</a>(<span class="keywordtype">int</span> elements);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="classMatrix.html#a9b1c3627f573d78a2f08623fdfef990f">~Matrix</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classMatrix.html#a98ba0c156a03a068759c4c2b8eb837eb">setElement</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column, <span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="classMatrix.html#a37b3a00db12f5838c164960ecf2ce42e">getElement</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classMatrix.html#ad5fe18fa5ffe97bda044000d45bf1547">showMatrix</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">   22</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">numberOfColumns</a>() {<span class="keywordflow">return</span> <a class="code" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">number_of_columns</a>;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classMatrix.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMatrix.html">Matrix</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">   18</a></span>&#160;            <span class="keywordtype">double</span>* <a class="code" href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">values</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">   19</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">number_of_columns</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classMatrix.html#ad88772bca79eec502f3737b027431c60">   20</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#ad88772bca79eec502f3737b027431c60">number_of_elements</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <a class="code" href="classMatrix.html#a6c846d0a46676ff6addbcd04e2d516cc">Matrix</a>(<span class="keywordtype">int</span> elements);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="classMatrix.html#a9b1c3627f573d78a2f08623fdfef990f">~Matrix</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classMatrix.html#a98ba0c156a03a068759c4c2b8eb837eb">setElement</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column, <span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="classMatrix.html#a37b3a00db12f5838c164960ecf2ce42e">getElement</a>(<span class="keywordtype">int</span> row, <span class="keywordtype">int</span> column);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classMatrix.html#ad5fe18fa5ffe97bda044000d45bf1547">showMatrix</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">   30</a></span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">numberOfColumns</a>() {<span class="keywordflow">return</span> <a class="code" href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">number_of_columns</a>;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classMatrix_html_ad5fe18fa5ffe97bda044000d45bf1547"><div class="ttname"><a href="classMatrix.html#ad5fe18fa5ffe97bda044000d45bf1547">Matrix::showMatrix</a></div><div class="ttdeci">void showMatrix()</div><div class="ttdef"><b>Definition:</b> Matrices.cpp:58</div></div>
-<div class="ttc" id="classMatrix_html_ad88772bca79eec502f3737b027431c60"><div class="ttname"><a href="classMatrix.html#ad88772bca79eec502f3737b027431c60">Matrix::number_of_elements</a></div><div class="ttdeci">int number_of_elements</div><div class="ttdef"><b>Definition:</b> Matrices.h:12</div></div>
-<div class="ttc" id="classMatrix_html_a19505b0b139553ad1ee2291f3d8385a9"><div class="ttname"><a href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">Matrix::values</a></div><div class="ttdeci">double * values</div><div class="ttdef"><b>Definition:</b> Matrices.h:10</div></div>
+<div class="ttc" id="classMatrix_html_ad88772bca79eec502f3737b027431c60"><div class="ttname"><a href="classMatrix.html#ad88772bca79eec502f3737b027431c60">Matrix::number_of_elements</a></div><div class="ttdeci">int number_of_elements</div><div class="ttdef"><b>Definition:</b> Matrices.h:20</div></div>
+<div class="ttc" id="classMatrix_html_a19505b0b139553ad1ee2291f3d8385a9"><div class="ttname"><a href="classMatrix.html#a19505b0b139553ad1ee2291f3d8385a9">Matrix::values</a></div><div class="ttdeci">double * values</div><div class="ttdef"><b>Definition:</b> Matrices.h:18</div></div>
 <div class="ttc" id="classMatrix_html_a37b3a00db12f5838c164960ecf2ce42e"><div class="ttname"><a href="classMatrix.html#a37b3a00db12f5838c164960ecf2ce42e">Matrix::getElement</a></div><div class="ttdeci">double getElement(int row, int column)</div><div class="ttdef"><b>Definition:</b> Matrices.cpp:41</div></div>
-<div class="ttc" id="classMatrix_html_af4421f66ac5f486116ebfe10f2cced18"><div class="ttname"><a href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">Matrix::numberOfColumns</a></div><div class="ttdeci">int numberOfColumns()</div><div class="ttdef"><b>Definition:</b> Matrices.h:22</div></div>
-<div class="ttc" id="classMatrix_html_afd4ab1ffa8fadfcaae4ebcf7802c0fef"><div class="ttname"><a href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">Matrix::number_of_columns</a></div><div class="ttdeci">int number_of_columns</div><div class="ttdef"><b>Definition:</b> Matrices.h:11</div></div>
-<div class="ttc" id="classMatrix_html"><div class="ttname"><a href="classMatrix.html">Matrix</a></div><div class="ttdef"><b>Definition:</b> Matrices.h:7</div></div>
+<div class="ttc" id="classMatrix_html_af4421f66ac5f486116ebfe10f2cced18"><div class="ttname"><a href="classMatrix.html#af4421f66ac5f486116ebfe10f2cced18">Matrix::numberOfColumns</a></div><div class="ttdeci">int numberOfColumns()</div><div class="ttdef"><b>Definition:</b> Matrices.h:30</div></div>
+<div class="ttc" id="classMatrix_html_afd4ab1ffa8fadfcaae4ebcf7802c0fef"><div class="ttname"><a href="classMatrix.html#afd4ab1ffa8fadfcaae4ebcf7802c0fef">Matrix::number_of_columns</a></div><div class="ttdeci">int number_of_columns</div><div class="ttdef"><b>Definition:</b> Matrices.h:19</div></div>
+<div class="ttc" id="classMatrix_html"><div class="ttname"><a href="classMatrix.html">Matrix</a></div><div class="ttdoc">A class that defines a matrix. </div><div class="ttdef"><b>Definition:</b> Matrices.h:15</div></div>
 <div class="ttc" id="classMatrix_html_a6c846d0a46676ff6addbcd04e2d516cc"><div class="ttname"><a href="classMatrix.html#a6c846d0a46676ff6addbcd04e2d516cc">Matrix::Matrix</a></div><div class="ttdeci">Matrix(int elements)</div><div class="ttdef"><b>Definition:</b> Matrices.cpp:4</div></div>
 <div class="ttc" id="classMatrix_html_a98ba0c156a03a068759c4c2b8eb837eb"><div class="ttname"><a href="classMatrix.html#a98ba0c156a03a068759c4c2b8eb837eb">Matrix::setElement</a></div><div class="ttdeci">bool setElement(int row, int column, double value)</div><div class="ttdef"><b>Definition:</b> Matrices.cpp:22</div></div>
 <div class="ttc" id="classMatrix_html_a9b1c3627f573d78a2f08623fdfef990f"><div class="ttname"><a href="classMatrix.html#a9b1c3627f573d78a2f08623fdfef990f">Matrix::~Matrix</a></div><div class="ttdeci">~Matrix()</div><div class="ttdef"><b>Definition:</b> Matrices.cpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 26 2014 22:13:17 for Axiom Enterprises - Route Logistics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 26 2014 22:31:25 for Axiom Enterprises - Route Logistics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
