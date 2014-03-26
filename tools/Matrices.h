@@ -4,6 +4,14 @@
 #include <iostream>
 #include <cmath>
 
+//! A class that defines a matrix
+/*!
+ * This class defines a matrix of arbitrary dimesions, I think
+ * the current implementation restricts this to a square matrix
+ * (nxn) where n is the square root of the value given to the 
+ * constructor.
+ */
+
 class Matrix
 {
     private:
