@@ -29,6 +29,9 @@ int getNumLines(FILE * file)
         i++;    // Else increment counter
     }
 
+    // Reset the cursor position to the start of the file
+    rewind(file);
+
     // Return the result
     return i;
 }
@@ -40,19 +43,16 @@ int loadAccounts(FILE* file, struct account* accounts, int num)
     int i;
 
     // Loop through each account in the file and pass it into an appropriate struct
-    for (i = 0; i < num; i++)
+    while(buffer, 256, file)
     {
-        // Get the next line from the file and store it in buffer
-        fgets(buffer, sizeof(buffer), file);
 
         // Assumning the file is in csv format, split the string into name password using the comma
         // as a delimeter
-        //accounts->username = strtok(buffer, ",");
-        //accounts->password = strtok(NULL, ",");
-        printf("%s\n", strtok(buffer, ","));
-        printf("%s\n", strtok(NULL, ","));
+        printf("Running strchr on %s\n", buffer);
+        printf("%s\n", strchr(buffer, ','));
 
         // Increment the pointer through the array
+        printf("Incrementing the accounts pointer\n");
         accounts++;
     }
 
