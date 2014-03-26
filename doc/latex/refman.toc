@@ -1,0 +1,229 @@
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}basic\discretionary {-}{}{}\_\discretionary {-}{}{}window Namespace Reference}{9}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Function Documentation}{9}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}main}{9}{subsubsection.5.1.1.1}
+\contentsline {section}{\numberline {5.2}hello Namespace Reference}{9}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Function Documentation}{9}{subsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1.1}hello}{9}{subsubsection.5.2.1.1}
+\contentsline {subsubsection}{\numberline {5.2.1.2}multiply}{9}{subsubsection.5.2.1.2}
+\contentsline {section}{\numberline {5.3}python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test Namespace Reference}{9}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Variable Documentation}{9}{subsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.1.1}data}{9}{subsubsection.5.3.1.1}
+\contentsline {subsubsection}{\numberline {5.3.1.2}H\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}T}{10}{subsubsection.5.3.1.2}
+\contentsline {subsubsection}{\numberline {5.3.1.3}P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}{10}{subsubsection.5.3.1.3}
+\contentsline {subsubsection}{\numberline {5.3.1.4}s}{10}{subsubsection.5.3.1.4}
+\contentsline {section}{\numberline {5.4}python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test Namespace Reference}{10}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Variable Documentation}{10}{subsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.1.1}data}{10}{subsubsection.5.4.1.1}
+\contentsline {subsubsection}{\numberline {5.4.1.2}H\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}T}{10}{subsubsection.5.4.1.2}
+\contentsline {subsubsection}{\numberline {5.4.1.3}P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}{10}{subsubsection.5.4.1.3}
+\contentsline {subsubsection}{\numberline {5.4.1.4}s}{10}{subsubsection.5.4.1.4}
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}account Struct Reference}{11}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Member Data Documentation}{11}{subsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.1}password}{11}{subsubsection.6.1.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.2}username}{11}{subsubsection.6.1.1.2}
+\contentsline {section}{\numberline {6.2}Connection$<$ Type $>$ Class Template Reference}{11}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Constructor \& Destructor Documentation}{11}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}Connection}{11}{subsubsection.6.2.1.1}
+\contentsline {section}{\numberline {6.3}Linked\discretionary {-}{}{}List$<$ Type $>$ Class Template Reference}{12}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Constructor \& Destructor Documentation}{12}{subsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1.1}Linked\discretionary {-}{}{}List}{12}{subsubsection.6.3.1.1}
+\contentsline {subsubsection}{\numberline {6.3.1.2}$\sim $\discretionary {-}{}{}Linked\discretionary {-}{}{}List}{12}{subsubsection.6.3.1.2}
+\contentsline {subsection}{\numberline {6.3.2}Member Function Documentation}{12}{subsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2.1}append\discretionary {-}{}{}Node}{12}{subsubsection.6.3.2.1}
+\contentsline {subsubsection}{\numberline {6.3.2.2}append\discretionary {-}{}{}Node}{12}{subsubsection.6.3.2.2}
+\contentsline {subsubsection}{\numberline {6.3.2.3}display\discretionary {-}{}{}Nodes}{12}{subsubsection.6.3.2.3}
+\contentsline {subsubsection}{\numberline {6.3.2.4}display\discretionary {-}{}{}Nodes\discretionary {-}{}{}R}{12}{subsubsection.6.3.2.4}
+\contentsline {subsubsection}{\numberline {6.3.2.5}empty\discretionary {-}{}{}List}{12}{subsubsection.6.3.2.5}
+\contentsline {subsubsection}{\numberline {6.3.2.6}from\discretionary {-}{}{}Start}{12}{subsubsection.6.3.2.6}
+\contentsline {subsubsection}{\numberline {6.3.2.7}get\discretionary {-}{}{}List\discretionary {-}{}{}Length}{12}{subsubsection.6.3.2.7}
+\contentsline {subsubsection}{\numberline {6.3.2.8}get\discretionary {-}{}{}Next\discretionary {-}{}{}Node}{12}{subsubsection.6.3.2.8}
+\contentsline {subsubsection}{\numberline {6.3.2.9}get\discretionary {-}{}{}Node\discretionary {-}{}{}At}{12}{subsubsection.6.3.2.9}
+\contentsline {subsubsection}{\numberline {6.3.2.10}loop\discretionary {-}{}{}Through\discretionary {-}{}{}From}{12}{subsubsection.6.3.2.10}
+\contentsline {subsection}{\numberline {6.3.3}Member Data Documentation}{13}{subsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.1}back}{13}{subsubsection.6.3.3.1}
+\contentsline {subsubsection}{\numberline {6.3.3.2}current\discretionary {-}{}{}Node}{13}{subsubsection.6.3.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3.3}front}{13}{subsubsection.6.3.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.4}list\discretionary {-}{}{}\_\discretionary {-}{}{}length}{13}{subsubsection.6.3.3.4}
+\contentsline {section}{\numberline {6.4}location Struct Reference}{13}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Member Data Documentation}{13}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}id}{13}{subsubsection.6.4.1.1}
+\contentsline {subsubsection}{\numberline {6.4.1.2}latitude}{13}{subsubsection.6.4.1.2}
+\contentsline {subsubsection}{\numberline {6.4.1.3}longitude}{13}{subsubsection.6.4.1.3}
+\contentsline {section}{\numberline {6.5}Location Class Reference}{13}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Constructor \& Destructor Documentation}{14}{subsection.6.5.1}
+\contentsline {subsubsection}{\numberline {6.5.1.1}Location}{14}{subsubsection.6.5.1.1}
+\contentsline {subsubsection}{\numberline {6.5.1.2}$\sim $\discretionary {-}{}{}Location}{14}{subsubsection.6.5.1.2}
+\contentsline {subsection}{\numberline {6.5.2}Member Function Documentation}{14}{subsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.2.1}get\discretionary {-}{}{}Distance\discretionary {-}{}{}To}{14}{subsubsection.6.5.2.1}
+\contentsline {subsubsection}{\numberline {6.5.2.2}get\discretionary {-}{}{}Lat}{14}{subsubsection.6.5.2.2}
+\contentsline {subsubsection}{\numberline {6.5.2.3}get\discretionary {-}{}{}Long}{14}{subsubsection.6.5.2.3}
+\contentsline {subsubsection}{\numberline {6.5.2.4}not\discretionary {-}{}{}Start}{14}{subsubsection.6.5.2.4}
+\contentsline {subsubsection}{\numberline {6.5.2.5}print\discretionary {-}{}{}Coords}{14}{subsubsection.6.5.2.5}
+\contentsline {subsubsection}{\numberline {6.5.2.6}set\discretionary {-}{}{}Start}{14}{subsubsection.6.5.2.6}
+\contentsline {subsubsection}{\numberline {6.5.2.7}start\discretionary {-}{}{}Location}{14}{subsubsection.6.5.2.7}
+\contentsline {subsection}{\numberline {6.5.3}Member Data Documentation}{14}{subsection.6.5.3}
+\contentsline {subsubsection}{\numberline {6.5.3.1}is\discretionary {-}{}{}Start}{14}{subsubsection.6.5.3.1}
+\contentsline {subsubsection}{\numberline {6.5.3.2}location\discretionary {-}{}{}I\discretionary {-}{}{}D}{14}{subsubsection.6.5.3.2}
+\contentsline {subsubsection}{\numberline {6.5.3.3}x}{14}{subsubsection.6.5.3.3}
+\contentsline {subsubsection}{\numberline {6.5.3.4}y}{14}{subsubsection.6.5.3.4}
+\contentsline {section}{\numberline {6.6}Matrix Class Reference}{15}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Constructor \& Destructor Documentation}{15}{subsection.6.6.1}
+\contentsline {subsubsection}{\numberline {6.6.1.1}Matrix}{15}{subsubsection.6.6.1.1}
+\contentsline {subsubsection}{\numberline {6.6.1.2}$\sim $\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.1.2}
+\contentsline {subsection}{\numberline {6.6.2}Member Function Documentation}{15}{subsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.2.1}get\discretionary {-}{}{}Element}{15}{subsubsection.6.6.2.1}
+\contentsline {subsubsection}{\numberline {6.6.2.2}number\discretionary {-}{}{}Of\discretionary {-}{}{}Columns}{15}{subsubsection.6.6.2.2}
+\contentsline {subsubsection}{\numberline {6.6.2.3}set\discretionary {-}{}{}Element}{15}{subsubsection.6.6.2.3}
+\contentsline {subsubsection}{\numberline {6.6.2.4}show\discretionary {-}{}{}Matrix}{15}{subsubsection.6.6.2.4}
+\contentsline {subsection}{\numberline {6.6.3}Member Data Documentation}{15}{subsection.6.6.3}
+\contentsline {subsubsection}{\numberline {6.6.3.1}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}{15}{subsubsection.6.6.3.1}
+\contentsline {subsubsection}{\numberline {6.6.3.2}number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}{15}{subsubsection.6.6.3.2}
+\contentsline {subsubsection}{\numberline {6.6.3.3}values}{15}{subsubsection.6.6.3.3}
+\contentsline {section}{\numberline {6.7}Node$<$ Type $>$ Class Template Reference}{15}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Constructor \& Destructor Documentation}{16}{subsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.1.1}Node}{16}{subsubsection.6.7.1.1}
+\contentsline {subsection}{\numberline {6.7.2}Member Data Documentation}{16}{subsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.2.1}next}{16}{subsubsection.6.7.2.1}
+\contentsline {subsubsection}{\numberline {6.7.2.2}previous}{16}{subsubsection.6.7.2.2}
+\contentsline {section}{\numberline {6.8}Py\discretionary {-}{}{}Func$<$ Type $>$ Class Template Reference}{16}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Constructor \& Destructor Documentation}{17}{subsection.6.8.1}
+\contentsline {subsubsection}{\numberline {6.8.1.1}Py\discretionary {-}{}{}Func}{17}{subsubsection.6.8.1.1}
+\contentsline {subsubsection}{\numberline {6.8.1.2}$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}Func}{17}{subsubsection.6.8.1.2}
+\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{17}{subsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.2.1}valid\discretionary {-}{}{}Func}{17}{subsubsection.6.8.2.1}
+\contentsline {subsection}{\numberline {6.8.3}Member Data Documentation}{17}{subsection.6.8.3}
+\contentsline {subsubsection}{\numberline {6.8.3.1}is\discretionary {-}{}{}Valid}{17}{subsubsection.6.8.3.1}
+\contentsline {subsubsection}{\numberline {6.8.3.2}p\discretionary {-}{}{}Func}{17}{subsubsection.6.8.3.2}
+\contentsline {subsubsection}{\numberline {6.8.3.3}p\discretionary {-}{}{}List}{17}{subsubsection.6.8.3.3}
+\contentsline {subsubsection}{\numberline {6.8.3.4}p\discretionary {-}{}{}List\discretionary {-}{}{}Item}{17}{subsubsection.6.8.3.4}
+\contentsline {subsubsection}{\numberline {6.8.3.5}p\discretionary {-}{}{}List\discretionary {-}{}{}Length}{17}{subsubsection.6.8.3.5}
+\contentsline {subsubsection}{\numberline {6.8.3.6}p\discretionary {-}{}{}Module}{17}{subsubsection.6.8.3.6}
+\contentsline {subsubsection}{\numberline {6.8.3.7}p\discretionary {-}{}{}Name}{17}{subsubsection.6.8.3.7}
+\contentsline {subsubsection}{\numberline {6.8.3.8}p\discretionary {-}{}{}Value}{17}{subsubsection.6.8.3.8}
+\contentsline {section}{\numberline {6.9}Py\discretionary {-}{}{}I Class Reference}{17}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Constructor \& Destructor Documentation}{18}{subsection.6.9.1}
+\contentsline {subsubsection}{\numberline {6.9.1.1}Py\discretionary {-}{}{}I}{18}{subsubsection.6.9.1.1}
+\contentsline {subsubsection}{\numberline {6.9.1.2}$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}I}{18}{subsubsection.6.9.1.2}
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{18}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}add\discretionary {-}{}{}Function}{18}{subsubsection.6.9.2.1}
+\contentsline {subsection}{\numberline {6.9.3}Member Data Documentation}{18}{subsection.6.9.3}
+\contentsline {subsubsection}{\numberline {6.9.3.1}func\discretionary {-}{}{}List}{18}{subsubsection.6.9.3.1}
+\contentsline {section}{\numberline {6.10}Return\discretionary {-}{}{}List$<$ Type $>$ Class Template Reference}{18}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Constructor \& Destructor Documentation}{18}{subsection.6.10.1}
+\contentsline {subsubsection}{\numberline {6.10.1.1}Return\discretionary {-}{}{}List}{18}{subsubsection.6.10.1.1}
+\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{18}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}call\discretionary {-}{}{}Function}{18}{subsubsection.6.10.2.1}
+\contentsline {section}{\numberline {6.11}Salesman Class Reference}{19}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}Constructor \& Destructor Documentation}{19}{subsection.6.11.1}
+\contentsline {subsubsection}{\numberline {6.11.1.1}Salesman}{19}{subsubsection.6.11.1.1}
+\contentsline {subsubsection}{\numberline {6.11.1.2}$\sim $\discretionary {-}{}{}Salesman}{19}{subsubsection.6.11.1.2}
+\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{19}{subsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.2.1}add\discretionary {-}{}{}Location}{19}{subsubsection.6.11.2.1}
+\contentsline {subsubsection}{\numberline {6.11.2.2}calculate\discretionary {-}{}{}Route}{19}{subsubsection.6.11.2.2}
+\contentsline {subsubsection}{\numberline {6.11.2.3}populate\discretionary {-}{}{}Matrix}{19}{subsubsection.6.11.2.3}
+\contentsline {subsubsection}{\numberline {6.11.2.4}show\discretionary {-}{}{}Locations}{19}{subsubsection.6.11.2.4}
+\contentsline {subsubsection}{\numberline {6.11.2.5}show\discretionary {-}{}{}Route}{19}{subsubsection.6.11.2.5}
+\contentsline {subsection}{\numberline {6.11.3}Member Data Documentation}{19}{subsection.6.11.3}
+\contentsline {subsubsection}{\numberline {6.11.3.1}distance\discretionary {-}{}{}Matrix}{19}{subsubsection.6.11.3.1}
+\contentsline {subsubsection}{\numberline {6.11.3.2}has\discretionary {-}{}{}Matrix}{19}{subsubsection.6.11.3.2}
+\contentsline {subsubsection}{\numberline {6.11.3.3}locations}{19}{subsubsection.6.11.3.3}
+\contentsline {subsubsection}{\numberline {6.11.3.4}route}{19}{subsubsection.6.11.3.4}
+\contentsline {chapter}{\numberline {7}File Documentation}{21}{chapter.7}
+\contentsline {section}{\numberline {7.1}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.cpp File Reference}{21}{section.7.1}
+\contentsline {section}{\numberline {7.2}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.h File Reference}{21}{section.7.2}
+\contentsline {section}{\numberline {7.3}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.cpp File Reference}{21}{section.7.3}
+\contentsline {section}{\numberline {7.4}Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.h File Reference}{21}{section.7.4}
+\contentsline {section}{\numberline {7.5}Backend/\discretionary {-}{}{}Salesman/test.cpp File Reference}{22}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Function Documentation}{22}{subsection.7.5.1}
+\contentsline {subsubsection}{\numberline {7.5.1.1}main}{22}{subsubsection.7.5.1.1}
+\contentsline {section}{\numberline {7.6}tests/test.cpp File Reference}{22}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Function Documentation}{22}{subsection.7.6.1}
+\contentsline {subsubsection}{\numberline {7.6.1.1}main}{22}{subsubsection.7.6.1.1}
+\contentsline {section}{\numberline {7.7}tools/\discretionary {-}{}{}Sockets/test.cpp File Reference}{22}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Function Documentation}{22}{subsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.1.1}main}{22}{subsubsection.7.7.1.1}
+\contentsline {section}{\numberline {7.8}tools/test.cpp File Reference}{22}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Function Documentation}{23}{subsection.7.8.1}
+\contentsline {subsubsection}{\numberline {7.8.1.1}main}{23}{subsubsection.7.8.1.1}
+\contentsline {section}{\numberline {7.9}Backend/\discretionary {-}{}{}Salesman/test2.cpp File Reference}{23}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Function Documentation}{23}{subsection.7.9.1}
+\contentsline {subsubsection}{\numberline {7.9.1.1}main}{23}{subsubsection.7.9.1.1}
+\contentsline {section}{\numberline {7.10}main.\discretionary {-}{}{}cpp File Reference}{23}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Function Documentation}{23}{subsection.7.10.1}
+\contentsline {subsubsection}{\numberline {7.10.1.1}main}{23}{subsubsection.7.10.1.1}
+\contentsline {section}{\numberline {7.11}tests/basic\discretionary {-}{}{}\_\discretionary {-}{}{}window.py File Reference}{23}{section.7.11}
+\contentsline {section}{\numberline {7.12}tests/example.cpp File Reference}{23}{section.7.12}
+\contentsline {subsection}{\numberline {7.12.1}Function Documentation}{24}{subsection.7.12.1}
+\contentsline {subsubsection}{\numberline {7.12.1.1}main}{24}{subsubsection.7.12.1.1}
+\contentsline {section}{\numberline {7.13}tests/hello.py File Reference}{24}{section.7.13}
+\contentsline {section}{\numberline {7.14}tools/\discretionary {-}{}{}Graph.h File Reference}{24}{section.7.14}
+\contentsline {subsection}{\numberline {7.14.1}Function Documentation}{24}{subsection.7.14.1}
+\contentsline {subsubsection}{\numberline {7.14.1.1}Connection}{24}{subsubsection.7.14.1.1}
+\contentsline {subsubsection}{\numberline {7.14.1.2}Node}{24}{subsubsection.7.14.1.2}
+\contentsline {subsubsection}{\numberline {7.14.1.3}$\sim $\discretionary {-}{}{}Node}{24}{subsubsection.7.14.1.3}
+\contentsline {section}{\numberline {7.15}tools/\discretionary {-}{}{}Linked\discretionary {-}{}{}List.h File Reference}{24}{section.7.15}
+\contentsline {subsection}{\numberline {7.15.1}Variable Documentation}{25}{subsection.7.15.1}
+\contentsline {subsubsection}{\numberline {7.15.1.1}Node}{25}{subsubsection.7.15.1.1}
+\contentsline {section}{\numberline {7.16}tools/\discretionary {-}{}{}Matrices.cpp File Reference}{25}{section.7.16}
+\contentsline {section}{\numberline {7.17}tools/\discretionary {-}{}{}Matrices.h File Reference}{25}{section.7.17}
+\contentsline {section}{\numberline {7.18}tools/\discretionary {-}{}{}Python/.Functions.\discretionary {-}{}{}cpp File Reference}{25}{section.7.18}
+\contentsline {section}{\numberline {7.19}tools/\discretionary {-}{}{}Python/.Py\discretionary {-}{}{}Func.\discretionary {-}{}{}cpp File Reference}{25}{section.7.19}
+\contentsline {section}{\numberline {7.20}tools/\discretionary {-}{}{}Python/.Py\discretionary {-}{}{}I.\discretionary {-}{}{}cpp File Reference}{25}{section.7.20}
+\contentsline {section}{\numberline {7.21}tools/\discretionary {-}{}{}Python/.Py\discretionary {-}{}{}I.\discretionary {-}{}{}h File Reference}{26}{section.7.21}
+\contentsline {section}{\numberline {7.22}tools/\discretionary {-}{}{}Python/\discretionary {-}{}{}Functions.h File Reference}{26}{section.7.22}
+\contentsline {section}{\numberline {7.23}tools/\discretionary {-}{}{}Python/\discretionary {-}{}{}Py\discretionary {-}{}{}Func.h File Reference}{26}{section.7.23}
+\contentsline {section}{\numberline {7.24}tools/\discretionary {-}{}{}Sockets/client.c File Reference}{26}{section.7.24}
+\contentsline {subsection}{\numberline {7.24.1}Macro Definition Documentation}{27}{subsection.7.24.1}
+\contentsline {subsubsection}{\numberline {7.24.1.1}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}{27}{subsubsection.7.24.1.1}
+\contentsline {subsubsection}{\numberline {7.24.1.2}P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}{27}{subsubsection.7.24.1.2}
+\contentsline {subsection}{\numberline {7.24.2}Function Documentation}{27}{subsection.7.24.2}
+\contentsline {subsubsection}{\numberline {7.24.2.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}{27}{subsubsection.7.24.2.1}
+\contentsline {subsubsection}{\numberline {7.24.2.2}main}{27}{subsubsection.7.24.2.2}
+\contentsline {section}{\numberline {7.25}tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test.py File Reference}{27}{section.7.25}
+\contentsline {section}{\numberline {7.26}tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test.py File Reference}{27}{section.7.26}
+\contentsline {section}{\numberline {7.27}tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.c File Reference}{27}{section.7.27}
+\contentsline {subsection}{\numberline {7.27.1}Function Documentation}{28}{subsection.7.27.1}
+\contentsline {subsubsection}{\numberline {7.27.1.1}get\discretionary {-}{}{}Num\discretionary {-}{}{}Lines}{28}{subsubsection.7.27.1.1}
+\contentsline {subsubsection}{\numberline {7.27.1.2}handle\discretionary {-}{}{}U\discretionary {-}{}{}I}{28}{subsubsection.7.27.1.2}
+\contentsline {subsubsection}{\numberline {7.27.1.3}load\discretionary {-}{}{}Accounts}{28}{subsubsection.7.27.1.3}
+\contentsline {subsubsection}{\numberline {7.27.1.4}login\discretionary {-}{}{}Successful}{28}{subsubsection.7.27.1.4}
+\contentsline {section}{\numberline {7.28}tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.h File Reference}{28}{section.7.28}
+\contentsline {subsection}{\numberline {7.28.1}Function Documentation}{28}{subsection.7.28.1}
+\contentsline {subsubsection}{\numberline {7.28.1.1}get\discretionary {-}{}{}Num\discretionary {-}{}{}Lines}{28}{subsubsection.7.28.1.1}
+\contentsline {subsubsection}{\numberline {7.28.1.2}handle\discretionary {-}{}{}U\discretionary {-}{}{}I}{28}{subsubsection.7.28.1.2}
+\contentsline {subsubsection}{\numberline {7.28.1.3}load\discretionary {-}{}{}Accounts}{28}{subsubsection.7.28.1.3}
+\contentsline {subsubsection}{\numberline {7.28.1.4}login\discretionary {-}{}{}Succesful}{28}{subsubsection.7.28.1.4}
+\contentsline {section}{\numberline {7.29}tools/\discretionary {-}{}{}Sockets/server.c File Reference}{28}{section.7.29}
+\contentsline {subsection}{\numberline {7.29.1}Function Documentation}{29}{subsection.7.29.1}
+\contentsline {subsubsection}{\numberline {7.29.1.1}run\discretionary {-}{}{}\_\discretionary {-}{}{}server}{29}{subsubsection.7.29.1.1}
+\contentsline {section}{\numberline {7.30}tools/\discretionary {-}{}{}Sockets/server.h File Reference}{29}{section.7.30}
+\contentsline {subsection}{\numberline {7.30.1}Function Documentation}{29}{subsection.7.30.1}
+\contentsline {subsubsection}{\numberline {7.30.1.1}run\discretionary {-}{}{}\_\discretionary {-}{}{}server}{29}{subsubsection.7.30.1.1}
+\contentsline {section}{\numberline {7.31}tools/\discretionary {-}{}{}Sockets/server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.c File Reference}{29}{section.7.31}
+\contentsline {subsection}{\numberline {7.31.1}Function Documentation}{29}{subsection.7.31.1}
+\contentsline {subsubsection}{\numberline {7.31.1.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}{29}{subsubsection.7.31.1.1}
+\contentsline {subsubsection}{\numberline {7.31.1.2}new\discretionary {-}{}{}\_\discretionary {-}{}{}socket}{29}{subsubsection.7.31.1.2}
+\contentsline {subsubsection}{\numberline {7.31.1.3}receive\discretionary {-}{}{}Data}{29}{subsubsection.7.31.1.3}
+\contentsline {subsubsection}{\numberline {7.31.1.4}sigchld\discretionary {-}{}{}\_\discretionary {-}{}{}handler}{29}{subsubsection.7.31.1.4}
+\contentsline {section}{\numberline {7.32}tools/\discretionary {-}{}{}Sockets/server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.h File Reference}{30}{section.7.32}
+\contentsline {subsection}{\numberline {7.32.1}Macro Definition Documentation}{30}{subsection.7.32.1}
+\contentsline {subsubsection}{\numberline {7.32.1.1}A\discretionary {-}{}{}P\discretionary {-}{}{}P}{30}{subsubsection.7.32.1.1}
+\contentsline {subsubsection}{\numberline {7.32.1.2}B\discretionary {-}{}{}A\discretionary {-}{}{}C\discretionary {-}{}{}K\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}G}{30}{subsubsection.7.32.1.2}
+\contentsline {subsubsection}{\numberline {7.32.1.3}P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}{30}{subsubsection.7.32.1.3}
+\contentsline {subsubsection}{\numberline {7.32.1.4}U\discretionary {-}{}{}I}{30}{subsubsection.7.32.1.4}
+\contentsline {subsection}{\numberline {7.32.2}Function Documentation}{30}{subsection.7.32.2}
+\contentsline {subsubsection}{\numberline {7.32.2.1}get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}{30}{subsubsection.7.32.2.1}
+\contentsline {subsubsection}{\numberline {7.32.2.2}new\discretionary {-}{}{}\_\discretionary {-}{}{}socket}{30}{subsubsection.7.32.2.2}
+\contentsline {subsubsection}{\numberline {7.32.2.3}receive\discretionary {-}{}{}Data}{30}{subsubsection.7.32.2.3}
+\contentsline {subsubsection}{\numberline {7.32.2.4}sigchld\discretionary {-}{}{}\_\discretionary {-}{}{}handler}{30}{subsubsection.7.32.2.4}
+\contentsline {chapter}{Index}{31}{section*.61}

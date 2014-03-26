@@ -1,0 +1,112 @@
+\hypertarget{classSalesman}{\section{Salesman Class Reference}
+\label{classSalesman}\index{Salesman@{Salesman}}
+}
+
+
+{\ttfamily \#include \char`\"{}Salesman.\-h\char`\"{}}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSalesman_ab32efbb2c7f7d57dbdcf9575370d1bce}{Salesman} ()
+\item 
+\hyperlink{classSalesman_af8e121d27b685f74edd1b8bc2964a668}{$\sim$\-Salesman} ()
+\item 
+void \hyperlink{classSalesman_a395e4d58d2c215370ec462fbf88d9db6}{add\-Location} (double longitude, double latitude)
+\item 
+void \hyperlink{classSalesman_adfdb2c81bbebdfa1415ff0955d63abdc}{show\-Locations} ()
+\item 
+void \hyperlink{classSalesman_a0d58b5de2bd9befcacd085fe930166ad}{show\-Route} ()
+\item 
+bool \hyperlink{classSalesman_a1590194b6a0e1edd9b7a156e00e5844e}{populate\-Matrix} ()
+\item 
+void \hyperlink{classSalesman_a4221f3823416c5a7b44cef13fce58700}{calculate\-Route} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classLocation}{Location} $>$ $\ast$ \hyperlink{classSalesman_ab9e104c49e0f5ac61deebb86520b229b}{locations}
+\item 
+\hyperlink{classLinkedList}{Linked\-List}$<$ \hyperlink{classLocation}{Location} $>$ $\ast$ \hyperlink{classSalesman_a7e6c1099741dd8cfc6d44784b026eb44}{route}
+\item 
+\hyperlink{classMatrix}{Matrix} $\ast$ \hyperlink{classSalesman_a11e52f4aa2750626800eecf2201c9088}{distance\-Matrix}
+\item 
+bool \hyperlink{classSalesman_abb3c72fd5efc1fb172d3271f82811053}{has\-Matrix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSalesman_ab32efbb2c7f7d57dbdcf9575370d1bce}{\index{Salesman@{Salesman}!Salesman@{Salesman}}
+\index{Salesman@{Salesman}!Salesman@{Salesman}}
+\subsubsection[{Salesman}]{\setlength{\rightskip}{0pt plus 5cm}Salesman\-::\-Salesman (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_ab32efbb2c7f7d57dbdcf9575370d1bce}
+\hypertarget{classSalesman_af8e121d27b685f74edd1b8bc2964a668}{\index{Salesman@{Salesman}!$\sim$\-Salesman@{$\sim$\-Salesman}}
+\index{$\sim$\-Salesman@{$\sim$\-Salesman}!Salesman@{Salesman}}
+\subsubsection[{$\sim$\-Salesman}]{\setlength{\rightskip}{0pt plus 5cm}Salesman\-::$\sim$\-Salesman (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_af8e121d27b685f74edd1b8bc2964a668}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSalesman_a395e4d58d2c215370ec462fbf88d9db6}{\index{Salesman@{Salesman}!add\-Location@{add\-Location}}
+\index{add\-Location@{add\-Location}!Salesman@{Salesman}}
+\subsubsection[{add\-Location}]{\setlength{\rightskip}{0pt plus 5cm}void Salesman\-::add\-Location (
+\begin{DoxyParamCaption}
+\item[{double}]{longitude, }
+\item[{double}]{latitude}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_a395e4d58d2c215370ec462fbf88d9db6}
+\hypertarget{classSalesman_a4221f3823416c5a7b44cef13fce58700}{\index{Salesman@{Salesman}!calculate\-Route@{calculate\-Route}}
+\index{calculate\-Route@{calculate\-Route}!Salesman@{Salesman}}
+\subsubsection[{calculate\-Route}]{\setlength{\rightskip}{0pt plus 5cm}void Salesman\-::calculate\-Route (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_a4221f3823416c5a7b44cef13fce58700}
+\hypertarget{classSalesman_a1590194b6a0e1edd9b7a156e00e5844e}{\index{Salesman@{Salesman}!populate\-Matrix@{populate\-Matrix}}
+\index{populate\-Matrix@{populate\-Matrix}!Salesman@{Salesman}}
+\subsubsection[{populate\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}bool Salesman\-::populate\-Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_a1590194b6a0e1edd9b7a156e00e5844e}
+\hypertarget{classSalesman_adfdb2c81bbebdfa1415ff0955d63abdc}{\index{Salesman@{Salesman}!show\-Locations@{show\-Locations}}
+\index{show\-Locations@{show\-Locations}!Salesman@{Salesman}}
+\subsubsection[{show\-Locations}]{\setlength{\rightskip}{0pt plus 5cm}void Salesman\-::show\-Locations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_adfdb2c81bbebdfa1415ff0955d63abdc}
+\hypertarget{classSalesman_a0d58b5de2bd9befcacd085fe930166ad}{\index{Salesman@{Salesman}!show\-Route@{show\-Route}}
+\index{show\-Route@{show\-Route}!Salesman@{Salesman}}
+\subsubsection[{show\-Route}]{\setlength{\rightskip}{0pt plus 5cm}void Salesman\-::show\-Route (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSalesman_a0d58b5de2bd9befcacd085fe930166ad}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classSalesman_a11e52f4aa2750626800eecf2201c9088}{\index{Salesman@{Salesman}!distance\-Matrix@{distance\-Matrix}}
+\index{distance\-Matrix@{distance\-Matrix}!Salesman@{Salesman}}
+\subsubsection[{distance\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Salesman\-::distance\-Matrix\hspace{0.3cm}{\ttfamily [private]}}}\label{classSalesman_a11e52f4aa2750626800eecf2201c9088}
+\hypertarget{classSalesman_abb3c72fd5efc1fb172d3271f82811053}{\index{Salesman@{Salesman}!has\-Matrix@{has\-Matrix}}
+\index{has\-Matrix@{has\-Matrix}!Salesman@{Salesman}}
+\subsubsection[{has\-Matrix}]{\setlength{\rightskip}{0pt plus 5cm}bool Salesman\-::has\-Matrix\hspace{0.3cm}{\ttfamily [private]}}}\label{classSalesman_abb3c72fd5efc1fb172d3271f82811053}
+\hypertarget{classSalesman_ab9e104c49e0f5ac61deebb86520b229b}{\index{Salesman@{Salesman}!locations@{locations}}
+\index{locations@{locations}!Salesman@{Salesman}}
+\subsubsection[{locations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Location}$>$$\ast$ Salesman\-::locations\hspace{0.3cm}{\ttfamily [private]}}}\label{classSalesman_ab9e104c49e0f5ac61deebb86520b229b}
+\hypertarget{classSalesman_a7e6c1099741dd8cfc6d44784b026eb44}{\index{Salesman@{Salesman}!route@{route}}
+\index{route@{route}!Salesman@{Salesman}}
+\subsubsection[{route}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Linked\-List}$<${\bf Location}$>$$\ast$ Salesman\-::route\hspace{0.3cm}{\ttfamily [private]}}}\label{classSalesman_a7e6c1099741dd8cfc6d44784b026eb44}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Backend/\-Salesman/\hyperlink{Salesman_8h}{Salesman.\-h}\item 
+Backend/\-Salesman/\hyperlink{Salesman_8cpp}{Salesman.\-cpp}\end{DoxyCompactItemize}

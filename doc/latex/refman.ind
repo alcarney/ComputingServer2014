@@ -1,0 +1,552 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Linked\discretionary {-}{}{}List}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {$\sim $\discretionary {-}{}{}Location}
+    \subitem {Location}, \hyperpage{14}
+  \item {$\sim $\discretionary {-}{}{}Matrix}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {$\sim $\discretionary {-}{}{}Node}
+    \subitem {Graph.\discretionary {-}{}{}h}, \hyperpage{24}
+  \item {$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}Func}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}I}
+    \subitem {Py\discretionary {-}{}{}I}, \hyperpage{18}
+  \item {$\sim $\discretionary {-}{}{}Salesman}
+    \subitem {Salesman}, \hyperpage{19}
+
+  \indexspace
+
+  \item {A\discretionary {-}{}{}P\discretionary {-}{}{}P}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {account}, \hyperpage{11}
+    \subitem {password}, \hyperpage{11}
+    \subitem {username}, \hyperpage{11}
+  \item {add\discretionary {-}{}{}Function}
+    \subitem {Py\discretionary {-}{}{}I}, \hyperpage{18}
+  \item {add\discretionary {-}{}{}Location}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {append\discretionary {-}{}{}Node}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+
+  \indexspace
+
+  \item {B\discretionary {-}{}{}A\discretionary {-}{}{}C\discretionary {-}{}{}K\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}G}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {back}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{13}
+  \item {Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}cpp}, 
+		\hyperpage{21}
+  \item {Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Location.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.\discretionary {-}{}{}cpp}, 
+		\hyperpage{21}
+  \item {Backend/\discretionary {-}{}{}Salesman/\discretionary {-}{}{}Salesman.\discretionary {-}{}{}h}, 
+		\hyperpage{21}
+  \item {Backend/\discretionary {-}{}{}Salesman/test.\discretionary {-}{}{}cpp}, 
+		\hyperpage{22}
+    \subitem {main}, \hyperpage{22}
+  \item {Backend/\discretionary {-}{}{}Salesman/test2.\discretionary {-}{}{}cpp}, 
+		\hyperpage{23}
+  \item {basic\discretionary {-}{}{}\_\discretionary {-}{}{}window}, 
+		\hyperpage{9}
+    \subitem {main}, \hyperpage{9}
+
+  \indexspace
+
+  \item {calculate\discretionary {-}{}{}Route}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {call\discretionary {-}{}{}Function}
+    \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
+  \item {client.\discretionary {-}{}{}c}
+    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}, 
+		\hyperpage{27}
+    \subitem {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}, 
+		\hyperpage{27}
+    \subitem {main}, \hyperpage{27}
+    \subitem {P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}, 
+		\hyperpage{27}
+  \item {Connection}
+    \subitem {Connection$<$ Type $>$}, \hyperpage{11}
+    \subitem {Graph.\discretionary {-}{}{}h}, \hyperpage{24}
+  \item {Connection$<$ Type $>$}, \hyperpage{11}
+    \subitem {Connection}, \hyperpage{11}
+  \item {current\discretionary {-}{}{}Node}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{13}
+
+  \indexspace
+
+  \item {data}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{9}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+  \item {display\discretionary {-}{}{}Nodes}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {display\discretionary {-}{}{}Nodes\discretionary {-}{}{}R}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {distance\discretionary {-}{}{}Matrix}
+    \subitem {Salesman}, \hyperpage{19}
+
+  \indexspace
+
+  \item {empty\discretionary {-}{}{}List}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {example.\discretionary {-}{}{}cpp}
+    \subitem {main}, \hyperpage{24}
+
+  \indexspace
+
+  \item {from\discretionary {-}{}{}Start}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {front}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{13}
+  \item {func\discretionary {-}{}{}List}
+    \subitem {Py\discretionary {-}{}{}I}, \hyperpage{18}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}
+    \subitem {client.\discretionary {-}{}{}c}, \hyperpage{27}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}, 
+		\hyperpage{29}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {get\discretionary {-}{}{}Distance\discretionary {-}{}{}To}
+    \subitem {Location}, \hyperpage{14}
+  \item {get\discretionary {-}{}{}Element}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {get\discretionary {-}{}{}Lat}
+    \subitem {Location}, \hyperpage{14}
+  \item {get\discretionary {-}{}{}List\discretionary {-}{}{}Length}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {get\discretionary {-}{}{}Long}
+    \subitem {Location}, \hyperpage{14}
+  \item {get\discretionary {-}{}{}Next\discretionary {-}{}{}Node}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {get\discretionary {-}{}{}Node\discretionary {-}{}{}At}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+  \item {get\discretionary {-}{}{}Num\discretionary {-}{}{}Lines}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}, 
+		\hyperpage{28}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
+		\hyperpage{28}
+  \item {Graph.\discretionary {-}{}{}h}
+    \subitem {$\sim $\discretionary {-}{}{}Node}, \hyperpage{24}
+    \subitem {Connection}, \hyperpage{24}
+    \subitem {Node}, \hyperpage{24}
+
+  \indexspace
+
+  \item {H\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}T}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{9}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+  \item {handle\discretionary {-}{}{}U\discretionary {-}{}{}I}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}, 
+		\hyperpage{28}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
+		\hyperpage{28}
+  \item {has\discretionary {-}{}{}Matrix}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {hello}, \hyperpage{9}
+    \subitem {hello}, \hyperpage{9}
+    \subitem {multiply}, \hyperpage{9}
+
+  \indexspace
+
+  \item {id}
+    \subitem {location}, \hyperpage{13}
+  \item {is\discretionary {-}{}{}Start}
+    \subitem {Location}, \hyperpage{14}
+  \item {is\discretionary {-}{}{}Valid}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+
+  \indexspace
+
+  \item {latitude}
+    \subitem {location}, \hyperpage{13}
+  \item {Linked\discretionary {-}{}{}List}
+    \subitem {$\sim $\discretionary {-}{}{}Linked\discretionary {-}{}{}List}, 
+		\hyperpage{12}
+    \subitem {append\discretionary {-}{}{}Node}, \hyperpage{12}
+    \subitem {back}, \hyperpage{13}
+    \subitem {current\discretionary {-}{}{}Node}, \hyperpage{13}
+    \subitem {display\discretionary {-}{}{}Nodes}, \hyperpage{12}
+    \subitem {display\discretionary {-}{}{}Nodes\discretionary {-}{}{}R}, 
+		\hyperpage{12}
+    \subitem {empty\discretionary {-}{}{}List}, \hyperpage{12}
+    \subitem {from\discretionary {-}{}{}Start}, \hyperpage{12}
+    \subitem {front}, \hyperpage{13}
+    \subitem {get\discretionary {-}{}{}List\discretionary {-}{}{}Length}, 
+		\hyperpage{12}
+    \subitem {get\discretionary {-}{}{}Next\discretionary {-}{}{}Node}, 
+		\hyperpage{12}
+    \subitem {get\discretionary {-}{}{}Node\discretionary {-}{}{}At}, 
+		\hyperpage{12}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+    \subitem {list\discretionary {-}{}{}\_\discretionary {-}{}{}length}, 
+		\hyperpage{13}
+    \subitem {loop\discretionary {-}{}{}Through\discretionary {-}{}{}From}, 
+		\hyperpage{12}
+  \item {Linked\discretionary {-}{}{}List$<$ Type $>$}, \hyperpage{12}
+  \item {Linked\discretionary {-}{}{}List.\discretionary {-}{}{}h}
+    \subitem {Node}, \hyperpage{25}
+  \item {list\discretionary {-}{}{}\_\discretionary {-}{}{}length}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{13}
+  \item {load\discretionary {-}{}{}Accounts}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}, 
+		\hyperpage{28}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
+		\hyperpage{28}
+  \item {Location}, \hyperpage{13}
+    \subitem {$\sim $\discretionary {-}{}{}Location}, \hyperpage{14}
+    \subitem {get\discretionary {-}{}{}Distance\discretionary {-}{}{}To}, 
+		\hyperpage{14}
+    \subitem {get\discretionary {-}{}{}Lat}, \hyperpage{14}
+    \subitem {get\discretionary {-}{}{}Long}, \hyperpage{14}
+    \subitem {is\discretionary {-}{}{}Start}, \hyperpage{14}
+    \subitem {Location}, \hyperpage{14}
+    \subitem {location\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{14}
+    \subitem {not\discretionary {-}{}{}Start}, \hyperpage{14}
+    \subitem {print\discretionary {-}{}{}Coords}, \hyperpage{14}
+    \subitem {set\discretionary {-}{}{}Start}, \hyperpage{14}
+    \subitem {start\discretionary {-}{}{}Location}, \hyperpage{14}
+    \subitem {x}, \hyperpage{14}
+    \subitem {y}, \hyperpage{14}
+  \item {location}, \hyperpage{13}
+    \subitem {id}, \hyperpage{13}
+    \subitem {latitude}, \hyperpage{13}
+    \subitem {longitude}, \hyperpage{13}
+  \item {location\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {Location}, \hyperpage{14}
+  \item {locations}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {login\discretionary {-}{}{}Succesful}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
+		\hyperpage{28}
+  \item {login\discretionary {-}{}{}Successful}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}, 
+		\hyperpage{28}
+  \item {longitude}
+    \subitem {location}, \hyperpage{13}
+  \item {loop\discretionary {-}{}{}Through\discretionary {-}{}{}From}
+    \subitem {Linked\discretionary {-}{}{}List}, \hyperpage{12}
+
+  \indexspace
+
+  \item {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}
+    \subitem {client.\discretionary {-}{}{}c}, \hyperpage{27}
+  \item {main}
+    \subitem {Backend/\discretionary {-}{}{}Salesman/test.\discretionary {-}{}{}cpp}, 
+		\hyperpage{22}
+    \subitem {basic\discretionary {-}{}{}\_\discretionary {-}{}{}window}, 
+		\hyperpage{9}
+    \subitem {client.\discretionary {-}{}{}c}, \hyperpage{27}
+    \subitem {example.\discretionary {-}{}{}cpp}, \hyperpage{24}
+    \subitem {main.\discretionary {-}{}{}cpp}, \hyperpage{23}
+    \subitem {test2.\discretionary {-}{}{}cpp}, \hyperpage{23}
+    \subitem {tests/test.\discretionary {-}{}{}cpp}, \hyperpage{22}
+    \subitem {tools/\discretionary {-}{}{}Sockets/test.\discretionary {-}{}{}cpp}, 
+		\hyperpage{22}
+    \subitem {tools/test.\discretionary {-}{}{}cpp}, \hyperpage{23}
+  \item {main.\discretionary {-}{}{}cpp}, \hyperpage{23}
+    \subitem {main}, \hyperpage{23}
+  \item {Matrix}, \hyperpage{15}
+    \subitem {$\sim $\discretionary {-}{}{}Matrix}, \hyperpage{15}
+    \subitem {get\discretionary {-}{}{}Element}, \hyperpage{15}
+    \subitem {Matrix}, \hyperpage{15}
+    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}, 
+		\hyperpage{15}
+    \subitem {number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}, 
+		\hyperpage{15}
+    \subitem {number\discretionary {-}{}{}Of\discretionary {-}{}{}Columns}, 
+		\hyperpage{15}
+    \subitem {set\discretionary {-}{}{}Element}, \hyperpage{15}
+    \subitem {show\discretionary {-}{}{}Matrix}, \hyperpage{15}
+    \subitem {values}, \hyperpage{15}
+  \item {multiply}
+    \subitem {hello}, \hyperpage{9}
+
+  \indexspace
+
+  \item {new\discretionary {-}{}{}\_\discretionary {-}{}{}socket}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}, 
+		\hyperpage{29}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {next}
+    \subitem {Node}, \hyperpage{16}
+  \item {Node}
+    \subitem {Graph.\discretionary {-}{}{}h}, \hyperpage{24}
+    \subitem {Linked\discretionary {-}{}{}List.\discretionary {-}{}{}h}, 
+		\hyperpage{25}
+    \subitem {next}, \hyperpage{16}
+    \subitem {Node}, \hyperpage{16}
+    \subitem {previous}, \hyperpage{16}
+  \item {Node$<$ Type $>$}, \hyperpage{15}
+  \item {not\discretionary {-}{}{}Start}
+    \subitem {Location}, \hyperpage{14}
+  \item {number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}columns}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {number\discretionary {-}{}{}\_\discretionary {-}{}{}of\discretionary {-}{}{}\_\discretionary {-}{}{}elements}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {number\discretionary {-}{}{}Of\discretionary {-}{}{}Columns}
+    \subitem {Matrix}, \hyperpage{15}
+
+  \indexspace
+
+  \item {p\discretionary {-}{}{}Func}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {p\discretionary {-}{}{}List}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {p\discretionary {-}{}{}List\discretionary {-}{}{}Item}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {p\discretionary {-}{}{}List\discretionary {-}{}{}Length}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {p\discretionary {-}{}{}Module}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {p\discretionary {-}{}{}Name}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}
+    \subitem {client.\discretionary {-}{}{}c}, \hyperpage{27}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {p\discretionary {-}{}{}Value}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {password}
+    \subitem {account}, \hyperpage{11}
+  \item {populate\discretionary {-}{}{}Matrix}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {previous}
+    \subitem {Node}, \hyperpage{16}
+  \item {print\discretionary {-}{}{}Coords}
+    \subitem {Location}, \hyperpage{14}
+  \item {Py\discretionary {-}{}{}Func}
+    \subitem {$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}Func}, 
+		\hyperpage{17}
+    \subitem {is\discretionary {-}{}{}Valid}, \hyperpage{17}
+    \subitem {p\discretionary {-}{}{}Func}, \hyperpage{17}
+    \subitem {p\discretionary {-}{}{}List}, \hyperpage{17}
+    \subitem {p\discretionary {-}{}{}List\discretionary {-}{}{}Item}, 
+		\hyperpage{17}
+    \subitem {p\discretionary {-}{}{}List\discretionary {-}{}{}Length}, 
+		\hyperpage{17}
+    \subitem {p\discretionary {-}{}{}Module}, \hyperpage{17}
+    \subitem {p\discretionary {-}{}{}Name}, \hyperpage{17}
+    \subitem {p\discretionary {-}{}{}Value}, \hyperpage{17}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+    \subitem {valid\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {Py\discretionary {-}{}{}Func$<$ Type $>$}, \hyperpage{16}
+  \item {Py\discretionary {-}{}{}I}, \hyperpage{17}
+    \subitem {$\sim $\discretionary {-}{}{}Py\discretionary {-}{}{}I}, 
+		\hyperpage{18}
+    \subitem {add\discretionary {-}{}{}Function}, \hyperpage{18}
+    \subitem {func\discretionary {-}{}{}List}, \hyperpage{18}
+    \subitem {Py\discretionary {-}{}{}I}, \hyperpage{18}
+    \subitem {Py\discretionary {-}{}{}I}, \hyperpage{18}
+  \item {python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{9}
+    \subitem {data}, \hyperpage{9}
+    \subitem {H\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
+		\hyperpage{9}
+    \subitem {P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}, 
+		\hyperpage{10}
+    \subitem {s}, \hyperpage{10}
+  \item {python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+    \subitem {data}, \hyperpage{10}
+    \subitem {H\discretionary {-}{}{}O\discretionary {-}{}{}S\discretionary {-}{}{}T}, 
+		\hyperpage{10}
+    \subitem {P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}, 
+		\hyperpage{10}
+    \subitem {s}, \hyperpage{10}
+  \item {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}
+    \subitem {get\discretionary {-}{}{}Num\discretionary {-}{}{}Lines}, 
+		\hyperpage{28}
+    \subitem {handle\discretionary {-}{}{}U\discretionary {-}{}{}I}, 
+		\hyperpage{28}
+    \subitem {load\discretionary {-}{}{}Accounts}, \hyperpage{28}
+    \subitem {login\discretionary {-}{}{}Successful}, \hyperpage{28}
+  \item {python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}
+    \subitem {get\discretionary {-}{}{}Num\discretionary {-}{}{}Lines}, 
+		\hyperpage{28}
+    \subitem {handle\discretionary {-}{}{}U\discretionary {-}{}{}I}, 
+		\hyperpage{28}
+    \subitem {load\discretionary {-}{}{}Accounts}, \hyperpage{28}
+    \subitem {login\discretionary {-}{}{}Succesful}, \hyperpage{28}
+
+  \indexspace
+
+  \item {receive\discretionary {-}{}{}Data}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}, 
+		\hyperpage{29}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {Return\discretionary {-}{}{}List}
+    \subitem {call\discretionary {-}{}{}Function}, \hyperpage{18}
+    \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
+    \subitem {Return\discretionary {-}{}{}List}, \hyperpage{18}
+  \item {Return\discretionary {-}{}{}List$<$ Type $>$}, \hyperpage{18}
+  \item {route}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {run\discretionary {-}{}{}\_\discretionary {-}{}{}server}
+    \subitem {server.\discretionary {-}{}{}c}, \hyperpage{29}
+    \subitem {server.\discretionary {-}{}{}h}, \hyperpage{29}
+
+  \indexspace
+
+  \item {s}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+    \subitem {python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test}, 
+		\hyperpage{10}
+  \item {Salesman}, \hyperpage{19}
+    \subitem {$\sim $\discretionary {-}{}{}Salesman}, \hyperpage{19}
+    \subitem {add\discretionary {-}{}{}Location}, \hyperpage{19}
+    \subitem {calculate\discretionary {-}{}{}Route}, \hyperpage{19}
+    \subitem {distance\discretionary {-}{}{}Matrix}, \hyperpage{19}
+    \subitem {has\discretionary {-}{}{}Matrix}, \hyperpage{19}
+    \subitem {locations}, \hyperpage{19}
+    \subitem {populate\discretionary {-}{}{}Matrix}, \hyperpage{19}
+    \subitem {route}, \hyperpage{19}
+    \subitem {Salesman}, \hyperpage{19}
+    \subitem {show\discretionary {-}{}{}Locations}, \hyperpage{19}
+    \subitem {show\discretionary {-}{}{}Route}, \hyperpage{19}
+  \item {server.\discretionary {-}{}{}c}
+    \subitem {run\discretionary {-}{}{}\_\discretionary {-}{}{}server}, 
+		\hyperpage{29}
+  \item {server.\discretionary {-}{}{}h}
+    \subitem {run\discretionary {-}{}{}\_\discretionary {-}{}{}server}, 
+		\hyperpage{29}
+  \item {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}
+    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}, 
+		\hyperpage{29}
+    \subitem {new\discretionary {-}{}{}\_\discretionary {-}{}{}socket}, 
+		\hyperpage{29}
+    \subitem {receive\discretionary {-}{}{}Data}, \hyperpage{29}
+    \subitem {sigchld\discretionary {-}{}{}\_\discretionary {-}{}{}handler}, 
+		\hyperpage{29}
+  \item {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}
+    \subitem {A\discretionary {-}{}{}P\discretionary {-}{}{}P}, 
+		\hyperpage{30}
+    \subitem {B\discretionary {-}{}{}A\discretionary {-}{}{}C\discretionary {-}{}{}K\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}G}, 
+		\hyperpage{30}
+    \subitem {get\discretionary {-}{}{}\_\discretionary {-}{}{}in\discretionary {-}{}{}\_\discretionary {-}{}{}addr}, 
+		\hyperpage{30}
+    \subitem {new\discretionary {-}{}{}\_\discretionary {-}{}{}socket}, 
+		\hyperpage{30}
+    \subitem {P\discretionary {-}{}{}O\discretionary {-}{}{}R\discretionary {-}{}{}T}, 
+		\hyperpage{30}
+    \subitem {receive\discretionary {-}{}{}Data}, \hyperpage{30}
+    \subitem {sigchld\discretionary {-}{}{}\_\discretionary {-}{}{}handler}, 
+		\hyperpage{30}
+    \subitem {U\discretionary {-}{}{}I}, \hyperpage{30}
+  \item {set\discretionary {-}{}{}Element}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {set\discretionary {-}{}{}Start}
+    \subitem {Location}, \hyperpage{14}
+  \item {show\discretionary {-}{}{}Locations}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {show\discretionary {-}{}{}Matrix}
+    \subitem {Matrix}, \hyperpage{15}
+  \item {show\discretionary {-}{}{}Route}
+    \subitem {Salesman}, \hyperpage{19}
+  \item {sigchld\discretionary {-}{}{}\_\discretionary {-}{}{}handler}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}, 
+		\hyperpage{29}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {start\discretionary {-}{}{}Location}
+    \subitem {Location}, \hyperpage{14}
+
+  \indexspace
+
+  \item {test2.\discretionary {-}{}{}cpp}
+    \subitem {main}, \hyperpage{23}
+  \item {tests/basic\discretionary {-}{}{}\_\discretionary {-}{}{}window.\discretionary {-}{}{}py}, 
+		\hyperpage{23}
+  \item {tests/example.\discretionary {-}{}{}cpp}, \hyperpage{23}
+  \item {tests/hello.\discretionary {-}{}{}py}, \hyperpage{24}
+  \item {tests/test.\discretionary {-}{}{}cpp}, \hyperpage{22}
+    \subitem {main}, \hyperpage{22}
+  \item {tools/\discretionary {-}{}{}Graph.\discretionary {-}{}{}h}, 
+		\hyperpage{24}
+  \item {tools/\discretionary {-}{}{}Linked\discretionary {-}{}{}List.\discretionary {-}{}{}h}, 
+		\hyperpage{24}
+  \item {tools/\discretionary {-}{}{}Matrices.\discretionary {-}{}{}cpp}, 
+		\hyperpage{25}
+  \item {tools/\discretionary {-}{}{}Matrices.\discretionary {-}{}{}h}, 
+		\hyperpage{25}
+  \item {tools/\discretionary {-}{}{}Python/.\discretionary {-}{}{}Functions.\discretionary {-}{}{}cpp}, 
+		\hyperpage{25}
+  \item {tools/\discretionary {-}{}{}Python/.\discretionary {-}{}{}Py\discretionary {-}{}{}Func.\discretionary {-}{}{}cpp}, 
+		\hyperpage{25}
+  \item {tools/\discretionary {-}{}{}Python/.\discretionary {-}{}{}Py\discretionary {-}{}{}I.\discretionary {-}{}{}cpp}, 
+		\hyperpage{25}
+  \item {tools/\discretionary {-}{}{}Python/.\discretionary {-}{}{}Py\discretionary {-}{}{}I.\discretionary {-}{}{}h}, 
+		\hyperpage{26}
+  \item {tools/\discretionary {-}{}{}Python/\discretionary {-}{}{}Functions.\discretionary {-}{}{}h}, 
+		\hyperpage{26}
+  \item {tools/\discretionary {-}{}{}Python/\discretionary {-}{}{}Py\discretionary {-}{}{}Func.\discretionary {-}{}{}h}, 
+		\hyperpage{26}
+  \item {tools/\discretionary {-}{}{}Sockets/client.\discretionary {-}{}{}c}, 
+		\hyperpage{26}
+  \item {tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}client\discretionary {-}{}{}\_\discretionary {-}{}{}test.\discretionary {-}{}{}py}, 
+		\hyperpage{27}
+  \item {tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}server\discretionary {-}{}{}\_\discretionary {-}{}{}test.\discretionary {-}{}{}py}, 
+		\hyperpage{27}
+  \item {tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}c}, 
+		\hyperpage{27}
+  \item {tools/\discretionary {-}{}{}Sockets/python\discretionary {-}{}{}\_\discretionary {-}{}{}ui.\discretionary {-}{}{}h}, 
+		\hyperpage{28}
+  \item {tools/\discretionary {-}{}{}Sockets/server.\discretionary {-}{}{}c}, 
+		\hyperpage{28}
+  \item {tools/\discretionary {-}{}{}Sockets/server.\discretionary {-}{}{}h}, 
+		\hyperpage{29}
+  \item {tools/\discretionary {-}{}{}Sockets/server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}c}, 
+		\hyperpage{29}
+  \item {tools/\discretionary {-}{}{}Sockets/server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {tools/\discretionary {-}{}{}Sockets/test.\discretionary {-}{}{}cpp}, 
+		\hyperpage{22}
+    \subitem {main}, \hyperpage{22}
+  \item {tools/test.\discretionary {-}{}{}cpp}, \hyperpage{22}
+    \subitem {main}, \hyperpage{23}
+
+  \indexspace
+
+  \item {U\discretionary {-}{}{}I}
+    \subitem {server\discretionary {-}{}{}\_\discretionary {-}{}{}utils.\discretionary {-}{}{}h}, 
+		\hyperpage{30}
+  \item {username}
+    \subitem {account}, \hyperpage{11}
+
+  \indexspace
+
+  \item {valid\discretionary {-}{}{}Func}
+    \subitem {Py\discretionary {-}{}{}Func}, \hyperpage{17}
+  \item {values}
+    \subitem {Matrix}, \hyperpage{15}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Location}, \hyperpage{14}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Location}, \hyperpage{14}
+
+\end{theindex}
