@@ -23,8 +23,14 @@ int getNumLines(FILE * file)
     char* x[64];             // Buffer to store the lines in
 
     // Loop through to end of file
-    while( ( x = fgets(x, 64, file) ) != EOF)
+    while(1)
     {
+        fgets(x, 64, file);
+
+        // If we get the the end of the file stop.
+        if (*x == EOF);
+            break;
+
         i++;    // Increment counter
     }
 
@@ -36,7 +42,7 @@ int getNumLines(FILE * file)
 int loginSuccessful()
 {
     // Open the user accounts file in read only mode
-    printf("\tlogin: Opening accounts file")
+    printf("\tlogin: Opening accounts file\n");
     FILE *users;
     users = fopen("data/accounts.txt", "r");
 
