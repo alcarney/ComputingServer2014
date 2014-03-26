@@ -19,19 +19,14 @@ int handleUI(int their_socket)
 int getNumLines(FILE * file)
 {
 
-    int i;                  // Store the count in i
-    char* x[64];             // Buffer to store the lines in
+    int i = 0;                  // Store the count in i
+    char x [256];             // Buffer to store the lines in
 
     // Loop through to end of file
-    while(1)
+    while(fgets(x, 256, file))
     {
-        fgets(x, 64, file);
-
-        // If we get the the end of the file stop.
-        if (*x == EOF);
-            break;
-
-        i++;    // Increment counter
+        //puts(x);
+        i++;    // Else increment counter
     }
 
     // Return the result
