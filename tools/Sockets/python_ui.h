@@ -16,5 +16,6 @@ int loginSuccesful();                          // Main login function
 
 // Text file parsing functions
 int getNumLines(FILE* file);
+int loadAccounts(FILE* file, struct account* accounts, int num);
 
 #endif

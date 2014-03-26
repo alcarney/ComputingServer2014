@@ -33,6 +33,33 @@ int getNumLines(FILE * file)
     return i;
 }
 
+// Load the accounts from file into the struct provided
+int loadAccounts(FILE* file, struct account* accounts, int num)
+{
+    char buffer[256]; 
+    int i;
+
+    // Loop through each account in the file and pass it into an appropriate struct
+    for (i = 0; i < num; i++)
+    {
+        // Get the next line from the file and store it in buffer
+        fgets(buffer, sizeof(buffer), file);
+
+        // Assumning the file is in csv format, split the string into name password using the comma
+        // as a delimeter
+        //accounts->username = strtok(buffer, ",");
+        //accounts->password = strtok(NULL, ",");
+        printf("%s\n", strtok(buffer, ","));
+        printf("%s\n", strtok(NULL, ","));
+
+        // Increment the pointer through the array
+        accounts++;
+    }
+
+    // Return non zero if all ok 
+    return 1;
+}
+
 // Login function
 int loginSuccessful()
 {
@@ -49,14 +76,24 @@ int loginSuccessful()
     }
 
     // Load the accounts
-    int x;                       // variable to store a single character in
-    int i = 0;                   // Used to count position in file
-    struct account user;
 
     // We assume that each line in the accounts file is a separate account
     printf("\tlogin: Getting number of registered accounts\n");
-    printf("There are %i accounts to check\n", getNumLines(users));
+    int numAccounts = getNumLines(users);
 
+    // Create an array of account structs of length equal to the number of accounts
+    struct account accounts[numAccounts];
+
+    // Loop through the file and add each entry to an element of the array
+    printf("\tlogin: Retreiving accounts from file\n");
+    loadAccounts(users, (struct account*)&accounts, numAccounts);
+
+    // Print the accounts to see if the above worked
+    //int c;
+    //for (c = 0; c < numAccounts; c++)
+    //{
+    //    printf("Username: %s\nPassword: %s\n", accounts[0].username, accounts[1].password);
+    //}
     // Loop through each character in the file
     //printf("s\n", user.username);
 
