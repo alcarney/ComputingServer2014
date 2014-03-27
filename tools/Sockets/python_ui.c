@@ -110,6 +110,13 @@ int loginSuccessful(int their_socket)
     attempt.password = malloc(128);
 
     // Get the login attempt
+    int requestID = 1;                          // Login request
+    char* buffer = (char *)&requestID;
+
+    // Send the request
+    sendData(their_socket, buffer, sizeof(requestID));
+
+    // Get the answer
     receiveData(their_socket, (char *)&attempt, sizeof(attempt));
 
     printf("Details to check:\n\tUsername:\t%s\n\tPassword:\t%s\n", attempt.username,attempt.password);
