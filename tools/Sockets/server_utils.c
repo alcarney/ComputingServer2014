@@ -110,9 +110,9 @@ int new_socket(int portNum)
 }
 
 
-// Function that reads data from a client into a given location
-//      their_sock - The socket file descriptor of the client
-//      data       - A pointer to where the data will be stored
+/*! Function that reads data from a client into a given location
+      \param their_sock - The socket file descriptor of the client
+      \param data       - A pointer to where the data will be stored*/
 int receiveData(int their_socket, char* data, int data_size)
 {
     // Set up the required variables
@@ -139,6 +139,21 @@ int receiveData(int their_socket, char* data, int data_size)
     return 0;
 }
 
+/*! Function that sends data to the client
+      \param their_sock - The socket file descriptor for the client
+      \param data       - A pointer to the data to be sent
+*/
+int sendData(int their_socket, char* data, int data_size)
+{
+    // Send the data
+    if(send(their_socket, data, data_size, 0) == -1)
+    {
+        perror("send");
+        return -1;
+    }
+
+    return 0;
+}
 
 /*
 int basicHandleClient(int their_socket)
