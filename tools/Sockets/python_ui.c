@@ -4,7 +4,7 @@
 int handleUI(int their_socket)
 {
     printf("pythonUI: New client detected, requesting login\n");
-    if(loginSuccessful() == 0)
+    if(loginSuccessful(their_socket) == 0)
     {
         printf("User quit without logging in or maximum trials reached closing connection\n");
         return 1;
@@ -76,7 +76,7 @@ int loadAccounts(FILE* file, struct account* accounts, int num)
 }
 
 // Login function
-int loginSuccessful()
+int loginSuccessful(int their_socket)
 {
     // Open the user accounts file in read only mode
     printf("\tlogin: Opening accounts file\n");
@@ -102,6 +102,18 @@ int loginSuccessful()
     // Loop through the file and add each entry to an element of the array
     printf("\tlogin: Retreiving accounts from file\n");
     loadAccounts(users, accounts, numAccounts);
+
+    // Create a single instance of the account structure to store the attempt in
+    // and allocate the memory
+    struct account attempt;
+    attempt.username = malloc(128);
+    attempt.password = malloc(128);
+
+    // Get the login attempt
+    receiveData(their_socket, (char *)&attempt, sizeof(attempt));
+
+    printf("Details to check:\n\tUsername:\t%s\n\tPassword:\t%s\n", attempt.username,attempt.password);
+
 
     return 1;
 }

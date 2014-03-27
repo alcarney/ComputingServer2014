@@ -12,7 +12,7 @@ struct account
 int handleUI(int their_socket);
 
 // Login Functions
-int loginSuccesful();                          // Main login function
+int loginSuccesful(int their_socket);                          // Main login function
 
 // Text file parsing functions
 int getNumLines(FILE* file);
