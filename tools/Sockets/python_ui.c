@@ -105,9 +105,11 @@ int loginSuccessful(int their_socket)
 
     // Create a single instance of the account structure to store the attempt in
     // and allocate the memory
-    struct account attempt;
-    attempt.username = malloc(128);
-    attempt.password = malloc(128);
+    //struct account attempt;
+    //attempt.username = malloc(128);
+    //attempt.password = malloc(128);
+
+    char attempt[128];
 
     // Get the login attempt
     int requestID = 1;                          // Login request
@@ -117,9 +119,9 @@ int loginSuccessful(int their_socket)
     sendData(their_socket, buffer, sizeof(requestID));
 
     // Get the answer
-    receiveData(their_socket, (char *)&attempt, sizeof(attempt));
+    receiveData(their_socket, &attempt, sizeof(attempt));
 
-    printf("Details to check:\n\tUsername:\t%s\n\tPassword:\t%s\n", attempt.username,attempt.password);
+    printf("Details to check:\n\tUsername:\t%s\n", attempt);
 
 
     return 1;
