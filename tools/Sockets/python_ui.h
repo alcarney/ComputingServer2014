@@ -20,7 +20,7 @@ struct task
     int taskType;
 };
 
-int handleUI(int their_socket);
+int handleUI(int their_socket, int task);
 
 // Login Functions
 int loginSuccesful(int their_socket);                          // Main login function

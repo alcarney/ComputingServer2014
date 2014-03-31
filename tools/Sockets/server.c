@@ -85,13 +85,13 @@ int run_server(int sock)
         struct task request;
         char* buf = (char *)&request;            // Create a buffer to read the data
 
-        receiveData(their_socket, buf, sizeofi(request));
+        receiveData(their_socket, buf, sizeof(request));
 
         // Choose appropriate action based on client type
         switch (request.clientType)
         {
             case UI:
-                    handleUI(their_socket, request.taskType)
+                    handleUI(their_socket, request.taskType);
                     break;
 
             case APP:

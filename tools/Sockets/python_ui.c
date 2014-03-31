@@ -5,12 +5,13 @@ int handleUI(int their_socket, int task)
 {
     switch (task)
     {
-        case LOGIN:
-
+        case 0:
+            loginSuccesful(their_socket);
             break;
 
-        case SALES:     // Travelling Salesman Algorithm
-            
+        case 1:     // Travelling Salesman Algorithm
+
+            // Get the locations from python
             getLocations(their_socket);
             break;
 
