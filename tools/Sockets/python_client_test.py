@@ -16,11 +16,7 @@ s.connect((HOST,PORT))
 s.sendall(struct.pack('i', 1))
 data = s.recv(4)
 
-# Tell the server how many locations we will send
-data = s.recv(4)
-
-if data == 1:
-    s.sendall(struct.pack('ss', "alex", "password"))
+s.sendall(struct.pack('s', "alex"))
 
 # Close the socket
 s.close()
