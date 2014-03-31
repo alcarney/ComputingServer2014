@@ -1,16 +1,23 @@
 #include "python_ui.h"
 
 // The new and improved UI handler
-int handleUI(int their_socket)
+int handleUI(int their_socket, int task)
 {
-    printf("pythonUI: New client detected, requesting login\n");
-    if(loginSuccessful(their_socket) == 0)
+    switch (task)
     {
-        printf("User quit without logging in or maximum trials reached closing connection\n");
-        return 1;
-    }
+        case LOGIN:
 
-    printf("Successful login!\n");
+            break;
+
+        case SALES:     // Travelling Salesman Algorithm
+            
+            getLocations(their_socket);
+            break;
+
+        default:
+            printf("server:python_ui: Error! Invalid task type\n");
+            return -1;
+    }
 
     return 0;
 }

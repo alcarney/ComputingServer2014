@@ -81,17 +81,17 @@ int run_server(int sock)
         // Say that we have a new connection from ip X
         printf("server: New connection from %s\n", s);
 
-        // Get the client to identify itself so we know which handler to call - Eventually
-        int clientType;
-        char* buf = (char *)&clientType;            // Create a buffer to read the data
+        // Create a task struct
+        struct task request;
+        char* buf = (char *)&request;            // Create a buffer to read the data
 
-        receiveData(their_socket, buf, sizeof(clientType));
+        receiveData(their_socket, buf, sizeofi(request));
 
         // Choose appropriate action based on client type
-        switch (clientType)
+        switch (request.clientType)
         {
             case UI:
-                    handleUI(their_socket);
+                    handleUI(their_socket, request.taskType)
                     break;
 
             case APP:

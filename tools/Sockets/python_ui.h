@@ -4,11 +4,22 @@
 #include <string.h>
 #include "server_utils.h"
 
+// Task Types
+const int LOGIN = 0;
+const int SALES = 1;
+
 struct account
 {
     char*  username;
     char*  password;
 };
+
+struct task
+{
+    int clientType;
+    int taskType;
+};
+
 int handleUI(int their_socket);
 
 // Login Functions
