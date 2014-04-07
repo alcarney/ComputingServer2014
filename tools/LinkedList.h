@@ -22,7 +22,11 @@ class Node : public Type
 
 };
 
-// Here is the actual linked list class
+/*! A template class that describes a Linked List. This template manages a series of nodes that are linked via a
+ * pointer to the next node in the list and the previous node in the list. This class currently supports adding 
+ * nodes to the end of the list, looping through the list from a given index and deleting its contents.
+ */
+
 template <class Type>
 class LinkedList 
 {
@@ -72,8 +76,8 @@ Node<Type>::Node(Type data)
 //===============================================================================================================
 
 
-//              Constructors and Destructors
-//===============================================
+/*! The constructor doesn't do too much really it simply sets the internal front and back pointers of the class to be NULL.
+ */
 template<class Type>
 LinkedList<Type>::LinkedList()
 {
@@ -81,6 +85,9 @@ LinkedList<Type>::LinkedList()
     back = NULL;
 }
 
+/*! The destructor calls the emptylist function to clear the list of any entries, so the nodes are able to de-allocate the 
+ * memory that they assigned themselves before the class instance is deleted.
+ */
 template<class Type>
 LinkedList<Type>::~LinkedList()
 {

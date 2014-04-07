@@ -7,17 +7,26 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structaccount}{account}
+\item 
+struct \hyperlink{structtask}{task}
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{python__ui_8h_afe4e5111335bb5acf3af323f7f6af709}{handle\-U\-I} (int their\-\_\-socket)
+int \hyperlink{python__ui_8h_a42e6da5c2ec59ee02e23e630993577e1}{handle\-U\-I} (int their\-\_\-socket, int \hyperlink{structtask}{task})
 \item 
-int \hyperlink{python__ui_8h_ae5f5a24e9d43e99d2e345a492a1cce60}{login\-Succesful} ()
+int \hyperlink{python__ui_8h_ae4beb89587239eddca83585a4066254f}{login\-Succesful} (int their\-\_\-socket)
 \item 
 int \hyperlink{python__ui_8h_a210505e8d00c738f3774e7d051178b66}{get\-Num\-Lines} (F\-I\-L\-E $\ast$file)
 \item 
 int \hyperlink{python__ui_8h_ac0b89b4da9f4c9cdf49ac5887401afc2}{load\-Accounts} (F\-I\-L\-E $\ast$file, struct \hyperlink{structaccount}{account} $\ast$accounts, int num)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{python__ui_8h_a0ceda323696ac1d5029aa38df28bb29c}{L\-O\-G\-I\-N} = 0
+\item 
+const int \hyperlink{python__ui_8h_a546c180396697d91ad0787574b233303}{S\-A\-L\-E\-S} = 1
 \end{DoxyCompactItemize}
 
 
@@ -29,13 +38,14 @@ int \hyperlink{python__ui_8h_ac0b89b4da9f4c9cdf49ac5887401afc2}{load\-Accounts} 
 \item[{F\-I\-L\-E $\ast$}]{file}
 \end{DoxyParamCaption}
 )}}\label{python__ui_8h_a210505e8d00c738f3774e7d051178b66}
-\hypertarget{python__ui_8h_afe4e5111335bb5acf3af323f7f6af709}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!handle\-U\-I@{handle\-U\-I}}
+\hypertarget{python__ui_8h_a42e6da5c2ec59ee02e23e630993577e1}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!handle\-U\-I@{handle\-U\-I}}
 \index{handle\-U\-I@{handle\-U\-I}!python_ui.h@{python\-\_\-ui.\-h}}
 \subsubsection[{handle\-U\-I}]{\setlength{\rightskip}{0pt plus 5cm}int handle\-U\-I (
 \begin{DoxyParamCaption}
-\item[{int}]{their\-\_\-socket}
+\item[{int}]{their\-\_\-socket, }
+\item[{int}]{task}
 \end{DoxyParamCaption}
-)}}\label{python__ui_8h_afe4e5111335bb5acf3af323f7f6af709}
+)}}\label{python__ui_8h_a42e6da5c2ec59ee02e23e630993577e1}
 \hypertarget{python__ui_8h_ac0b89b4da9f4c9cdf49ac5887401afc2}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!load\-Accounts@{load\-Accounts}}
 \index{load\-Accounts@{load\-Accounts}!python_ui.h@{python\-\_\-ui.\-h}}
 \subsubsection[{load\-Accounts}]{\setlength{\rightskip}{0pt plus 5cm}int load\-Accounts (
@@ -45,10 +55,19 @@ int \hyperlink{python__ui_8h_ac0b89b4da9f4c9cdf49ac5887401afc2}{load\-Accounts} 
 \item[{int}]{num}
 \end{DoxyParamCaption}
 )}}\label{python__ui_8h_ac0b89b4da9f4c9cdf49ac5887401afc2}
-\hypertarget{python__ui_8h_ae5f5a24e9d43e99d2e345a492a1cce60}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!login\-Succesful@{login\-Succesful}}
+\hypertarget{python__ui_8h_ae4beb89587239eddca83585a4066254f}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!login\-Succesful@{login\-Succesful}}
 \index{login\-Succesful@{login\-Succesful}!python_ui.h@{python\-\_\-ui.\-h}}
 \subsubsection[{login\-Succesful}]{\setlength{\rightskip}{0pt plus 5cm}int login\-Succesful (
 \begin{DoxyParamCaption}
-{}
+\item[{int}]{their\-\_\-socket}
 \end{DoxyParamCaption}
-)}}\label{python__ui_8h_ae5f5a24e9d43e99d2e345a492a1cce60}
+)}}\label{python__ui_8h_ae4beb89587239eddca83585a4066254f}
+
+
+\subsection{Variable Documentation}
+\hypertarget{python__ui_8h_a0ceda323696ac1d5029aa38df28bb29c}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!L\-O\-G\-I\-N@{L\-O\-G\-I\-N}}
+\index{L\-O\-G\-I\-N@{L\-O\-G\-I\-N}!python_ui.h@{python\-\_\-ui.\-h}}
+\subsubsection[{L\-O\-G\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}const int L\-O\-G\-I\-N = 0}}\label{python__ui_8h_a0ceda323696ac1d5029aa38df28bb29c}
+\hypertarget{python__ui_8h_a546c180396697d91ad0787574b233303}{\index{python\-\_\-ui.\-h@{python\-\_\-ui.\-h}!S\-A\-L\-E\-S@{S\-A\-L\-E\-S}}
+\index{S\-A\-L\-E\-S@{S\-A\-L\-E\-S}!python_ui.h@{python\-\_\-ui.\-h}}
+\subsubsection[{S\-A\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}const int S\-A\-L\-E\-S = 1}}\label{python__ui_8h_a546c180396697d91ad0787574b233303}

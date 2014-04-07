@@ -3,15 +3,20 @@
 }
 
 
+A template class that describes a Linked List.  
+
+
+
+
 {\ttfamily \#include \char`\"{}Linked\-List.\-h\char`\"{}}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classLinkedList_ab071ad70f21bb30297b95ce8afecb95f}{Linked\-List} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The constructor doesn't do too much really it simply sets the internal front and back pointers of the class to be N\-U\-L\-L. \end{DoxyCompactList}\item 
 \hyperlink{classLinkedList_a06639bd2e85ed04bfcf004de12f19388}{$\sim$\-Linked\-List} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The destructor calls the emptylist function to clear the list of any entries, so the nodes are able to de-\/allocate the memory that they assigned themselves before the class instance is deleted. \end{DoxyCompactList}\item 
 void \hyperlink{classLinkedList_a9fca2f717c8b5f078ae6fc8ac0a95368}{append\-Node} (double latitude, double longitude)
 \item 
 void \hyperlink{classLinkedList_af8979406b4a82460fa34e14c445c5c7a}{append\-Node} (\hyperlink{classNode}{Node}$<$ Type $>$ $\ast$n)
@@ -45,6 +50,13 @@ int \hyperlink{classLinkedList_a77c68b53ba781c46ca7de3fa80abc8cf}{list\-\_\-leng
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$class Linked\-List$<$ Type $>$}
+
+A template class that describes a Linked List. 
+
+This template manages a series of nodes that are linked via a pointer to the next node in the list and the previous node in the list. This class currently supports adding nodes to the end of the list, looping through the list from a given index and deleting its contents. 
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classLinkedList_ab071ad70f21bb30297b95ce8afecb95f}{\index{Linked\-List@{Linked\-List}!Linked\-List@{Linked\-List}}
 \index{Linked\-List@{Linked\-List}!LinkedList@{Linked\-List}}
@@ -53,6 +65,10 @@ int \hyperlink{classLinkedList_a77c68b53ba781c46ca7de3fa80abc8cf}{list\-\_\-leng
 {}
 \end{DoxyParamCaption}
 )}}\label{classLinkedList_ab071ad70f21bb30297b95ce8afecb95f}
+
+
+The constructor doesn't do too much really it simply sets the internal front and back pointers of the class to be N\-U\-L\-L. 
+
 \hypertarget{classLinkedList_a06639bd2e85ed04bfcf004de12f19388}{\index{Linked\-List@{Linked\-List}!$\sim$\-Linked\-List@{$\sim$\-Linked\-List}}
 \index{$\sim$\-Linked\-List@{$\sim$\-Linked\-List}!LinkedList@{Linked\-List}}
 \subsubsection[{$\sim$\-Linked\-List}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Type $>$ {\bf Linked\-List}$<$ Type $>$\-::$\sim${\bf Linked\-List} (
@@ -60,6 +76,10 @@ int \hyperlink{classLinkedList_a77c68b53ba781c46ca7de3fa80abc8cf}{list\-\_\-leng
 {}
 \end{DoxyParamCaption}
 )}}\label{classLinkedList_a06639bd2e85ed04bfcf004de12f19388}
+
+
+The destructor calls the emptylist function to clear the list of any entries, so the nodes are able to de-\/allocate the memory that they assigned themselves before the class instance is deleted. 
+
 
 
 \subsection{Member Function Documentation}

@@ -12,7 +12,9 @@ void $\ast$ \hyperlink{server__utils_8c_a294867ba9d7ff47e39d421134d8e12ab}{get\-
 int \hyperlink{server__utils_8c_a86d518c4cc2bc5dd7ac99bc036af8ca4}{new\-\_\-socket} (int port\-Num)
 \item 
 int \hyperlink{server__utils_8c_a687011a96feb3946d64dd534fbb7e826}{receive\-Data} (int their\-\_\-socket, char $\ast$data, int data\-\_\-size)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function that reads data from a client into a given location. \end{DoxyCompactList}\item 
+int \hyperlink{server__utils_8c_a65abf772469b635aef308177b6bb53e2}{send\-Data} (int their\-\_\-socket, char $\ast$data, int data\-\_\-size)
+\begin{DoxyCompactList}\small\item\em Function that sends data to the client. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -39,6 +41,37 @@ int \hyperlink{server__utils_8c_a687011a96feb3946d64dd534fbb7e826}{receive\-Data
 \item[{int}]{data\-\_\-size}
 \end{DoxyParamCaption}
 )}}\label{server__utils_8c_a687011a96feb3946d64dd534fbb7e826}
+
+
+Function that reads data from a client into a given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em their\-\_\-sock} & -\/ The socket file descriptor of the client \\
+\hline
+{\em data} & -\/ A pointer to where the data will be stored \\
+\hline
+\end{DoxyParams}
+\hypertarget{server__utils_8c_a65abf772469b635aef308177b6bb53e2}{\index{server\-\_\-utils.\-c@{server\-\_\-utils.\-c}!send\-Data@{send\-Data}}
+\index{send\-Data@{send\-Data}!server_utils.c@{server\-\_\-utils.\-c}}
+\subsubsection[{send\-Data}]{\setlength{\rightskip}{0pt plus 5cm}int send\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{their\-\_\-socket, }
+\item[{char $\ast$}]{data, }
+\item[{int}]{data\-\_\-size}
+\end{DoxyParamCaption}
+)}}\label{server__utils_8c_a65abf772469b635aef308177b6bb53e2}
+
+
+Function that sends data to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em their\-\_\-sock} & -\/ The socket file descriptor for the client \\
+\hline
+{\em data} & -\/ A pointer to the data to be sent \\
+\hline
+\end{DoxyParams}
 \hypertarget{server__utils_8c_a6c2d9589ac70568b8e3a6980bb3d45d6}{\index{server\-\_\-utils.\-c@{server\-\_\-utils.\-c}!sigchld\-\_\-handler@{sigchld\-\_\-handler}}
 \index{sigchld\-\_\-handler@{sigchld\-\_\-handler}!server_utils.c@{server\-\_\-utils.\-c}}
 \subsubsection[{sigchld\-\_\-handler}]{\setlength{\rightskip}{0pt plus 5cm}void sigchld\-\_\-handler (
