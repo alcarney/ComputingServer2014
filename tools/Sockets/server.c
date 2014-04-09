@@ -82,7 +82,7 @@ int run_server(int sock)
         printf("server: New connection from %s\n", s);
 
         // Create a task struct
-        struct task request;
+        struct taskRequest request;
         char* buf = (char *)&request;            // Create a buffer to read the data
 
         receiveData(their_socket, buf, sizeof(request));

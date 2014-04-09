@@ -14,12 +14,6 @@ struct account
     char*  password;
 };
 
-struct task
-{
-    int clientType;
-    int taskType;
-};
-
 int handleUI(int their_socket, int task);
 
 // Login Functions

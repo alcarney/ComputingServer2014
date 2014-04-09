@@ -116,7 +116,7 @@ int loginSuccessful(int their_socket)
     //struct account attempt;
     //attempt.username = malloc(128);
     //attempt.password = malloc(128);
-
+/*
     char attempt[128];
 
     // Get the login attempt
@@ -130,7 +130,7 @@ int loginSuccessful(int their_socket)
     receiveData(their_socket, &attempt, sizeof(attempt));
 
     printf("Details to check:\n\tUsername:\t%s\n", attempt);
-
+*/
 
     return 1;
 }
