@@ -6,13 +6,13 @@ int handleUI(int their_socket, int task)
     switch (task)
     {
         case 0:
-            loginSuccesful(their_socket);
+            loginSuccessful(their_socket);
             break;
 
         case 1:     // Travelling Salesman Algorithm
 
             // Get the locations from python
-            getLocations(their_socket);
+//            getLocations(their_socket);
             break;
 
         default:
@@ -79,7 +79,7 @@ int loadAccounts(FILE* file, struct account* accounts, int num)
         accounts++;
     }
 
-    // Return non zero if all ok 
+    // Return non zero if all ok
     return 1;
 }
 

@@ -5,8 +5,8 @@
 #include "server_utils.h"
 
 // Task Types
-const int LOGIN = 0;
-const int SALES = 1;
+//const int MYLOGIN = 0;
+//const int MYSALES = 1;
 
 struct account
 {
@@ -17,7 +17,7 @@ struct account
 int handleUI(int their_socket, int task);
 
 // Login Functions
-int loginSuccesful(int their_socket);                          // Main login function
+int loginSuccessful(int their_socket);                          // Main login function
 
 // Text file parsing functions
 int getNumLines(FILE* file);

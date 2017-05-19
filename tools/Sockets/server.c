@@ -1,3 +1,5 @@
+#include "python_ui.h"
+#include "server.h"
 #include "server_utils.h"
 
 
@@ -18,13 +20,13 @@ int run_server(int sock)
     socklen_t sin_size;
     sin_size = sizeof(their_addr);
 
-    // Some form of event handler? 
+    // Some form of event handler?
     struct sigaction sa;
 
     // I think this is where the IP address is stored
     char s[INET6_ADDRSTRLEN];
 
-    // This next section has something to do with killing of the child procesess this 
+    // This next section has something to do with killing of the child procesess this
     // function will create later.
     sa.sa_handler = sigchld_handler;
     sigemptyset(&sa.sa_mask);
@@ -111,7 +113,7 @@ int run_server(int sock)
     return 0;
 }
 
-/*
+
 int main()
 {
     int sock = new_socket(3490);
@@ -119,4 +121,4 @@ int main()
 
     return 0;
 }
-*/
+

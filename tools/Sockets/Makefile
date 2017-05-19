@@ -1,5 +1,5 @@
 server: utils.o python_ui.o
-	gcc -c server.c utils.o python_ui.o -o server.o
+	gcc server.c utils.o python_ui.o -o server
 
 utils.o:
 	gcc -c server_utils.c -o utils.o
